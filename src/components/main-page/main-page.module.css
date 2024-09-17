@@ -1,5 +1,5 @@
 .container {
-  background-color: #3E2A44;
+  background: radial-gradient(#714e7c, #302034);
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -8,113 +8,55 @@
   flex-direction: column;
   overflow: hidden;
   position: relative;
-  /* padding: calc(1vh + 1vw) 0; */
-}
-
-.frame {
-  grid-row: 1 / 3;
-  grid-column-start: 1;
-  width: calc(23vh + 23vw);
-  height: calc(23vh + 23vw);
-  border-radius: 50%;
-  border: 10px solid #3E2A44;
-  align-self: center;
-  background-color: transparent;
-  animation: emphasize 3s 1 1s forwards;
-  z-index: 1;
 }
 
 .content {
     /* border: 2px solid hotpink; */
     flex-grow: 1;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr;
+    display: flex;
+    justify-content: center;
 }
 
 .imageWrap {
-  grid-row: 1 / 3;
-  grid-column-start: 1;
   background: lime;
-  width: calc(23vh + 23vw + 10px); 
-  height: calc(23vh + 23vw + 10px);
+  width: calc(20vh + 20vw); 
+  height: calc(20vh + 20vw);
   border-radius: 50%;
-  z-index: 0;
   align-self: center;
-  font-family: 'Sacramento';
-}
-
-.frontUp, .frontDown{
-  grid-column-start: 1;
-  background-color: #3E2A44;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  animation: slideOut 3s 1 5s ease-out forwards;
-  white-space: pre;
-  font-family: sans-serif;
-  font-weight: normal;
-  color: white;
-  justify-content: center;
-  text-shadow: 
-    0px 0px 5px white,
-    0px 0px 15px white,
-    0px 0px 25px hotpink,
-    0px 0px 35px hotpink;
-  font-size: calc(1em + 2.5vw + 2.5vh);
-  /* border: 2px solid red; */
-  z-index: 1;
-}
-
-.frontUp p, .frontDown p {
-  margin: 0;
-  /* border: 2px solid green; */
-  font-family: "Sacramento", cursive;
-  opacity: 1;
-  animation: turnOffText 1s 1 5s ease-out forwards;
-}
-
-.frontUp p {
-  align-self: flex-end;
-}
-
-.frontDown p {
-  align-self: flex-start;
-}
-
-.frontUp{
-  grid-row: 1 / 2;
-  --i: -1;
-  text-align: right;
-}
-
-.frontDown{
-  grid-row: 2 / 3;
-  right: 0;
-  --i: 1;
+  box-shadow: 10px 10px 20px #302034;
 }
 
 .introduction{
-  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   color: white;
+  /* border: 2px solid lime; */
+  padding: calc(1vh + 1vw);
+  max-width: 50%;
+}
+
+.introduction h1 {
   text-shadow: 
     0px 0px 5px white,
     0px 0px 15px white,
     0px 0px 25px hotpink,
     0px 0px 35px hotpink;
-  font-size: calc(2em + 3vw + 3vh);
-  font-family: sans-serif;
-  animation: showText 3s 1 8s forwards;
-  height: 0;
-}
-
-.introduction p {
+  font-size: calc(1.5em + 2vw + 2vh);
   text-align: center;
-    font-family: 'Sacramento';
-    margin: 0;
+  font-family: 'Sacramento';
+  margin: 0;
+  font-weight: normal;
 }
 
-p {
+.introduction p{
+  text-wrap: wrap;
+  width: 100%;
+  text-align: center;
+  font-size: calc(0.5em + 0.4vw + 0.4vh);
+}
+
+h1 {
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
@@ -124,37 +66,24 @@ p {
 }
 
 .btnBox {
-  height: 0%;
-  width: 90%;
+  width: fit-content;
   align-items: center;
-  justify-content: space-evenly;
   display: flex;
-  flex-wrap: wrap;
-  animation: showBtnBox 0.5s 8s forwards;
-  /* border: 2px solid red; */
   gap: calc(1vh + 1vw);
+  padding-right: calc(1vh + 1vw);
 }
 
 .btnBox button {
-  opacity: 0;
-  width: calc(70px + 8vw + 2vh);
-  max-height: 70%;
+  width: fit-content;
   height: fit-content;
-  min-height: 40%;
-  font-size: calc(1em + 0.4vw + 0.4vh);
-  border: 10px solid #3E2A44;
-  background-color: #3E2A44;
-  color: #2E1E35;
-  border-radius: 20px;
-  animation: 
-    emphasize 5s 1 calc(12s + var(--i)) forwards, 
-    showBtn 0.5s 1 calc(13s + var(--i)) forwards;
-  font-weight: bold;
-  padding: calc(1vh + 1vw) 0;
+  font-size: calc(0.4em + 0.8vw + 0.8vh);
+  border: none;
+  background-color: transparent;
+  font-weight: lighter;
+  color: white;
 }
 
 .btnBox button:hover {
-  color: white;
   text-shadow: 
     0px 0px 5px white,
     0px 0px 15px white,
@@ -162,81 +91,33 @@ p {
     0px 0px 35px hotpink;
 }
 
-@media (orientation: landscape) {
-  .imageWrap {
-    animation: shrinkImg 3s 1 8s forwards;
-  }
-
-  .frame {
-    animation: emphasize 3s 1 1s forwards, shrinkFrame 3s 1 8s forwards;
-  }
+.navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px;
 }
 
-/*ANIMATIONS IN ORDER*/
+.navbar p{
+  margin: 0;
+  padding-left: calc(1vh + 1vw);
+  font-family: 'Sacramento';
+  color: white;
+  text-shadow: 
+    0px 0px 5px white,
+    0px 0px 15px white,
+    0px 0px 25px hotpink,
+    0px 0px 35px hotpink;
+  font-size: calc(10px + 1vw + 1vh);
+}
+
+@media (orientation: portrait) {
+  .content{
+    flex-direction: column;
+    justify-content: center;
+  }
   
-@keyframes emphasize { /* 1-3s */
-  100% {
-  box-shadow: 
-    10px 10px 15px #2E1E35,
-    inset 10px 10px 15px #2E1E35,
-    -10px -10px 15px #55375E,
-    inset -10px -10px 15px #55375E;
-  }
-}
-
-@keyframes slideOut { /* 5-8s */
-  33% {
-    font-size: calc(1em + 2.5vw + 2.5vh);
-  }
-  99% {
-    height: 50%;
-  }
-  100% {
-    font-size: 0;
-    height: 0;
-    transform: translateY(calc(50vh*var(--i)));
-  }
-}  
-
-@keyframes turnOffText { /* 5-6s */
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes shrinkFrame { /* 8-11s */
-  100% {
-    width: 40vh;
-    height: 40vh;
-  }
-}
-
-@keyframes shrinkImg { /* 8-11s */
-  100% {
-    width: calc(40vh + 10px);
-    height: calc(40vh + 10px);
-  }
-}
-
-@keyframes showText { /* 8-11s */
-  100% {
-    height: 20%;
-    opacity: 1;
-  }
-}
-
-@keyframes showBtnBox { /* 8-8.5s */
-  100% {
-    height: 25%;
-  }
-}
-
-@keyframes showBtn { /* 12-17s */
-  0% {
-    height: 25%;
-  }
-
-  100% {
-    opacity: 1;
+  .introduction{
+    max-width: 100%;
   }
 }
