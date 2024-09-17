@@ -1,0 +1,66 @@
+.container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid hotpink; */
+    height: 100%;
+}
+
+.imageWrap {
+    background: lime;
+    width: calc(20vh + 20vw); 
+    height: calc(20vh + 20vw);
+    border-radius: 50%;
+    align-self: center;
+    box-shadow: 10px 10px 20px #302034;
+  }
+  
+  .introduction{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    /* border: 2px solid lime; */
+    padding: calc(1vh + 1vw);
+    max-width: 50%;
+  }
+  
+  .introduction h1 {
+    text-shadow: 
+      0px 0px 5px white,
+      0px 0px 15px white,
+      0px 0px 25px hotpink,
+      0px 0px 35px hotpink;
+    font-size: calc(1.5em + 2vw + 2vh);
+    text-align: center;
+    font-family: 'Sacramento';
+    margin: 0;
+    font-weight: normal;
+  }
+  
+  .introduction p{
+    text-wrap: wrap;
+    width: 100%;
+    text-align: center;
+    font-size: calc(0.5em + 0.4vw + 0.4vh);
+  }
+  
+  h1 {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+
+  @media (orientation: portrait) {
+    .container{
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .introduction{
+      max-width: 100%;
+    }
+  }

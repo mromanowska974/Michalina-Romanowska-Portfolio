@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './main-page.module.css';
 import '../../fonts/Sacramento-Regular.ttf';
 import { motion } from 'framer-motion';
+import { Link, Outlet } from 'react-router-dom';
 
 const MainPage = () => {
   const initial = {
@@ -24,10 +25,10 @@ const MainPage = () => {
           <p>MR</p>
         </div>
         <div className={styles.btnBox}>
-          <button style={{'--i': '0s'}}>About Me</button>
-          <button style={{'--i': '1s'}}>Projects</button>
-          <button style={{'--i': '2s'}}>CV</button>
-          <button style={{'--i': '3s'}}>Contact</button>
+          <Link to={'about-me'}>About Me</Link>
+          <Link to={'projects'}>Projects</Link>
+          <Link>CV</Link>
+          <Link to={'contact'}>Contact</Link>
         </div>
       </div>
       <motion.div 
@@ -36,11 +37,7 @@ const MainPage = () => {
         animate={animate}
         transition={transition}
       >
-        <div className={styles.imageWrap}></div>
-        <div className={styles.introduction}>
-          <h1>Michalina Romanowska</h1>
-          <p>Junior Web Developer with passion, curiosity and readiness to gain new experience.</p>
-        </div>
+        <Outlet/>
       </motion.div>
     </div>
   );
