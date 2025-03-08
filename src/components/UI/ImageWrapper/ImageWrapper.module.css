@@ -1,0 +1,6 @@
+.imageWrap {
+    background: lime;
+    border-radius: 50%;
+    align-self: center;
+    box-shadow: 10px 10px 20px #302034;
+  }

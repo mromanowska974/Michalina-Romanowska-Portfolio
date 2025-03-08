@@ -1,1 +1,100 @@
-.Contact {}
+.container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    gap: 10%;
+}
+
+.content {
+    width: 40%;
+    color: white;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: calc(1vh + 1vw);
+    height: fit-content;
+}
+
+.content h1 {
+    width: 100%;
+    margin: 0;
+    font-size: calc(1em + 1vw + 1vh);
+    text-align: center; 
+}
+
+.content p {
+    text-wrap: wrap;
+    font-size: calc(0.5em + 0.4vw + 0.4vh);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(1vw + 1vh);
+}
+
+.inputBox {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 80%;
+    gap: 5px;
+}
+
+label {
+    font-weight: lighter;
+    font-size: calc(0.5em + 0.4vw + 0.4vh);
+}
+
+input, textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: calc(0.5em + 0.4vw + 0.4vh);
+}
+
+textarea {
+    resize: none;
+    font-family: sans-serif;
+    height: 10vh;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    color: #302034;
+    cursor: pointer;
+    font-size: calc(0.4em + 0.8vw + 0.8vh);
+    padding: 5px;
+}
+
+button:hover {
+    box-shadow: 
+        0px 0px 5px white,
+        0px 0px 15px white,
+        0px 0px 25px hotpink,
+        0px 0px 35px hotpink;
+}
+
+.linkToLinkedIn {
+    text-align: center; 
+}
+
+@media (orientation: portrait) {
+    .container {
+        flex-direction: column;
+        justify-content: space-between;
+        align-self: center;
+    }
+    .content {
+        width: 60%;
+        align-self: center;
+    }
+}
