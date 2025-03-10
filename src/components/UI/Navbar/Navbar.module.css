@@ -1,0 +1,50 @@
+.btnBox {
+    width: fit-content;
+    align-items: center;
+    display: flex;
+    gap: calc(1vh + 1vw);
+    padding-right: calc(1vh + 1vw);
+  }
+  
+  .btnBox a, select{
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    background-color: transparent;
+    font-weight: lighter;
+    color: white;
+    text-decoration: none;
+    margin-block: 0;
+  }
+  
+  .btnBox a:hover, select:hover {
+    text-shadow: 
+      0px 0px 5px white,
+      0px 0px 15px white,
+      0px 0px 25px hotpink,
+      0px 0px 35px hotpink;
+  }
+  
+  option {
+    background-color: #302034;
+  }
+  
+  nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .logo a{
+    align-self: center;
+    margin-left: calc(1vh + 1vw);
+    font-family: 'Sacramento';
+    color: white;
+    text-shadow: 
+      0px 0px 5px white,
+      0px 0px 15px white,
+      0px 0px 25px hotpink,
+      0px 0px 35px hotpink;
+    font-size: calc(10px + 1vw + 1vh);
+    text-decoration: none;
+  }
