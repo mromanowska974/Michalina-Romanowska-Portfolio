@@ -1,1 +1,23 @@
-.AboutMe {}
+.container {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap: 10%;
+    height: 100%;
+}
+
+.content {
+    color: white;
+    width: 40%;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+    overflow-y: scroll;
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+h1 {
+    text-align: center;
+}

@@ -8,6 +8,7 @@ i18n.use(initReactI18next).init({
         en: {
             translation: {
                 navbar: {
+                    mainPage: 'Main Page',
                     aboutMe: 'About Me',
                     projects: 'Projects',
                     contact: 'Contact',
@@ -27,12 +28,18 @@ i18n.use(initReactI18next).init({
                     en: 'English',
                     pl: 'Polish'
                 },
+                aboutMe: {
+                    title: 'Something about me',
+                    whoAmI: 'Who am I?',
+                    skills: 'My skills'
+                },
                 introText: 'Junior Web Developer with passion, curiosity and readiness to gain new experience.'
             }
         },
         pl: {
             translation: {
                 navbar: {
+                    mainPage: 'Strona Główna',
                     aboutMe: 'O Mnie',
                     projects: 'Projekty',
                     contact: 'Kontakt',
@@ -51,6 +58,11 @@ i18n.use(initReactI18next).init({
                 lang: {
                     en: 'Angielski',
                     pl: 'Polski'
+                },
+                aboutMe: {
+                    title: 'Kilka słów o mnie',
+                    whoAmI: 'Kim jestem?',
+                    skills: 'Moje umiejętności'
                 },
                 introText: 'Początkująca programistka stron internetowych z pasją, ciekawością i gotowością do zdobywania nowych doświadczeń.'
             }
