@@ -1,21 +1,20 @@
 .container {
     display: flex;
     justify-content: center;
-    align-self: center;
-    gap: 10%;
+    align-items: center;
+    gap: 5%;
     height: 100%;
 }
 
 .content {
     color: white;
-    width: 40%;
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
-    overflow-y: scroll;
+    width: 50%;
+    height: 80%;
+    overflow-y: hidden;
 }
 
-.content::-webkit-scrollbar {
-    display: none;
+.content:hover {
+    overflow-y: scroll;
 }
 
 h1 {

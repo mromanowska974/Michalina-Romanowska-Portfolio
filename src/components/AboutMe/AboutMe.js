@@ -25,7 +25,7 @@ function AboutMe() {
           <li>Angular 18 (rjsx)</li>
           <li>Git</li>
           <li>Docker (learning)</li>
-          <li>PHP Laraver 11</li>
+          <li>PHP Laraver 11 (learning)</li>
           <li>Java SpringBoot</li>
           <li>SQL</li>
           <li>REST API (HTTP requests, CRUD)</li>
