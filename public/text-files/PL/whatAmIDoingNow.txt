@@ -1,0 +1,1 @@
+Obecnie uczę się frameworków takich jak React czy Laravel, technologii Docker oraz testów jednostkowych i integracyjnych. W przyszłości chciałabym również poznać framework Vue oraz być może spróbować swoich sił w programowaniu aplikacji mobilnych.

@@ -1,5 +1,6 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import { skills } from './skills-data';
 
 async function getTextFromFile(path) {
     const res = await fetch(`${path}`);
@@ -13,7 +14,8 @@ async function getTextFromFile(path) {
 
 i18n.use(initReactI18next).init({
     debug: true,
-    fallbackLng: 'en',
+    fallbackLng: 'pl',
+    returnObjects: true,
     resources: {
         en: {
             translation: {
@@ -35,8 +37,29 @@ i18n.use(initReactI18next).init({
                 },
                 aboutMe: {
                     title: 'Something about me',
-                    whoAmI: 'Who am I?',
-                    skills: 'My skills'
+                    whoAmI: {
+                        title: 'Who am I?',
+                        description: await getTextFromFile('text-files/EN/whoAmI.txt')
+                    },
+                    whyIChose: {
+                        title: 'Why did I choose programming?',
+                        description: await getTextFromFile('text-files/EN/whyIChose.txt'),
+                    },
+                    whatAmIDoingNow: {
+                        title: 'What am I working on currently?',
+                        description: await getTextFromFile('text-files/EN/whatAmIDoingNow.txt'),
+                    },
+                    skills: {
+                        title: 'My skills',
+                        technical: {
+                            title: 'Technical',
+                            list: [...skills.universal.technical, ...skills.en.technical]
+                        },
+                        soft: {
+                            title: 'Soft',
+                            list: skills.en.soft
+                        }
+                    }
                 },
                 introText: await getTextFromFile('text-files/EN/intro.txt')
             }
@@ -61,8 +84,29 @@ i18n.use(initReactI18next).init({
                 },
                 aboutMe: {
                     title: 'Kilka słów o mnie',
-                    whoAmI: 'Kim jestem?',
-                    skills: 'Moje umiejętności'
+                    whoAmI: {
+                        title: 'Kim jestem?',
+                        description: await getTextFromFile('text-files/PL/whoAmI.txt'),
+                    },
+                    whyIChose: {
+                        title: 'Dlaczego programuję?',
+                        description: await getTextFromFile('text-files/PL/whyIChose.txt'),
+                    },
+                    whatAmIDoingNow: {
+                        title: 'Czym się zajmuję obecnie?',
+                        description: await getTextFromFile('text-files/PL/whatAmIDoingNow.txt'),
+                    },
+                    skills: {
+                        title: 'Moje umiejętności',
+                        technical: {
+                            title: 'Techniczne',
+                            list: [...skills.universal.technical, ...skills.pl.technical]
+                        },
+                        soft: {
+                            title: 'Miękkie',
+                            list: skills.pl.soft
+                        }
+                    }
                 },
                 introText: await getTextFromFile('text-files/PL/intro.txt')
             }

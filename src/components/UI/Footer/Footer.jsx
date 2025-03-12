@@ -2,20 +2,19 @@ import React from 'react';
 import styles from './Footer.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-function Footer(props) {
+function Footer() {
     return (
         <footer>
             <p>© 2025 Michalina Romanowska</p>
             <div className={styles.websites}>
-                <a>
+                <a href='https://www.linkedin.com/in/michalina-romanowska-281557227/'>
                     <FontAwesomeIcon 
                         icon={faLinkedin}
                         size='2x'
                     />
                 </a>
-                <a>
+                <a href='https://github.com/mromanowska974'>
                     <FontAwesomeIcon 
                         icon={faGithub}
                         size='2x'
