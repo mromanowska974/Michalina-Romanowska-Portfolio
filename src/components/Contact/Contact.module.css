@@ -6,15 +6,16 @@
     height: 100%;
     gap: 10%;
     color: white;
+    overflow-y: hidden;
 }
 
 .content {
-    width: 40%; 
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: calc(1vh + 1vw);
-    height: fit-content;
+    height: 80%;
 }
 
 .content h1 {
@@ -24,7 +25,7 @@
     text-align: center; 
 }
 
-.content p {
+.content p, .wrapper p {
     text-wrap: wrap;
     font-size: calc(0.5em + 0.4vw + 0.4vh);
 }
@@ -34,6 +35,7 @@ form {
     flex-direction: column;
     align-items: center;
     gap: calc(1vw + 1vh);
+    overflow-y: auto;
 }
 
 .inputBox {
@@ -93,14 +95,31 @@ button:hover {
     gap: 10px;
 }
 
+.line {
+    display: none;
+}
+
 @media (orientation: portrait) {
     .container {
+        /* border: 2px solid yellow; */
         flex-direction: column;
-        justify-content: space-between;
         align-self: center;
+        gap: 5%;
+        height: 95%;
     }
     .content {
         width: 60%;
         align-self: center;
+        overflow-x: scroll;
+    }
+    .line {
+        margin: 0;
+        display: inline;
+        box-shadow: 
+          0px 0px 5px white,
+          0px 0px 15px white,
+          0px 0px 20px hotpink,
+          0px 0px 30px hotpink;
+        width: 50%;
     }
 }

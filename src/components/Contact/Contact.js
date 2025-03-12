@@ -25,6 +25,9 @@ const Contact = () => {
             </p>
           </div>
         </div>
+
+        <hr className={styles.line}/>
+        
         <div className={styles.content}>
           <div className={styles.intro}>
             <h1>{translate("contact.title")}</h1>

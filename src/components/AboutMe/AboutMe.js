@@ -18,11 +18,17 @@ function AboutMe() {
         <h2>{translate('aboutMe.whoAmI.title')}</h2>
         <p>{translate('aboutMe.whoAmI.description')}</p>
 
+        <hr className={styles.line}/>
+
         <h2>{translate('aboutMe.whyIChose.title')}</h2>
         <p>{translate('aboutMe.whyIChose.description')}</p>
 
+        <hr className={styles.line}/>
+
         <h2>{translate('aboutMe.whatAmIDoingNow.title')}</h2>
         <p>{translate('aboutMe.whatAmIDoingNow.description')}</p>
+
+        <hr className={styles.line}/>
 
         <h2>{translate('aboutMe.skills.title')}</h2>
         <h3>{translate('aboutMe.skills.technical.title')}</h3>

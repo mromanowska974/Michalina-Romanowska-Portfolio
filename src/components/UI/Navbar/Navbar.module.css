@@ -48,3 +48,13 @@
     font-size: calc(10px + 1vw + 1vh);
     text-decoration: none;
   }
+
+  @media (max-width: 435px) and (min-height: 660px) {
+    .logo a {
+      display: none;
+    }
+
+    .btnBox {
+      gap: 8px;
+    }
+  }
