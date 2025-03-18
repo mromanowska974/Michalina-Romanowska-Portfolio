@@ -11,22 +11,19 @@
     height: fit-content;
     border: none;
     background-color: transparent;
-    font-weight: lighter;
-    color: white;
+    color: var(--blue_gray-100);
     text-decoration: none;
     margin-block: 0;
+    cursor: pointer;
   }
   
   .btnBox a:hover, select:hover {
-    text-shadow: 
-      0px 0px 5px white,
-      0px 0px 15px white,
-      0px 0px 25px hotpink,
-      0px 0px 35px hotpink;
+    /* font-weight: bold; */
+    text-shadow: 3px 3px 2px var(--blue_gray-700);
   }
   
   option {
-    background-color: #302034;
+    background-color: var(--aqua-700);
   }
   
   nav {
@@ -39,14 +36,13 @@
     align-self: center;
     margin-left: calc(1vh + 1vw);
     font-family: 'Sacramento';
-    color: white;
-    text-shadow: 
-      0px 0px 5px white,
-      0px 0px 15px white,
-      0px 0px 25px hotpink,
-      0px 0px 35px hotpink;
+    background: linear-gradient(45deg, var(--aqua-200), var(--violet-200));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(2px 2px 2px var(--blue_gray-700));
     font-size: calc(10px + 1vw + 1vh);
     text-decoration: none;
+    font-weight: bold;
   }
 
   @media (max-width: 435px) and (min-height: 660px) {

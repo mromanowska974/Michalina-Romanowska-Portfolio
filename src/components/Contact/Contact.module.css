@@ -5,7 +5,7 @@
     align-items: center;
     height: 100%;
     gap: 10%;
-    color: white;
+    color: var(--blue_gray-100);
     overflow-y: hidden;
 }
 
@@ -36,6 +36,7 @@ form {
     align-items: center;
     gap: calc(1vw + 1vh);
     overflow-y: auto;
+    padding: 5px;
 }
 
 .inputBox {
@@ -47,7 +48,6 @@ form {
 }
 
 label {
-    font-weight: lighter;
     font-size: calc(0.5em + 0.4vw + 0.4vh);
 }
 
@@ -56,6 +56,7 @@ input, textarea {
     border: none;
     border-bottom: 1px solid white;
     font-size: calc(0.5em + 0.4vw + 0.4vh);
+    color: var(--blue_gray-100);
 }
 
 textarea {
@@ -69,19 +70,18 @@ textarea {
 button {
     border: none;
     border-radius: 10px;
-    background-color: white;
-    color: #302034;
+    background: linear-gradient(45deg, var(--violet-200), var(--aqua-200));
+    color: var(--blue_gray-800);
+    box-shadow: 
+        inset -2px 2px 5px var(--blue_gray-100),
+        inset 2px -2px 5px var(--blue_gray-500);
     cursor: pointer;
     font-size: calc(0.4em + 0.8vw + 0.8vh);
     padding: 5px;
 }
 
 button:hover {
-    box-shadow: 
-        0px 0px 5px white,
-        0px 0px 15px white,
-        0px 0px 25px hotpink,
-        0px 0px 35px hotpink;
+    background: linear-gradient(45deg, var(--violet-300), var(--aqua-300));
 }
 
 .wrapper {
@@ -115,11 +115,10 @@ button:hover {
     .line {
         margin: 0;
         display: inline;
-        box-shadow: 
-          0px 0px 5px white,
-          0px 0px 15px white,
-          0px 0px 20px hotpink,
-          0px 0px 30px hotpink;
+        box-shadow: 5px 5px 5px var(--blue_gray-700);
+        height: 3px;
+        border: transparent;
+        background: linear-gradient(45deg, var(--violet-400), var(--aqua-400));
         width: 50%;
     }
 }

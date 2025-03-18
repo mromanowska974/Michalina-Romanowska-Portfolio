@@ -2,12 +2,11 @@ footer {
     display: flex;
     width: 100%;
     justify-content: center;
-    color: white;
-    font-weight: lighter;
+    color: var(--blue_gray-100);
   }
 
   a {
-    color: white;
+    color: var(--blue_gray-100);
   }
 
   .websites {

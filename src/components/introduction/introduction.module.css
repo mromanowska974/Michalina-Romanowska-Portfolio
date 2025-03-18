@@ -12,22 +12,22 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: white;
     padding: calc(1vh + 1vw);
     max-width: 30%;
   }
   
   .introduction h1 {
-    text-shadow: 
-      0px 0px 5px white,
-      0px 0px 15px white,
-      0px 0px 25px hotpink,
-      0px 0px 35px hotpink;
+    background: linear-gradient(45deg, var(--aqua-200), var(--violet-200));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: calc(1.5em + 2vw + 2vh);
     text-align: center;
+    align-self: center;
+    filter: drop-shadow(5px 5px 5px var(--blue_gray-700));
     font-family: 'Sacramento';
     margin: 0;
-    font-weight: normal;
+    font-weight: bold;
+    width: fit-content;
   }
   
   .introduction p{
@@ -35,6 +35,7 @@
     width: 100%;
     text-align: center;
     font-size: calc(0.5em + 0.4vw + 0.4vh);
+    color: var(--blue_gray-100);
   }
   
   h1 {

@@ -2,5 +2,11 @@
     background: lime;
     border-radius: 50%;
     align-self: center;
-    box-shadow: 10px 10px 20px #302034;
+    box-shadow: 10px 10px 20px var(--blue_gray-700);
+  }
+
+  .myImg {
+    border-radius: 50%;
+    object-fit: cover;
+    background: linear-gradient(45deg, var(--violet-300), var(--aqua-300));
   }

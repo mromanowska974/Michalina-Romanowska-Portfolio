@@ -1,5 +1,6 @@
 .container {
-  background: radial-gradient(#714e7c, #302034);
+  /* background: radial-gradient(#714e7c, #302034); */
+  background: linear-gradient(45deg, var(--violet-700), var(--aqua-700));
   width: 100vw;
   height: 100vh;
   display: flex;

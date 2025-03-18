@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './ImageWrapper.module.css'
+import myPhoto from '../../../../src/my_photo.jpg';
 
 function ImageWrapper({width, height}) {
     return (
@@ -10,7 +11,10 @@ function ImageWrapper({width, height}) {
                 height: height
             }}
         >
-            <img />
+            <img className={styles.myImg} style={{
+                width: width,
+                height: height
+            }} src={myPhoto} alt='Me'/>
         </div>
     );
 }
