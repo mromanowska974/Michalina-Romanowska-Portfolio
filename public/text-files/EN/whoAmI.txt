@@ -1,1 +1,0 @@
-I'm a web developer who's at the beginning of the career. My current experience mainly includes 6 months of internship and working on my own projects. During my internship I learned how to create advanced web full-stack applications using Angular and Java SpringBoot frameworks. In my free time I'm still training my skills in both frontend and backend fields.

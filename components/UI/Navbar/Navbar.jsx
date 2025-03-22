@@ -6,6 +6,10 @@ import styles from './Navbar.module.css';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 
+import localFont from 'next/font/local';
+
+const sacramento = localFont({src: '../../../app/fonts/Sacramento-Regular.ttf'})
+
 let cookieLocale = document.cookie
             .split("; ")
             .find(row => row.startsWith("PORTFOLIO_LOCALE="))
@@ -39,7 +43,7 @@ function Navbar(props) {
     return (
         <nav className={styles.navbar}>
             <div className={styles.logo}>
-            <Link href='/'>MR</Link>
+            <Link href='/' className={sacramento.className}>MR</Link>
             </div>
             <div className={styles.btnBox}>
                 <Link href='/'>{translate('mainPage')}</Link>

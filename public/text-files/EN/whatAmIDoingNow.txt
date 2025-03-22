@@ -1,1 +1,0 @@
-Currently I'm learning frameworks such as React and Laravel, Docker technology and also unit and integration tests. I would like to learn Vue framework in the future and maybe I'll try to explore mobile programming too.

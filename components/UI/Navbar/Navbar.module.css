@@ -19,8 +19,7 @@
 }
 
 .btnBox a:hover, .btnBox select:hover {
-  /* font-weight: bold; */
-  text-shadow: 3px 3px 2px var(--blue_gray-700);
+  text-shadow: 3px 3px 5px var(--aqua-900);
 }
 
 .btnBox select option {
@@ -36,11 +35,10 @@
 .logo a{
   align-self: center;
   margin-left: calc(1vh + 1vw);
-  font-family: 'Sacramento';
   background: linear-gradient(45deg, var(--aqua-200), var(--violet-200));
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(2px 2px 2px var(--blue_gray-700));
+  filter: drop-shadow(2px 2px 2px var(--violet-900));
   font-size: calc(10px + 1vw + 1vh);
   text-decoration: none;
   font-weight: bold;

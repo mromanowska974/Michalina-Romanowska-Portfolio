@@ -32,6 +32,7 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
+;
 let cookieLocale = document.cookie.split("; ").find((row)=>row.startsWith("PORTFOLIO_LOCALE="))?.split("=")[1];
 const browserLocale = navigator.language.slice(0, 2);
 function Navbar(props) {
@@ -65,12 +66,12 @@ function Navbar(props) {
                     children: "MR"
                 }, void 0, false, {
                     fileName: "[project]/components/UI/Navbar/Navbar.jsx",
-                    lineNumber: 42,
+                    lineNumber: 46,
                     columnNumber: 13
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/UI/Navbar/Navbar.jsx",
-                lineNumber: 41,
+                lineNumber: 45,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -81,7 +82,7 @@ function Navbar(props) {
                         children: translate('mainPage')
                     }, void 0, false, {
                         fileName: "[project]/components/UI/Navbar/Navbar.jsx",
-                        lineNumber: 45,
+                        lineNumber: 49,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -89,7 +90,7 @@ function Navbar(props) {
                         children: translate("aboutMe")
                     }, void 0, false, {
                         fileName: "[project]/components/UI/Navbar/Navbar.jsx",
-                        lineNumber: 46,
+                        lineNumber: 50,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -97,7 +98,7 @@ function Navbar(props) {
                         children: translate("projects")
                     }, void 0, false, {
                         fileName: "[project]/components/UI/Navbar/Navbar.jsx",
-                        lineNumber: 47,
+                        lineNumber: 51,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -105,7 +106,7 @@ function Navbar(props) {
                         children: translate("contact")
                     }, void 0, false, {
                         fileName: "[project]/components/UI/Navbar/Navbar.jsx",
-                        lineNumber: 48,
+                        lineNumber: 52,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -118,7 +119,7 @@ function Navbar(props) {
                                 children: "PL"
                             }, void 0, false, {
                                 fileName: "[project]/components/UI/Navbar/Navbar.jsx",
-                                lineNumber: 50,
+                                lineNumber: 54,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -126,25 +127,25 @@ function Navbar(props) {
                                 children: "EN"
                             }, void 0, false, {
                                 fileName: "[project]/components/UI/Navbar/Navbar.jsx",
-                                lineNumber: 51,
+                                lineNumber: 55,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/UI/Navbar/Navbar.jsx",
-                        lineNumber: 49,
+                        lineNumber: 53,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/UI/Navbar/Navbar.jsx",
-                lineNumber: 44,
+                lineNumber: 48,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/UI/Navbar/Navbar.jsx",
-        lineNumber: 40,
+        lineNumber: 44,
         columnNumber: 9
     }, this);
 }

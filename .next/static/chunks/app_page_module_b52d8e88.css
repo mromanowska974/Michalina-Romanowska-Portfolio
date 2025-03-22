@@ -23,8 +23,7 @@
   font-size: calc(1.5em + 2vw + 2vh);
   text-align: center;
   align-self: center;
-  filter: drop-shadow(5px 5px 5px var(--blue_gray-700));
-  font-family: Sacramento;
+  filter: drop-shadow(5px 5px 5px var(--aqua-900));
   margin: 0;
   font-weight: bold;
   width: fit-content;
@@ -55,7 +54,8 @@
   }
 
   .page-module__E0kJGG__introduction {
-    max-width: 100%;
+    align-self: center;
+    max-width: 70%;
   }
 }
 

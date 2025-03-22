@@ -22,8 +22,11 @@
 .page-module__j6Q3dW__content h1 {
   width: 100%;
   margin: 0;
-  font-size: calc(1em + 1vw + 1vh);
   text-align: center;
+  background: linear-gradient(45deg, var(--violet-200), var(--aqua-200));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(3px 3px 5px var(--aqua-900));
 }
 
 .page-module__j6Q3dW__content p, .page-module__j6Q3dW__wrapper p {
@@ -53,7 +56,9 @@
 }
 
 .page-module__j6Q3dW__inputBox input, .page-module__j6Q3dW__inputBox textarea {
-  background-color: #0000;
+  background: #ffffff1a;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
   border: none;
   border-bottom: 1px solid #fff;
   font-size: calc(.5em + .4vw + .4vh);
@@ -64,8 +69,6 @@
   resize: none;
   font-family: sans-serif;
   height: 10vh;
-  border: 1px solid #fff;
-  border-radius: 10px;
 }
 
 .page-module__j6Q3dW__form button {
@@ -73,7 +76,6 @@
   border-radius: 10px;
   background: linear-gradient(45deg, var(--violet-200), var(--aqua-200));
   color: var(--blue_gray-800);
-  box-shadow: inset -2px 2px 5px var(--blue_gray-100), inset 2px -2px 5px var(--blue_gray-500);
   cursor: pointer;
   font-size: calc(.4em + .8vw + .8vh);
   padding: 5px;
@@ -102,20 +104,30 @@
   .page-module__j6Q3dW__container {
     flex-direction: column;
     align-self: center;
-    gap: 5%;
+    gap: 2%;
     height: 95%;
   }
 
   .page-module__j6Q3dW__content {
     width: 60%;
+    height: 50%;
     align-self: center;
     overflow-x: scroll;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    border: #0000;
+    background-color: #fff3;
   }
 
   .page-module__j6Q3dW__line {
     margin: 0;
     display: inline;
-    box-shadow: 5px 5px 5px var(--blue_gray-700);
     height: 3px;
     border: #0000;
     background: linear-gradient(45deg, var(--violet-400), var(--aqua-400));
@@ -129,7 +141,7 @@
   background: #0f0;
   border-radius: 50%;
   align-self: center;
-  box-shadow: 10px 10px 20px var(--blue_gray-700);
+  box-shadow: 5px 5px 20px var(--violet-900);
 }
 
 .ImageWrapper-module__WOAQlq__myImg {

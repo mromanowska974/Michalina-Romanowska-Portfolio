@@ -8,6 +8,7 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { useTranslations } from 'next-intl';
 import getTextFromFile from '../getTextFromFile';
+import Input from '../../components/UI/Input/input';
 
 const Contact = () => {
   const translate = useTranslations("contact");
@@ -45,18 +46,9 @@ const Contact = () => {
             </p>
           </div>
           <form className={styles.form}>
-            <div className={styles.inputBox}>
-              <label>{translate('form.fullName')}</label>
-              <input/>
-            </div>
-            <div className={styles.inputBox}>
-              <label>E-mail</label>
-              <input type='email'/>
-            </div>
-            <div className={styles.inputBox}>
-              <label>{translate('form.yourMessage')}</label>
-              <textarea></textarea>
-            </div>
+            <Input label={translate('form.fullName')} name='fullName'/>
+            <Input label={'E-mail'} name='fullName'/>
+            <Input textarea label={translate('form.yourMessage')} name='fullName'/>
             <button type='button'>{translate('form.submit')}</button>
           </form>
         </div>

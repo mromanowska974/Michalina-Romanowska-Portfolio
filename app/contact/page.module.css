@@ -21,8 +21,11 @@
 .content h1 {
     width: 100%;
     margin: 0;
-    font-size: calc(1em + 1vw + 1vh);
     text-align: center; 
+    background: linear-gradient(45deg, var(--violet-200), var(--aqua-200));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(3px 3px 5px var(--aqua-900));
 }
 
 .content p, .wrapper p {
@@ -39,42 +42,11 @@
     padding: 5px;
 }
 
-.inputBox {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    width: 80%;
-    gap: 5px;
-}
-
-.inputBox label {
-    font-size: calc(0.5em + 0.4vw + 0.4vh);
-}
-
-.inputBox input, .inputBox textarea {
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid white;
-    font-size: calc(0.5em + 0.4vw + 0.4vh);
-    color: var(--blue_gray-100);
-}
-
-.inputBox textarea {
-    resize: none;
-    font-family: sans-serif;
-    height: 10vh;
-    border: 1px solid white;
-    border-radius: 10px;
-}
-
 .form button {
     border: none;
     border-radius: 10px;
     background: linear-gradient(45deg, var(--violet-200), var(--aqua-200));
     color: var(--blue_gray-800);
-    box-shadow: 
-        inset -2px 2px 5px var(--blue_gray-100),
-        inset 2px -2px 5px var(--blue_gray-500);
     cursor: pointer;
     font-size: calc(0.4em + 0.8vw + 0.8vh);
     padding: 5px;
@@ -101,21 +73,28 @@
 
 @media (orientation: portrait) {
     .container {
-        /* border: 2px solid yellow; */
         flex-direction: column;
         align-self: center;
-        gap: 5%;
+        gap: 2%;
         height: 95%;
     }
     .content {
         width: 60%;
+        height: 50%;
         align-self: center;
         overflow-x: scroll;
+    }
+    ::-webkit-scrollbar {
+        width: 10px;
+    }  
+    ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        border: transparent;
+        background-color: rgba(255, 255, 255, 0.2);
     }
     .line {
         margin: 0;
         display: inline;
-        box-shadow: 5px 5px 5px var(--blue_gray-700);
         height: 3px;
         border: transparent;
         background: linear-gradient(45deg, var(--violet-400), var(--aqua-400));

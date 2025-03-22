@@ -10,6 +10,10 @@
   color: var(--blue_gray-100);
 }
 
+.Footer-module__-thf7G__websites a:hover {
+  text-shadow: 3px 3px 5px var(--violet-900);
+}
+
 .Footer-module__-thf7G__websites {
   display: flex;
   justify-content: center;

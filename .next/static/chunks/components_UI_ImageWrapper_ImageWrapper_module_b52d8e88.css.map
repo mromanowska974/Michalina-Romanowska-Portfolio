@@ -2,5 +2,5 @@
   "version": 3,
   "sources": [],
   "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/components/UI/ImageWrapper/ImageWrapper.module.css"],"sourcesContent":[".imageWrap {\r\n    background: lime;\r\n    border-radius: 50%;\r\n    align-self: center;\r\n    box-shadow: 10px 10px 20px var(--blue_gray-700);\r\n  }\r\n\r\n  .myImg {\r\n    border-radius: 50%;\r\n    object-fit: cover;\r\n    background: linear-gradient(45deg, var(--violet-300), var(--aqua-300));\r\n  }"],"names":[],"mappings":"AAAA;;;;;;;AAOE"}}]
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/components/UI/ImageWrapper/ImageWrapper.module.css"],"sourcesContent":[".imageWrap {\r\n    background: lime;\r\n    border-radius: 50%;\r\n    align-self: center;\r\n    box-shadow: 5px 5px 20px var(--violet-900);\r\n  }\r\n\r\n  .myImg {\r\n    border-radius: 50%;\r\n    object-fit: cover;\r\n    background: linear-gradient(45deg, var(--violet-300), var(--aqua-300));\r\n  }"],"names":[],"mappings":"AAAA;;;;;;;AAOE"}}]
 }

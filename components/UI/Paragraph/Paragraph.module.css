@@ -1,5 +1,6 @@
 .line {
-    box-shadow: 5px 5px 5px var(--blue_gray-700);
+    margin-top: 15px;
+    /* box-shadow: 5px 5px 5px var(--blue_gray-700); */
     width: 95%;
     height: 2px;
     border: transparent;
