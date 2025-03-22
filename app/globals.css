@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  :root {
+    --violet-100: #E9DAF2;
+    --violet-200: #D8ADF1;
+    --violet-300: #BD74E7;
+    --violet-400: #AA49E2;
+    --violet-500: #8721C2;
+    --violet-600: #7117A5;
+    --violet-700: #4F0878;
+    --violet-800: #340351;
+    --violet-900: #220533;
+  
+    --blue_gray-100: #E4E8F0;
+    --blue_gray-200: #ACB4C4;
+    --blue_gray-300: #7B87A0;
+    --blue_gray-400: #505E7B;
+    --blue_gray-500: #394866;
+    --blue_gray-600: #223153;
+    --blue_gray-700: #14264C;
+    --blue_gray-800: #071431;
+    --blue_gray-900: #020C22;
+  
+    --aqua-100: #DAF2F0;
+    --aqua-200: #AEF2ED;
+    --aqua-300: #74E8DE;
+    --aqua-400: #49E3D6;
+    --aqua-500: #21C2B4;
+    --aqua-600: #17A69A;
+    --aqua-700: #08786F;
+    --aqua-800: #03524B;
+    --aqua-900: #05332F;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  

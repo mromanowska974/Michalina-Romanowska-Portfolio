@@ -1,0 +1,57 @@
+.btnBox {
+  width: fit-content;
+  align-items: center;
+  display: flex;
+  gap: calc(1vh + 1vw);
+  padding-right: calc(1vh + 1vw);
+
+}
+
+.btnBox a, .btnBox select{
+  width: fit-content;
+  height: fit-content;
+  border: none;
+  background-color: transparent;
+  color: var(--blue_gray-100);
+  text-decoration: none;
+  margin-block: 0;
+  cursor: pointer;
+}
+
+.btnBox a:hover, .btnBox select:hover {
+  /* font-weight: bold; */
+  text-shadow: 3px 3px 2px var(--blue_gray-700);
+}
+
+.btnBox select option {
+  background-color: var(--aqua-700);
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.logo a{
+  align-self: center;
+  margin-left: calc(1vh + 1vw);
+  font-family: 'Sacramento';
+  background: linear-gradient(45deg, var(--aqua-200), var(--violet-200));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(2px 2px 2px var(--blue_gray-700));
+  font-size: calc(10px + 1vw + 1vh);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media (max-width: 435px) and (min-height: 660px) {
+  .logo a {
+    display: none;
+  }
+
+  .btnBox {
+    gap: 8px;
+  }
+}

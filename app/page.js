@@ -1,0 +1,25 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
+import ImageWrapper from '../components/UI/ImageWrapper/ImageWrapper';
+import styles from './page.module.css';
+
+import localFont from 'next/font/local';
+
+const sacramento = localFont({src: './fonts/Sacramento-Regular.ttf'})
+
+export default function HomePage() {
+    const t = useTranslations("home");
+
+    return (
+        <div className={styles.container}>
+        <ImageWrapper width={'calc(20vh + 20vw)'} height={'calc(20vh + 20vw)'}/>
+        <div className={styles.introduction}>
+            <h1 className={sacramento.className}>Michalina Romanowska</h1>
+            <p>
+                {t("introText")}
+            </p>
+        </div>
+        </div>
+    );
+}

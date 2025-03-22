@@ -1,0 +1,113 @@
+/* [project]/components/UI/Footer/Footer.module.css [app-client] (css) */
+.Footer-module__-thf7G__footer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  color: var(--blue_gray-100);
+}
+
+.Footer-module__-thf7G__websites a {
+  color: var(--blue_gray-100);
+}
+
+.Footer-module__-thf7G__websites {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  height: fit-content;
+  width: 15%;
+  align-items: center;
+  align-self: center;
+}
+
+@media (width <= 500px) {
+  .Footer-module__-thf7G__footer {
+    justify-content: space-evenly;
+  }
+
+  .Footer-module__-thf7G__websites {
+    gap: 10%;
+  }
+}
+
+
+/* [project]/components/UI/Navbar/navbar.module.css [app-client] (css) */
+.navbar-module__PHN8BG__btnBox {
+  width: fit-content;
+  align-items: center;
+  display: flex;
+  gap: calc(1vh + 1vw);
+  padding-right: calc(1vh + 1vw);
+}
+
+.navbar-module__PHN8BG__btnBox a, .navbar-module__PHN8BG__language {
+  width: fit-content;
+  height: fit-content;
+  border: none;
+  background-color: #0000;
+  color: var(--blue_gray-100);
+  text-decoration: none;
+  margin-block: 0;
+  cursor: pointer;
+}
+
+.navbar-module__PHN8BG__btnBox a:hover, .navbar-module__PHN8BG__language:hover {
+  text-shadow: 3px 3px 2px var(--blue_gray-700);
+}
+
+.navbar-module__PHN8BG__language option {
+  background-color: var(--aqua-700);
+}
+
+.navbar-module__PHN8BG__navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.navbar-module__PHN8BG__logo a {
+  align-self: center;
+  margin-left: calc(1vh + 1vw);
+  font-family: Sacramento;
+  background: linear-gradient(45deg, var(--aqua-200), var(--violet-200));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(2px 2px 2px var(--blue_gray-700));
+  font-size: calc(10px + 1vw + 1vh);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media (width <= 435px) and (height >= 660px) {
+  .navbar-module__PHN8BG__logo a {
+    display: none;
+  }
+
+  .navbar-module__PHN8BG__btnBox {
+    gap: 8px;
+  }
+}
+
+
+/* [project]/app/layout.module.css [app-client] (css) */
+.layout-module__CUj6aG__root {
+  background: linear-gradient(45deg, var(--violet-700), var(--aqua-700));
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.layout-module__CUj6aG__content {
+  flex-grow: 1;
+  width: 100%;
+  overflow-y: hidden;
+  display: flex;
+}
+
+
+/*# sourceMappingURL=_d0d531d0._.css.map*/

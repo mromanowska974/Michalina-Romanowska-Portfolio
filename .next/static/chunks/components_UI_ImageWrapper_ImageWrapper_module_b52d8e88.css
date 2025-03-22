@@ -1,0 +1,15 @@
+/* [project]/components/UI/ImageWrapper/ImageWrapper.module.css [app-client] (css) */
+.ImageWrapper-module__WOAQlq__imageWrap {
+  background: #0f0;
+  border-radius: 50%;
+  align-self: center;
+  box-shadow: 10px 10px 20px var(--blue_gray-700);
+}
+
+.ImageWrapper-module__WOAQlq__myImg {
+  border-radius: 50%;
+  object-fit: cover;
+  background: linear-gradient(45deg, var(--violet-300), var(--aqua-300));
+}
+
+/*# sourceMappingURL=components_UI_ImageWrapper_ImageWrapper_module_b52d8e88.css.map*/

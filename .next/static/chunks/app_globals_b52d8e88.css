@@ -1,0 +1,43 @@
+/* [project]/app/globals.css [app-client] (css) */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --violet-100: #e9daf2;
+  --violet-200: #d8adf1;
+  --violet-300: #bd74e7;
+  --violet-400: #aa49e2;
+  --violet-500: #8721c2;
+  --violet-600: #7117a5;
+  --violet-700: #4f0878;
+  --violet-800: #340351;
+  --violet-900: #220533;
+  --blue_gray-100: #e4e8f0;
+  --blue_gray-200: #acb4c4;
+  --blue_gray-300: #7b87a0;
+  --blue_gray-400: #505e7b;
+  --blue_gray-500: #394866;
+  --blue_gray-600: #223153;
+  --blue_gray-700: #14264c;
+  --blue_gray-800: #071431;
+  --blue_gray-900: #020c22;
+  --aqua-100: #daf2f0;
+  --aqua-200: #aef2ed;
+  --aqua-300: #74e8de;
+  --aqua-400: #49e3d6;
+  --aqua-500: #21c2b4;
+  --aqua-600: #17a69a;
+  --aqua-700: #08786f;
+  --aqua-800: #03524b;
+  --aqua-900: #05332f;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace;
+}
+
+/*# sourceMappingURL=app_globals_b52d8e88.css.map*/

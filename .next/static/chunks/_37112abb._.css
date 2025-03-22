@@ -1,0 +1,157 @@
+/* [project]/components/UI/Footer/Footer.module.css [app-client] (css) */
+.Footer-module__-thf7G__footer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  color: var(--blue_gray-100);
+}
+
+.Footer-module__-thf7G__websites a {
+  color: var(--blue_gray-100);
+}
+
+.Footer-module__-thf7G__websites {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  height: fit-content;
+  width: 15%;
+  align-items: center;
+  align-self: center;
+  border: 2px solid red;
+}
+
+@media (width <= 500px) {
+  .Footer-module__-thf7G__footer {
+    justify-content: space-evenly;
+  }
+
+  .Footer-module__-thf7G__websites {
+    gap: 10%;
+  }
+}
+
+
+/* [project]/components/UI/Navbar/Navbar.module.css [app-client] (css) */
+.Navbar-module__YSLHDW__btnBox {
+  width: fit-content;
+  align-items: center;
+  display: flex;
+  gap: calc(1vh + 1vw);
+  padding-right: calc(1vh + 1vw);
+}
+
+.Navbar-module__YSLHDW__btnBox a, .Navbar-module__YSLHDW__btnBox select {
+  width: fit-content;
+  height: fit-content;
+  border: none;
+  background-color: #0000;
+  color: var(--blue_gray-100);
+  text-decoration: none;
+  margin-block: 0;
+  cursor: pointer;
+}
+
+.Navbar-module__YSLHDW__btnBox a:hover, .Navbar-module__YSLHDW__btnBox select:hover {
+  text-shadow: 3px 3px 2px var(--blue_gray-700);
+}
+
+.Navbar-module__YSLHDW__btnBox select option {
+  background-color: var(--aqua-700);
+}
+
+.Navbar-module__YSLHDW__navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.Navbar-module__YSLHDW__logo a {
+  align-self: center;
+  margin-left: calc(1vh + 1vw);
+  font-family: Sacramento;
+  background: linear-gradient(45deg, var(--aqua-200), var(--violet-200));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(2px 2px 2px var(--blue_gray-700));
+  font-size: calc(10px + 1vw + 1vh);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media (width <= 435px) and (height >= 660px) {
+  .Navbar-module__YSLHDW__logo a {
+    display: none;
+  }
+
+  .Navbar-module__YSLHDW__btnBox {
+    gap: 8px;
+  }
+}
+
+
+/* [project]/app/layout.module.css [app-client] (css) */
+#layout-module__CUj6aG__root {
+  background: linear-gradient(45deg, var(--violet-700), var(--aqua-700));
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.layout-module__CUj6aG__content {
+  flex-grow: 1;
+  width: 100%;
+  overflow-y: hidden;
+  display: flex;
+}
+
+
+/* [project]/app/globals.css [app-client] (css) */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --violet-100: #e9daf2;
+  --violet-200: #d8adf1;
+  --violet-300: #bd74e7;
+  --violet-400: #aa49e2;
+  --violet-500: #8721c2;
+  --violet-600: #7117a5;
+  --violet-700: #4f0878;
+  --violet-800: #340351;
+  --violet-900: #220533;
+  --blue_gray-100: #e4e8f0;
+  --blue_gray-200: #acb4c4;
+  --blue_gray-300: #7b87a0;
+  --blue_gray-400: #505e7b;
+  --blue_gray-500: #394866;
+  --blue_gray-600: #223153;
+  --blue_gray-700: #14264c;
+  --blue_gray-800: #071431;
+  --blue_gray-900: #020c22;
+  --aqua-100: #daf2f0;
+  --aqua-200: #aef2ed;
+  --aqua-300: #74e8de;
+  --aqua-400: #49e3d6;
+  --aqua-500: #21c2b4;
+  --aqua-600: #17a69a;
+  --aqua-700: #08786f;
+  --aqua-800: #03524b;
+  --aqua-900: #05332f;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace;
+}
+
+
+/*# sourceMappingURL=_37112abb._.css.map*/

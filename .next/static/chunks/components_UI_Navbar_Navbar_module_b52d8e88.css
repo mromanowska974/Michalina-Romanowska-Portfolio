@@ -1,0 +1,58 @@
+/* [project]/components/UI/Navbar/Navbar.module.css [app-client] (css) */
+.Navbar-module__YSLHDW__btnBox {
+  width: fit-content;
+  align-items: center;
+  display: flex;
+  gap: calc(1vh + 1vw);
+  padding-right: calc(1vh + 1vw);
+}
+
+.Navbar-module__YSLHDW__btnBox a, .Navbar-module__YSLHDW__btnBox select {
+  width: fit-content;
+  height: fit-content;
+  border: none;
+  background-color: #0000;
+  color: var(--blue_gray-100);
+  text-decoration: none;
+  margin-block: 0;
+  cursor: pointer;
+}
+
+.Navbar-module__YSLHDW__btnBox a:hover, .Navbar-module__YSLHDW__btnBox select:hover {
+  text-shadow: 3px 3px 2px var(--blue_gray-700);
+}
+
+.Navbar-module__YSLHDW__btnBox select option {
+  background-color: var(--aqua-700);
+}
+
+.Navbar-module__YSLHDW__navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.Navbar-module__YSLHDW__logo a {
+  align-self: center;
+  margin-left: calc(1vh + 1vw);
+  font-family: Sacramento;
+  background: linear-gradient(45deg, var(--aqua-200), var(--violet-200));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(2px 2px 2px var(--blue_gray-700));
+  font-size: calc(10px + 1vw + 1vh);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media (width <= 435px) and (height >= 660px) {
+  .Navbar-module__YSLHDW__logo a {
+    display: none;
+  }
+
+  .Navbar-module__YSLHDW__btnBox {
+    gap: 8px;
+  }
+}
+
+/*# sourceMappingURL=components_UI_Navbar_Navbar_module_b52d8e88.css.map*/

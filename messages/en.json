@@ -1,0 +1,65 @@
+{
+    "navbar": {
+        "mainPage": "Main Page",
+        "aboutMe": "About Me",
+        "projects": "Projects",
+        "contact": "Contact",
+        "language": "Language"
+    },
+    "contact": {
+        "title": "Contact Me",
+        "text": "Are you interested in inviting me to your team or learning more about my career path? Send me a message and I will gladly answer all your questions.",
+        "form": {
+            "fullName": "Full Name or Company Name",
+            "yourMessage": "Your Message",
+            "submit": "Submit"
+        }
+    },
+    "aboutMe": {
+        "title": "Something about me",
+        "whoAmI": {
+            "title": "Who am I?",
+            "description": "I'm a web developer who's at the beginning of the career. My current experience mainly includes 6 months of internship and working on my own projects. During my internship I learned how to create advanced web full-stack applications using Angular and Java SpringBoot frameworks. In my free time I'm still training my skills in both frontend and backend fields."
+        },
+        "whyIChose": {
+            "title": "Why did I choose programming?",
+            "description": "I chose the programming career because I enjoyed general science since I started the primary school and I was always curious how the applications I'm using daily are created. Programming allows me to use not only my logical and problem solving skills, but also my sense of aesthetics and creativity."
+        },
+        "whatAmIDoingNow": {
+            "title": "What am I working on currently?",
+            "description": "Currently I'm learning frameworks such as React and Laravel, Docker technology and also unit and integration tests. I would like to learn Vue framework in the future and maybe I'll try to explore mobile programming too."
+        },
+        "skills": {
+            "title": "My skills",
+            "technical": {
+                "title": "Technical",
+                "list": {
+                    "1": "HTML, CSS, JavaScript/TypeScript",
+                    "2": "React 19 (incl. React Router, React Hooks)",
+                    "3": "Angular 18 (incl. Rxjs)",
+                    "4": "Git, GitHub",
+                    "5": "Java SpringBoot",
+                    "6": "SQL",
+                    "7": "REST API (incl. HTTP, CRUD)",
+                    "8": "Firebase (incl. Authentication, Cloud Firestore, Hosting)",
+                    "9": "Figma",
+                    "10": "Docker (still learning)",
+                    "11": "PHP Laravel 11 (still learning)"
+                }
+            },
+            "soft": {
+                "title": "Soft",
+                "list": {
+                    "1": "Fast-learner",
+                    "2": "Problem solving",
+                    "3": "Engagement into my tasks",
+                    "4": "Individual work and teamwork",
+                    "5": "Comunicative English (B2)"
+                }
+            }
+        }
+    },
+    "home": {
+        "introText": "I'm creating web apps with passion, curiosity and desire to gain new experience."
+    }
+}

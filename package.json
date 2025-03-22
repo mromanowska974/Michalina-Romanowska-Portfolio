@@ -13,6 +13,9 @@
     "@testing-library/user-event": "^13.5.0",
     "framer-motion": "^11.5.4",
     "i18next": "^24.2.2",
+    "next": "^15.2.3",
+    "next-i18next": "^15.4.2",
+    "next-intl": "^4.0.2",
     "portfolio": "file:",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -21,11 +24,15 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.0.3"
+  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next dev --turbo",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "eslintConfig": {
     "extends": [

@@ -1,0 +1,55 @@
+/* [project]/app/about-me/page.module.css [app-client] (css) */
+.page-module__lE81NW__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  height: 100%;
+}
+
+.page-module__lE81NW__content {
+  color: var(--blue_gray-100);
+  width: 50%;
+  height: 80%;
+  overflow-y: hidden;
+  scrollbar-gutter: stable;
+}
+
+.page-module__lE81NW__content:hover {
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  border: #0000;
+  background: linear-gradient(45deg, var(--violet-300), var(--aqua-300));
+  box-shadow: inset 1px -1px 3px var(--blue_gray-100), inset -1px 1px 3px var(--blue_gray-700);
+}
+
+.page-module__lE81NW__content h1 {
+  text-align: center;
+  background: linear-gradient(45deg, var(--violet-200), var(--aqua-200));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.page-module__lE81NW__content h1, .page-module__lE81NW__content h2, .page-module__lE81NW__content h3 {
+  filter: drop-shadow(5px 5px 5px var(--blue_gray-700));
+}
+
+@media (orientation: portrait) {
+  .page-module__lE81NW__container {
+    flex-direction: column;
+  }
+
+  .page-module__lE81NW__content {
+    width: 80%;
+    height: 60%;
+  }
+}
+
+/*# sourceMappingURL=app_about-me_page_module_b52d8e88.css.map*/
