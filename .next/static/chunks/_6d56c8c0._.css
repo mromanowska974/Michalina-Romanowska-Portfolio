@@ -55,12 +55,22 @@
   cursor: pointer;
 }
 
-.Navbar-module__YSLHDW__btnBox a:hover, .Navbar-module__YSLHDW__btnBox select:hover {
-  text-shadow: 3px 3px 5px var(--aqua-900);
+.Navbar-module__YSLHDW__btnBox a:hover, .Navbar-module__YSLHDW__btnBox select:hover, .Navbar-module__YSLHDW__active {
+  text-decoration: underline var(--orange-cta);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 5px;
+}
+
+.Navbar-module__YSLHDW__btnBox a p {
+  margin: 0;
 }
 
 .Navbar-module__YSLHDW__btnBox select option {
   background-color: var(--aqua-700);
+}
+
+.Navbar-module__YSLHDW__btnBox select option:hover {
+  background: var(--orange-cta);
 }
 
 .Navbar-module__YSLHDW__navbar {
@@ -147,6 +157,7 @@ body {
 }
 
 :root {
+  --orange-cta: #ff8c40;
   --violet-100: #e9daf2;
   --violet-200: #d8adf1;
   --violet-300: #bd74e7;

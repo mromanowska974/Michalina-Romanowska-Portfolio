@@ -8,6 +8,8 @@ body {
   }
   
   :root {
+    --orange-cta: #FF8C40;
+
     --violet-100: #E9DAF2;
     --violet-200: #D8ADF1;
     --violet-300: #BD74E7;

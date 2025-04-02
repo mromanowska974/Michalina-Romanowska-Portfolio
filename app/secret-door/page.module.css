@@ -1,0 +1,18 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    gap: 5%;
+}
+
+.form button {
+    border: none;
+    border-radius: 10px;
+    background-color: var(--orange-cta);
+    color: var(--blue_gray-900);
+    cursor: pointer;
+    font-size: calc(0.4em + 0.8vw + 0.8vh);
+    padding: 5px;
+}

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import styles from './Navbar.module.css';
 import { useTranslations } from 'next-intl';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 import localFont from 'next/font/local';
 
@@ -20,9 +20,10 @@ const browserLocale = navigator.language.slice(0, 2);
 function Navbar(props) {
     const translate = useTranslations('navbar');
     const [locale, setLocale] = useState(cookieLocale || browserLocale);
+    const path = usePathname();
     const router = useRouter();
 
-    console.log(locale);
+    console.log(path);
     
 
     function handleChangeLanguage(event){
@@ -46,10 +47,26 @@ function Navbar(props) {
             <Link href='/' className={sacramento.className}>MR</Link>
             </div>
             <div className={styles.btnBox}>
-                <Link href='/'>{translate('mainPage')}</Link>
-                <Link href='/about-me'>{translate("aboutMe")}</Link>
-                <Link href='/projects'>{translate("projects")}</Link>
-                <Link href='/contact'>{translate("contact")}</Link>
+                <Link href='/'>
+                    <p className={path ==='/' ? styles.active : undefined}>
+                        {translate('mainPage')}
+                    </p>
+                </Link>
+                <Link href='/about-me'>
+                    <p className={path ==='/about-me' ? styles.active : undefined}>
+                        {translate("aboutMe")}
+                    </p>
+                </Link>
+                <Link href='/projects'>
+                    <p className={path ==='/projects' ? styles.active : undefined}>
+                        {translate("projects")}
+                    </p>
+                </Link>
+                <Link href='/contact'>
+                    <p className={path ==='/contact' ? styles.active : undefined}>
+                        {translate("contact")}
+                    </p>
+                </Link>
                 <select name='language' defaultValue={locale} onChange={handleChangeLanguage}>
                     <option value={'pl'}>PL</option>
                     <option value={'en'}>EN</option>

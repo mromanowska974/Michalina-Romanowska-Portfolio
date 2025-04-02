@@ -15,6 +15,9 @@
     ],
     "[project]/app/projects/page": [
       "static/media/Sacramento_Regular-s.p.994356b2.ttf"
+    ],
+    "[project]/app/secret-door/page": [
+      "static/media/Sacramento_Regular-s.p.994356b2.ttf"
     ]
   },
   "appUsingSizeAdjust": true,

@@ -28,4 +28,26 @@
   height: 10vh;
 }
 
-/*# sourceMappingURL=components_UI_Input_input_module_b52d8e88.css.map*/
+
+/* [project]/app/secret-door/page.module.css [app-client] (css) */
+.page-module__iiEkeW__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  gap: 5%;
+}
+
+.page-module__iiEkeW__form button {
+  border: none;
+  border-radius: 10px;
+  background-color: var(--orange-cta);
+  color: var(--blue_gray-900);
+  cursor: pointer;
+  font-size: calc(.4em + .8vw + .8vh);
+  padding: 5px;
+}
+
+
+/*# sourceMappingURL=_b731a112._.css.map*/
