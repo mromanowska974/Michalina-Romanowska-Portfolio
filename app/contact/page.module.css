@@ -42,16 +42,6 @@
     padding: 5px;
 }
 
-.form button {
-    border: none;
-    border-radius: 10px;
-    background-color: var(--orange-cta);
-    color: var(--blue_gray-800);
-    cursor: pointer;
-    font-size: calc(0.4em + 0.8vw + 0.8vh);
-    padding: 5px;
-}
-
 .wrapper {
     display: flex;
     flex-direction: column;

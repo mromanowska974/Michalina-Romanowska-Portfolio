@@ -9,6 +9,7 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { useTranslations } from 'next-intl';
 import getTextFromFile from '../getTextFromFile';
 import Input from '../../components/UI/Input/input';
+import Button from '../../components/UI/Button/button';
 
 const Contact = () => {
   const translate = useTranslations("contact");
@@ -49,7 +50,7 @@ const Contact = () => {
             <Input label={translate('form.fullName')} name='fullName'/>
             <Input label={'E-mail'} name='fullName'/>
             <Input textarea label={translate('form.yourMessage')} name='fullName'/>
-            <button type='button'>{translate('form.submit')}</button>
+            <Button type='button' text={translate('form.submit')}/>
           </form>
         </div>
       </div>

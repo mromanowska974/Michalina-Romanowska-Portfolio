@@ -1,0 +1,12 @@
+/* [project]/components/UI/Button/button.module.css [app-client] (css) */
+.button-module__U4j46q__btn {
+  border: none;
+  border-radius: 10px;
+  background-color: var(--orange-cta);
+  color: var(--blue_gray-800);
+  cursor: pointer;
+  font-size: calc(.4em + .8vw + .8vh);
+  padding: 5px;
+}
+
+/*# sourceMappingURL=components_UI_Button_button_module_b52d8e88.css.map*/

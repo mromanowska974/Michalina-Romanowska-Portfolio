@@ -47,6 +47,20 @@ function Navbar(props) {
             <Link href='/' className={sacramento.className}>MR</Link>
             </div>
             <div className={styles.btnBox}>
+                {
+                    path.startsWith('/secret-door') && <>
+                        <Link href='/secret-door/admin'>
+                            <p className={path ==='/secret-door/admin' ? styles.active : undefined}>
+                                Admin
+                            </p>
+                        </Link>
+                        <Link href='/secret-door'>
+                            <p className={path ==='/secret-door' ? styles.active : undefined}>
+                                Dodaj Projekt
+                            </p>
+                        </Link>
+                    </>
+                }
                 <Link href='/'>
                     <p className={path ==='/' ? styles.active : undefined}>
                         {translate('mainPage')}
