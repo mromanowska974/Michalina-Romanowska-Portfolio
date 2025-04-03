@@ -6,6 +6,7 @@ var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.v({
   "imageWrap": "ImageWrapper-module__WOAQlq__imageWrap",
+  "isRound": "ImageWrapper-module__WOAQlq__isRound",
   "myImg": "ImageWrapper-module__WOAQlq__myImg",
 });
 }}),
@@ -52,9 +53,9 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$my_photo$2e$jpg$2e$mj
 ;
 ;
 ;
-function ImageWrapper({ width, height }) {
+function ImageWrapper({ width, height, isRound, src }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$UI$2f$ImageWrapper$2f$ImageWrapper$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].imageWrap,
+        className: `${__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$UI$2f$ImageWrapper$2f$ImageWrapper$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].imageWrap} ${isRound ? __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$UI$2f$ImageWrapper$2f$ImageWrapper$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].isRound : undefined}`,
         style: {
             width: width,
             height: height
@@ -65,7 +66,7 @@ function ImageWrapper({ width, height }) {
                 width: width,
                 height: height
             },
-            src: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$my_photo$2e$jpg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$my_photo$2e$jpg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"].src,
+            src: src,
             alt: "Me"
         }, void 0, false, {
             fileName: "[project]/components/UI/ImageWrapper/ImageWrapper.jsx",
@@ -154,6 +155,7 @@ function HomePage() {
         className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$page$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].container,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$UI$2f$ImageWrapper$2f$ImageWrapper$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                isRound: true,
                 width: 'calc(20vh + 20vw)',
                 height: 'calc(20vh + 20vw)'
             }, void 0, false, {

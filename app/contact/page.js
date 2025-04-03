@@ -10,6 +10,8 @@ import { useTranslations } from 'next-intl';
 import getTextFromFile from '../getTextFromFile';
 import Input from '../../components/UI/Input/input';
 import Button from '../../components/UI/Button/button';
+import myPhoto from '../my_photo.jpg';
+import Title from '../../components/UI/Title/title';
 
 const Contact = () => {
   const translate = useTranslations("contact");
@@ -22,7 +24,12 @@ const Contact = () => {
   return (
       <div className={styles.container}>
         <div className={styles.wrapper}>
-          <ImageWrapper width={'calc(15vh + 15vw)'} height={'calc(15vh + 15vw)'}/>
+          <ImageWrapper 
+            isRound 
+            width={'calc(15vh + 15vw)'} 
+            height={'calc(15vh + 15vw)'}
+            src={myPhoto.src}
+          />
           <div className={styles.contactInfo}>
             <p>
               <FontAwesomeIcon icon={faEnvelope}/>
@@ -39,7 +46,7 @@ const Contact = () => {
         
         <div className={styles.content}>
           <div className={styles.intro}>
-            <h1>{translate("title")}</h1>
+            <Title>{translate("title")}</Title>
             <p>
               {translate("text", {
                 text: translateLongText('text-files/EN/contact.txt').then(text => text)

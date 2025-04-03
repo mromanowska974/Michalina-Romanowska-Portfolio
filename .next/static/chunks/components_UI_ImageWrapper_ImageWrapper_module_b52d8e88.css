@@ -1,15 +1,19 @@
 /* [project]/components/UI/ImageWrapper/ImageWrapper.module.css [app-client] (css) */
 .ImageWrapper-module__WOAQlq__imageWrap {
   background: #0f0;
-  border-radius: 50%;
   align-self: center;
+}
+
+.ImageWrapper-module__WOAQlq__isRound {
   box-shadow: 5px 5px 20px var(--violet-900);
 }
 
-.ImageWrapper-module__WOAQlq__myImg {
+.ImageWrapper-module__WOAQlq__isRound, .ImageWrapper-module__WOAQlq__isRound img {
   border-radius: 50%;
+}
+
+.ImageWrapper-module__WOAQlq__imageWrap img {
   object-fit: cover;
-  background: linear-gradient(45deg, var(--violet-300), var(--aqua-300));
 }
 
 /*# sourceMappingURL=components_UI_ImageWrapper_ImageWrapper_module_b52d8e88.css.map*/

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://D%3A/Kodowanko/React/portfolio/components/UI/AdminNavbar/admin-navbar.js"],"sourcesContent":["import React from 'react';\r\nimport { Link } from 'react-router-dom';\r\n\r\nfunction AdminNavbar(props) {\r\n    return (\r\n        <nav>\r\n            <Link>Dodaj Projekt</Link>\r\n            <Link>Edytuj/Usuń Projekt</Link>\r\n            <Link>Pytania weryfikacyjne</Link>\r\n        </nav>\r\n    );\r\n}\r\n\r\nexport default AdminNavbar;"],"names":[],"mappings":";;;;AAAA;AACA;;;;AAEA,SAAS,YAAY,KAAK;IACtB,qBACI,8OAAC;;0BACG,8OAAC,uKAAA,CAAA,OAAI;0BAAC;;;;;;0BACN,8OAAC,uKAAA,CAAA,OAAI;0BAAC;;;;;;0BACN,8OAAC,uKAAA,CAAA,OAAI;0BAAC;;;;;;;;;;;;AAGlB;uCAEe","debugId":null}},
+    {"offset": {"line": 54, "column": 0}, "map": {"version":3,"sources":["file://D%3A/Kodowanko/React/portfolio/app/secret-door/layout.js"],"sourcesContent":["import React from 'react';\r\nimport AdminNavbar from '../../components/UI/AdminNavbar/admin-navbar';\r\n\r\nfunction AdminLayout({ children }) {\r\n    return (\r\n        <div>\r\n            <AdminNavbar />\r\n            { children }\r\n        </div>\r\n    );\r\n}\r\n\r\nexport default AdminLayout;"],"names":[],"mappings":";;;;AAAA;AACA;;;;AAEA,SAAS,YAAY,EAAE,QAAQ,EAAE;IAC7B,qBACI,8OAAC;;0BACG,8OAAC,kJAAA,CAAA,UAAW;;;;;YACV;;;;;;;AAGd;uCAEe","debugId":null}}]
+}

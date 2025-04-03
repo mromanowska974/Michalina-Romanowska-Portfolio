@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://D%3A/Kodowanko/React/portfolio/components/UI/AdminNavbar/admin-navbar.js"],"sourcesContent":["'use client';\r\n\r\nimport React from 'react';\r\nimport { Link } from 'next/link';\r\n\r\nfunction AdminNavbar() {\r\n    return (\r\n        <nav>\r\n            <Link href={'/add-project'}>Dodaj Projekt</Link>\r\n            <Link>Edytuj/Usuń Projekt</Link>\r\n            <Link>Pytania weryfikacyjne</Link>\r\n        </nav>\r\n    );\r\n}\r\n\r\nexport default AdminNavbar;"],"names":[],"mappings":";;;;AAEA;AACA;AAHA;;;;AAKA,SAAS;IACL,qBACI,8OAAC;;0BACG,8OAAC,4JAAA,CAAA,OAAI;gBAAC,MAAM;0BAAgB;;;;;;0BAC5B,8OAAC,4JAAA,CAAA,OAAI;0BAAC;;;;;;0BACN,8OAAC,4JAAA,CAAA,OAAI;0BAAC;;;;;;;;;;;;AAGlB;uCAEe","debugId":null}}]
+}

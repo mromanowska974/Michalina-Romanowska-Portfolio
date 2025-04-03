@@ -1,0 +1,161 @@
+/* [project]/app/contact/page.module.css [app-client] (css) */
+.page-module__j6Q3dW__container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 10%;
+  color: var(--blue_gray-100);
+  overflow-y: hidden;
+}
+
+.page-module__j6Q3dW__content {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: calc(1vh + 1vw);
+  height: 80%;
+}
+
+.page-module__j6Q3dW__content p, .page-module__j6Q3dW__wrapper p {
+  text-wrap: wrap;
+  font-size: calc(.5em + .4vw + .4vh);
+}
+
+.page-module__j6Q3dW__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(1vw + 1vh);
+  overflow-y: auto;
+  padding: 5px;
+}
+
+.page-module__j6Q3dW__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-module__j6Q3dW__contactInfo p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.page-module__j6Q3dW__line {
+  display: none;
+}
+
+@media (orientation: portrait) {
+  .page-module__j6Q3dW__container {
+    flex-direction: column;
+    align-self: center;
+    gap: 2%;
+    height: 95%;
+  }
+
+  .page-module__j6Q3dW__content {
+    width: 60%;
+    height: 50%;
+    align-self: center;
+    overflow-x: scroll;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    border: #0000;
+    background-color: #fff3;
+  }
+
+  .page-module__j6Q3dW__line {
+    margin: 0;
+    display: inline;
+    height: 3px;
+    border: #0000;
+    background: linear-gradient(45deg, var(--violet-400), var(--aqua-400));
+    width: 50%;
+  }
+}
+
+
+/* [project]/components/UI/ImageWrapper/ImageWrapper.module.css [app-client] (css) */
+.ImageWrapper-module__WOAQlq__imageWrap {
+  background: #0f0;
+  align-self: center;
+}
+
+.ImageWrapper-module__WOAQlq__isRound {
+  box-shadow: 5px 5px 20px var(--violet-900);
+}
+
+.ImageWrapper-module__WOAQlq__isRound, .ImageWrapper-module__WOAQlq__isRound img {
+  border-radius: 50%;
+}
+
+.ImageWrapper-module__WOAQlq__imageWrap img {
+  object-fit: cover;
+}
+
+
+/* [project]/components/UI/Input/input.module.css [app-client] (css) */
+.input-module__qknLnW__inputBox {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 80%;
+  gap: 5px;
+  color: var(--blue_gray-100);
+}
+
+.input-module__qknLnW__inputBox label {
+  font-size: calc(.5em + .4vw + .4vh);
+}
+
+.input-module__qknLnW__inputBox input, .input-module__qknLnW__inputBox textarea {
+  background: #ffffff1a;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  font-size: calc(.5em + .4vw + .4vh);
+  color: var(--blue_gray-100);
+}
+
+.input-module__qknLnW__inputBox textarea {
+  resize: none;
+  font-family: sans-serif;
+  height: 10vh;
+}
+
+
+/* [project]/components/UI/Button/button.module.css [app-client] (css) */
+.button-module__U4j46q__btn {
+  border: none;
+  border-radius: 10px;
+  background-color: var(--orange-cta);
+  color: var(--blue_gray-800);
+  cursor: pointer;
+  font-size: calc(.4em + .8vw + .8vh);
+  padding: 5px;
+}
+
+
+/* [project]/components/UI/Title/title.module.css [app-client] (css) */
+.title-module__HbxPLa__title {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  background: linear-gradient(45deg, var(--violet-200), var(--aqua-200));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(3px 3px 5px var(--aqua-900));
+}
+
+
+/*# sourceMappingURL=_dc81831f._.css.map*/

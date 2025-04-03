@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import ImageWrapper from '../components/UI/ImageWrapper/ImageWrapper';
 import styles from './page.module.css';
+import myPhoto from './my_photo.jpg';
 
 import localFont from 'next/font/local';
 
@@ -13,7 +14,12 @@ export default function HomePage() {
 
     return (
         <div className={styles.container}>
-        <ImageWrapper width={'calc(20vh + 20vw)'} height={'calc(20vh + 20vw)'}/>
+        <ImageWrapper 
+            isRound 
+            width={'calc(20vh + 20vw)'} 
+            height={'calc(20vh + 20vw)'}
+            src={myPhoto.src}
+        />
         <div className={styles.introduction}>
             <h1 className={sacramento.className}>Michalina Romanowska</h1>
             <p>

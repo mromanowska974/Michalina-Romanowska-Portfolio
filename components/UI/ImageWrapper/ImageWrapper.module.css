@@ -1,12 +1,16 @@
 .imageWrap {
     background: lime;
-    border-radius: 50%;
     align-self: center;
+  }
+
+  .isRound {
     box-shadow: 5px 5px 20px var(--violet-900);
   }
 
-  .myImg {
+  .isRound, .isRound img {
     border-radius: 50%;
+  }
+
+  .imageWrap img {
     object-fit: cover;
-    background: linear-gradient(45deg, var(--violet-300), var(--aqua-300));
   }

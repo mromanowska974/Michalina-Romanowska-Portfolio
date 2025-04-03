@@ -23,9 +23,6 @@ function Navbar(props) {
     const path = usePathname();
     const router = useRouter();
 
-    console.log(path);
-    
-
     function handleChangeLanguage(event){
         const selectedLanguage = event.target.value
         setLocale(selectedLanguage);
@@ -49,14 +46,9 @@ function Navbar(props) {
             <div className={styles.btnBox}>
                 {
                     path.startsWith('/secret-door') && <>
-                        <Link href='/secret-door/admin'>
-                            <p className={path ==='/secret-door/admin' ? styles.active : undefined}>
-                                Admin
-                            </p>
-                        </Link>
                         <Link href='/secret-door'>
                             <p className={path ==='/secret-door' ? styles.active : undefined}>
-                                Dodaj Projekt
+                                Admin
                             </p>
                         </Link>
                     </>

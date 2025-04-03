@@ -2,13 +2,13 @@
   "node": {
     "405b4a211d6b7d1c59ae147518bcb565669b058e0b": {
       "workers": {
-        "app/secret-door/page": {
-          "moduleId": "[project]/.next-internal/server/app/secret-door/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/action.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+        "app/secret-door/add-project/page": {
+          "moduleId": "[project]/.next-internal/server/app/secret-door/add-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/action.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false
         }
       },
       "layer": {
-        "app/secret-door/page": "rsc"
+        "app/secret-door/add-project/page": "rsc"
       }
     }
   },

@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file://D%3A/Kodowanko/React/portfolio/app/projects/page.module.css"],"sourcesContent":[".projects {\r\n    color: var(--blue_gray-100);\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    width: 80%;\r\n}\r\n\r\n.list {\r\n    border: 2px solid hotpink;\r\n    display: flex;\r\n    padding: 0;\r\n    gap: 50px;\r\n    width: 100%;\r\n    overflow-x: auto;\r\n}\r\n\r\n.list li {\r\n    border: 2px solid red;\r\n    list-style: none;\r\n}"],"names":[],"mappings":"AAAA;;;;;;;;AAQA;;;;;;;;;AASA","debugId":null}},
+    {"offset": {"line": 25, "column": 0}, "map": {"version":3,"sources":["file://D%3A/Kodowanko/React/portfolio/components/UI/Project/project.module.css"],"sourcesContent":[""],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 29, "column": 0}, "map": {"version":3,"sources":["file://D%3A/Kodowanko/React/portfolio/components/UI/ImageWrapper/ImageWrapper.module.css"],"sourcesContent":[".imageWrap {\r\n    background: lime;\r\n    align-self: center;\r\n    box-shadow: 5px 5px 20px var(--violet-900);\r\n  }\r\n\r\n  .isRound, .isRound img {\r\n    border-radius: 50%;\r\n  }\r\n\r\n  .imageWrap img {\r\n    object-fit: cover;\r\n  }"],"names":[],"mappings":"AAAA;;;;;;AAME;;;;AAIA","debugId":null}}]
+}

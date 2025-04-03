@@ -6,6 +6,8 @@ import ImageWrapper from '../../components/UI/ImageWrapper/ImageWrapper.jsx';
 import Paragraph from '../../components/UI/Paragraph/Paragraph.jsx';
 import List from '../../components/UI/List/List.jsx';
 import { useMessages, useTranslations } from 'next-intl';
+import myPhoto from '../my_photo.jpg';
+import Title from '../../components/UI/Title/title.js';
 
 function AboutMe() {
   const translate = useTranslations("aboutMe");
@@ -29,9 +31,14 @@ function AboutMe() {
 
   return (
     <div className={styles.container}>
-      <ImageWrapper width={'calc(15vh + 15vw)'} height={'calc(15vh + 15vw)'}/>
+      <ImageWrapper 
+        isRound 
+        width={'calc(15vh + 15vw)'} 
+        height={'calc(15vh + 15vw)'}
+        src={myPhoto.src}
+      />
       <div className={styles.content}>
-        <h1>{translate('title')}</h1>
+        <Title>{translate('title')}</Title>
         <Paragraph 
           title={translate('whoAmI.title')}
           content={translate('whoAmI.description')}

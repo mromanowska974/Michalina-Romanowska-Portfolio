@@ -1,0 +1,131 @@
+/* [project]/app/projects/page.module.css [app-client] (css) */
+.page-module__4ccqhG__projects {
+  color: var(--blue_gray-100);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+}
+
+.page-module__4ccqhG__list {
+  display: flex;
+  padding: 0;
+  gap: 50px;
+  width: 100%;
+  padding-inline: 10px;
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
+}
+
+.page-module__4ccqhG__list:hover {
+  overflow-x: auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  border: #0000;
+  background-color: #fff3;
+}
+
+.page-module__4ccqhG__list li {
+  list-style: none;
+}
+
+@media (orientation: portrait) {
+  .page-module__4ccqhG__projects {
+    height: 90%;
+    align-self: center;
+  }
+
+  .page-module__4ccqhG__list {
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    flex-flow: wrap;
+  }
+}
+
+
+/* [project]/components/UI/Project/project.module.css [app-client] (css) */
+.project-module__cMAqrG__project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff1a;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 3px 3px 3px var(--blue_gray-600);
+  gap: 10px;
+  width: 200px;
+}
+
+.project-module__cMAqrG__project h2 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+}
+
+.project-module__cMAqrG__project p {
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.project-module__cMAqrG__project h2, .project-module__cMAqrG__project p {
+  margin: 0;
+  width: 95%;
+}
+
+
+/* [project]/components/UI/ImageWrapper/ImageWrapper.module.css [app-client] (css) */
+.ImageWrapper-module__WOAQlq__imageWrap {
+  background: #0f0;
+  align-self: center;
+}
+
+.ImageWrapper-module__WOAQlq__isRound {
+  box-shadow: 5px 5px 20px var(--violet-900);
+}
+
+.ImageWrapper-module__WOAQlq__isRound, .ImageWrapper-module__WOAQlq__isRound img {
+  border-radius: 50%;
+}
+
+.ImageWrapper-module__WOAQlq__imageWrap img {
+  object-fit: cover;
+}
+
+
+/* [project]/components/UI/Button/button.module.css [app-client] (css) */
+.button-module__U4j46q__btn {
+  border: none;
+  border-radius: 10px;
+  background-color: var(--orange-cta);
+  color: var(--blue_gray-800);
+  cursor: pointer;
+  font-size: calc(.4em + .8vw + .8vh);
+  padding: 5px;
+}
+
+
+/* [project]/components/UI/Title/title.module.css [app-client] (css) */
+.title-module__HbxPLa__title {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  background: linear-gradient(45deg, var(--violet-200), var(--aqua-200));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(3px 3px 5px var(--aqua-900));
+}
+
+
+/*# sourceMappingURL=_84095a2d._.css.map*/

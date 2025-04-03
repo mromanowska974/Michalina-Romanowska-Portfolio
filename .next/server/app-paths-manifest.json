@@ -1,8 +1,14 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
+  "/about-me/page": "app/about-me/page.js",
+  "/contact/page": "app/contact/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/manifest.json/route": "app/manifest.json/route.js",
+  "/page": "app/page.js",
   "/projects/page": "app/projects/page.js",
+  "/secret-door/add-project/page": "app/secret-door/add-project/page.js",
   "/secret-door/admin/page": "app/secret-door/admin/page.js",
-  "/secret-door/page": "app/secret-door/page.js"
+  "/secret-door/edit-projects/page": "app/secret-door/edit-projects/page.js",
+  "/secret-door/page": "app/secret-door/page.js",
+  "/secret-door/questions/page": "app/secret-door/questions/page.js"
 }

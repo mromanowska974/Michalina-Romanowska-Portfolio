@@ -3,13 +3,32 @@
     "[project]/app/_not-found/page": [
       "static/media/Sacramento_Regular-s.p.994356b2.ttf"
     ],
+    "[project]/app/about-me/page": [
+      "static/media/Sacramento_Regular-s.p.994356b2.ttf"
+    ],
+    "[project]/app/contact/page": [
+      "static/media/Sacramento_Regular-s.p.994356b2.ttf"
+    ],
+    "[project]/app/page": [
+      "static/media/Sacramento_Regular-s.p.994356b2.ttf",
+      "static/media/Sacramento_Regular-s.p.994356b2.ttf"
+    ],
     "[project]/app/projects/page": [
+      "static/media/Sacramento_Regular-s.p.994356b2.ttf"
+    ],
+    "[project]/app/secret-door/add-project/page": [
       "static/media/Sacramento_Regular-s.p.994356b2.ttf"
     ],
     "[project]/app/secret-door/admin/page": [
       "static/media/Sacramento_Regular-s.p.994356b2.ttf"
     ],
+    "[project]/app/secret-door/edit-projects/page": [
+      "static/media/Sacramento_Regular-s.p.994356b2.ttf"
+    ],
     "[project]/app/secret-door/page": [
+      "static/media/Sacramento_Regular-s.p.994356b2.ttf"
+    ],
+    "[project]/app/secret-door/questions/page": [
       "static/media/Sacramento_Regular-s.p.994356b2.ttf"
     ]
   },

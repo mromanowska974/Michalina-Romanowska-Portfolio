@@ -1,0 +1,70 @@
+/* [project]/app/projects/page.module.css [app-client] (css) */
+.page-module__4ccqhG__projects {
+  color: var(--blue_gray-100);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+.page-module__4ccqhG__list {
+  display: flex;
+  padding: 0;
+  gap: 50px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.page-module__4ccqhG__list li {
+  list-style: none;
+}
+
+
+/* [project]/components/UI/Project/project.module.css [app-client] (css) */
+.project-module__cMAqrG__project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff26;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.project-module__cMAqrG__project h2 {
+  margin: 10px;
+}
+
+
+/* [project]/components/UI/ImageWrapper/ImageWrapper.module.css [app-client] (css) */
+.ImageWrapper-module__WOAQlq__imageWrap {
+  background: #0f0;
+  align-self: center;
+}
+
+.ImageWrapper-module__WOAQlq__isRound {
+  box-shadow: 5px 5px 20px var(--violet-900);
+}
+
+.ImageWrapper-module__WOAQlq__isRound, .ImageWrapper-module__WOAQlq__isRound img {
+  border-radius: 50%;
+}
+
+.ImageWrapper-module__WOAQlq__imageWrap img {
+  object-fit: cover;
+}
+
+
+/* [project]/components/UI/Button/button.module.css [app-client] (css) */
+.button-module__U4j46q__btn {
+  border: none;
+  border-radius: 10px;
+  background-color: var(--orange-cta);
+  color: var(--blue_gray-800);
+  cursor: pointer;
+  font-size: calc(.4em + .8vw + .8vh);
+  padding: 5px;
+}
+
+
+/*# sourceMappingURL=_8996b53b._.css.map*/

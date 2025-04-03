@@ -1,0 +1,45 @@
+/* [project]/app/projects/page.module.css [app-client] (css) */
+.page-module__4ccqhG__projects {
+  color: var(--blue_gray-100);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+.page-module__4ccqhG__list {
+  border: 2px solid #ff69b4;
+  display: flex;
+  padding: 0;
+  gap: 50px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.page-module__4ccqhG__list li {
+  border: 2px solid red;
+  list-style: none;
+}
+
+
+/* [project]/components/UI/Project/project.module.css [app-client] (css) */
+
+
+
+/* [project]/components/UI/ImageWrapper/ImageWrapper.module.css [app-client] (css) */
+.ImageWrapper-module__WOAQlq__imageWrap {
+  background: #0f0;
+  align-self: center;
+  box-shadow: 5px 5px 20px var(--violet-900);
+}
+
+.ImageWrapper-module__WOAQlq__isRound, .ImageWrapper-module__WOAQlq__isRound img {
+  border-radius: 50%;
+}
+
+.ImageWrapper-module__WOAQlq__imageWrap img {
+  object-fit: cover;
+}
+
+
+/*# sourceMappingURL=_b0e308c5._.css.map*/

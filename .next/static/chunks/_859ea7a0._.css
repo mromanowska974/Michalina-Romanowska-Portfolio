@@ -1,0 +1,59 @@
+/* [project]/app/secret-door/page.module.css [app-client] (css) */
+.page-module__iiEkeW__container {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-module__iiEkeW__newQuestion {
+  display: flex;
+  gap: 10px;
+  align-items: last baseline;
+}
+
+
+/* [project]/components/UI/Input/input.module.css [app-client] (css) */
+.input-module__qknLnW__inputBox {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 80%;
+  gap: 5px;
+  color: var(--blue_gray-100);
+}
+
+.input-module__qknLnW__inputBox label {
+  font-size: calc(.5em + .4vw + .4vh);
+}
+
+.input-module__qknLnW__inputBox input, .input-module__qknLnW__inputBox textarea {
+  background: #ffffff1a;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  font-size: calc(.5em + .4vw + .4vh);
+  color: var(--blue_gray-100);
+}
+
+.input-module__qknLnW__inputBox textarea {
+  resize: none;
+  font-family: sans-serif;
+  height: 10vh;
+}
+
+
+/* [project]/components/UI/Button/button.module.css [app-client] (css) */
+.button-module__U4j46q__btn {
+  border: none;
+  border-radius: 10px;
+  background-color: var(--orange-cta);
+  color: var(--blue_gray-800);
+  cursor: pointer;
+  font-size: calc(.4em + .8vw + .8vh);
+  padding: 5px;
+}
+
+
+/*# sourceMappingURL=_859ea7a0._.css.map*/
