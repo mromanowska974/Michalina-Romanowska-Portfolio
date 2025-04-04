@@ -87,7 +87,7 @@
 
 /* [project]/components/UI/ImageWrapper/ImageWrapper.module.css [app-client] (css) */
 .ImageWrapper-module__WOAQlq__imageWrap {
-  background: #0f0;
+  background: #20b2aa;
   align-self: center;
 }
 
@@ -116,6 +116,29 @@
 }
 
 
+/* [project]/components/UI/Technologies/technologies.module.css [app-client] (css) */
+.technologies-module__obcnBW__span {
+  display: flex;
+  width: 100%;
+}
+
+.technologies-module__obcnBW__span ul {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  padding: 0;
+  gap: 5%;
+}
+
+.technologies-module__obcnBW__span ul li {
+  font-size: 10px;
+  text-transform: uppercase;
+  border: 1px solid var(--blue_gray-100);
+  border-radius: 5px;
+  padding: 3px;
+}
+
+
 /* [project]/components/UI/Title/title.module.css [app-client] (css) */
 .title-module__HbxPLa__title {
   width: 100%;
@@ -128,4 +151,4 @@
 }
 
 
-/*# sourceMappingURL=_84095a2d._.css.map*/
+/*# sourceMappingURL=_6947a1b0._.css.map*/

@@ -141,7 +141,7 @@
   background-color: var(--orange-cta);
   color: var(--blue_gray-800);
   cursor: pointer;
-  font-size: calc(.4em + .8vw + .8vh);
+  font-size: 1em;
   padding: 5px;
 }
 
