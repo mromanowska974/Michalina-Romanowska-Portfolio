@@ -1,0 +1,24 @@
+/* [project]/components/Technologies/technologies.module.css [app-client] (css) */
+.technologies-module__a6s4fq__span {
+  display: flex;
+  width: 100%;
+}
+
+.technologies-module__a6s4fq__span ul {
+  display: flex;
+  justify-content: start;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  gap: 5%;
+}
+
+.technologies-module__a6s4fq__span ul li {
+  font-size: 10px;
+  text-transform: uppercase;
+  border: 1px solid var(--blue_gray-100);
+  border-radius: 5px;
+  padding: 3px;
+}
+
+/*# sourceMappingURL=components_Technologies_technologies_module_b52d8e88.css.map*/

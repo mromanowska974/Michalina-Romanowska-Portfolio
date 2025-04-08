@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import ImageWrapper from '../components/UI/ImageWrapper/ImageWrapper';
+import ImageWrapper from '../components/ImageWrapper/ImageWrapper';
 import styles from './page.module.css';
 import myPhoto from './my_photo.jpg';
 

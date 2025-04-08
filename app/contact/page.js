@@ -2,24 +2,18 @@
 
 import React from 'react';
 import styles from './page.module.css';
-import ImageWrapper from '../../components/UI/ImageWrapper/ImageWrapper';
+import ImageWrapper from '../../components/ImageWrapper/ImageWrapper';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { useTranslations } from 'next-intl';
-import getTextFromFile from '../getTextFromFile';
-import Input from '../../components/UI/Input/input';
-import Button from '../../components/UI/Button/button';
+import Input from '../../components/Input/input';
+import Button from '../../components/Button/button';
 import myPhoto from '../my_photo.jpg';
-import Title from '../../components/UI/Title/title';
+import Title from '../../components/Title/title';
 
 const Contact = () => {
   const translate = useTranslations("contact");
-
-  async function translateLongText(path) {
-    const text = await getTextFromFile(path)
-    return text;
-  }
 
   return (
       <div className={styles.container}>
@@ -48,9 +42,7 @@ const Contact = () => {
           <div className={styles.intro}>
             <Title>{translate("title")}</Title>
             <p>
-              {translate("text", {
-                text: translateLongText('text-files/EN/contact.txt').then(text => text)
-              })}
+              {translate("text")}
             </p>
           </div>
           <form className={styles.form}>

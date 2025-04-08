@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/components/Title/title.module.css"],"sourcesContent":[".title {\r\n    width: 100%;\r\n    margin: 0;\r\n    text-align: center; \r\n    background: linear-gradient(45deg, var(--violet-200), var(--aqua-200));\r\n    background-clip: text;\r\n    -webkit-text-fill-color: transparent;\r\n    filter: drop-shadow(3px 3px 5px var(--aqua-900));\r\n}"],"names":[],"mappings":"AAAA"}}]
+}

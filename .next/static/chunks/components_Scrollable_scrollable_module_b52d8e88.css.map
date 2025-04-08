@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/components/Scrollable/scrollable.module.css"],"sourcesContent":[".container {\r\n    scrollbar-gutter: stable;\r\n    overflow: hidden;\r\n}\r\n\r\n.y:hover{\r\n    overflow-y: auto;\r\n}\r\n\r\n.x:hover {\r\n    overflow-x: auto;\r\n}\r\n\r\n.portraitY:hover {\r\n    overflow-y: auto;\r\n}\r\n\r\n.portraitX:hover {\r\n    overflow-x: auto;\r\n}\r\n\r\n::-webkit-scrollbar {\r\n    width: 10px;\r\n}\r\n\r\n::-webkit-scrollbar-thumb {\r\n    border-radius: 10px;\r\n    border: transparent;\r\n    background-color: rgba(255, 255, 255, 0.2);\r\n  }\r\n\r\n@media (orientation: portrait) {\r\n    .y:hover {\r\n        overflow-y: auto;\r\n    }\r\n\r\n    .x:hover {\r\n        overflow-x: auto;\r\n    }\r\n\r\n    .portraitY:hover {\r\n        overflow-y: auto;\r\n    }\r\n\r\n    .portraitX:hover {\r\n        overflow-x: auto;\r\n    }\r\n}"],"names":[],"mappings":"AAAA;;;;;AAKA;;;;AAIA;;;;AAIA;;;;AAIA;;;;AAIA;;;;AAIA;;;;;;AAMA;EACI;;;;EAIA;;;;EAIA;;;;EAIA"}}]
+}

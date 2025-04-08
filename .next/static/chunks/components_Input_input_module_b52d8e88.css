@@ -1,0 +1,31 @@
+/* [project]/components/Input/input.module.css [app-client] (css) */
+.input-module__fX75SW__inputBox {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 80%;
+  gap: 5px;
+  color: var(--blue_gray-100);
+}
+
+.input-module__fX75SW__inputBox label {
+  font-size: calc(.5em + .4vw + .4vh);
+}
+
+.input-module__fX75SW__inputBox input, .input-module__fX75SW__inputBox textarea {
+  background: #ffffff1a;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  font-size: calc(.5em + .4vw + .4vh);
+  color: var(--blue_gray-100);
+}
+
+.input-module__fX75SW__inputBox textarea {
+  resize: none;
+  font-family: sans-serif;
+  height: 10vh;
+}
+
+/*# sourceMappingURL=components_Input_input_module_b52d8e88.css.map*/

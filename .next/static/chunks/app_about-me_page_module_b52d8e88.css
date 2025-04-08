@@ -11,22 +11,6 @@
   color: var(--blue_gray-100);
   width: 50%;
   height: 80%;
-  overflow-y: hidden;
-  scrollbar-gutter: stable;
-}
-
-.page-module__lE81NW__content:hover {
-  overflow-y: scroll;
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  border: #0000;
-  background-color: #fff3;
 }
 
 .page-module__lE81NW__content h2, .page-module__lE81NW__content h3 {

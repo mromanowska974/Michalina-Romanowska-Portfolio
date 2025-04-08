@@ -1,0 +1,124 @@
+/* [project]/app/about-me/page.module.css [app-client] (css) */
+.page-module__lE81NW__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  height: 100%;
+}
+
+.page-module__lE81NW__content {
+  color: var(--blue_gray-100);
+  width: 50%;
+  height: 80%;
+}
+
+.page-module__lE81NW__content h2, .page-module__lE81NW__content h3 {
+  text-shadow: 3px 3px 5px var(--aqua-900);
+}
+
+@media (orientation: portrait) {
+  .page-module__lE81NW__container {
+    flex-direction: column;
+  }
+
+  .page-module__lE81NW__content {
+    width: 80%;
+    height: 60%;
+  }
+}
+
+
+/* [project]/components/ImageWrapper/ImageWrapper.module.css [app-client] (css) */
+.ImageWrapper-module__Limqsa__imageWrap {
+  background: #20b2aa;
+  align-self: center;
+}
+
+.ImageWrapper-module__Limqsa__isRound {
+  box-shadow: 5px 5px 20px var(--violet-900);
+}
+
+.ImageWrapper-module__Limqsa__isRound, .ImageWrapper-module__Limqsa__isRound img {
+  border-radius: 50%;
+}
+
+.ImageWrapper-module__Limqsa__imageWrap img {
+  object-fit: cover;
+}
+
+
+/* [project]/components/Paragraph/Paragraph.module.css [app-client] (css) */
+.Paragraph-module__dqvZqq__line {
+  margin-top: 15px;
+  width: 95%;
+  height: 2px;
+  border: #0000;
+  background: linear-gradient(45deg, var(--violet-400), var(--aqua-400));
+}
+
+
+/* [project]/components/Title/title.module.css [app-client] (css) */
+.title-module__Qjx9Ca__title {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  background: linear-gradient(45deg, var(--violet-200), var(--aqua-200));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(3px 3px 5px var(--aqua-900));
+}
+
+
+/* [project]/components/Scrollable/scrollable.module.css [app-client] (css) */
+.scrollable-module__hiIgJq__container {
+  scrollbar-gutter: stable;
+  overflow: hidden;
+}
+
+.scrollable-module__hiIgJq__y:hover {
+  overflow-y: auto;
+}
+
+.scrollable-module__hiIgJq__x:hover {
+  overflow-x: auto;
+}
+
+.scrollable-module__hiIgJq__portraitY:hover {
+  overflow-y: auto;
+}
+
+.scrollable-module__hiIgJq__portraitX:hover {
+  overflow-x: auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  border: #0000;
+  background-color: #fff3;
+}
+
+@media (orientation: portrait) {
+  .scrollable-module__hiIgJq__y:hover {
+    overflow-y: auto;
+  }
+
+  .scrollable-module__hiIgJq__x:hover {
+    overflow-x: auto;
+  }
+
+  .scrollable-module__hiIgJq__portraitY:hover {
+    overflow-y: auto;
+  }
+
+  .scrollable-module__hiIgJq__portraitX:hover {
+    overflow-x: auto;
+  }
+}
+
+
+/*# sourceMappingURL=_b0512328._.css.map*/

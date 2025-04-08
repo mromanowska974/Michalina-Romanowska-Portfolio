@@ -1,0 +1,48 @@
+.container {
+    scrollbar-gutter: stable;
+    overflow: hidden;
+}
+
+.y:hover{
+    overflow-y: auto;
+}
+
+.x:hover {
+    overflow-x: auto;
+}
+
+.portraitY:hover {
+    overflow-y: auto;
+}
+
+.portraitX:hover {
+    overflow-x: auto;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    border: transparent;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+@media (orientation: portrait) {
+    .y:hover {
+        overflow-y: auto;
+    }
+
+    .x:hover {
+        overflow-x: auto;
+    }
+
+    .portraitY:hover {
+        overflow-y: auto;
+    }
+
+    .portraitX:hover {
+        overflow-x: auto;
+    }
+}

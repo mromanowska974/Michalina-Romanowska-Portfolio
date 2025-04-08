@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://D%3A/Kodowanko/React/portfolio/components/AdminNavbar/AdminNavbar.js"],"sourcesContent":["'use client';\r\n\r\nimport React from 'react';\r\nimport Link from 'next/link';\r\n\r\nfunction AdminNavbar() {\r\n    return (\r\n        <nav>\r\n            <Link href={'/secret-door/add-project'}>Dodaj Projekt</Link>\r\n            <Link href={'/secret-door/edit-projects'}>Edytuj/Usuń Projekt</Link>\r\n            <Link href={'/secret-door/questions'}>Pytania weryfikacyjne</Link>\r\n        </nav>\r\n    );\r\n}\r\n\r\nexport default AdminNavbar;"],"names":[],"mappings":";;;;AAEA;AACA;AAHA;;;;AAKA,SAAS;IACL,qBACI,6LAAC;;0BACG,6LAAC,+JAAA,CAAA,UAAI;gBAAC,MAAM;0BAA4B;;;;;;0BACxC,6LAAC,+JAAA,CAAA,UAAI;gBAAC,MAAM;0BAA8B;;;;;;0BAC1C,6LAAC,+JAAA,CAAA,UAAI;gBAAC,MAAM;0BAA0B;;;;;;;;;;;;AAGlD;KARS;uCAUM","debugId":null}}]
+}

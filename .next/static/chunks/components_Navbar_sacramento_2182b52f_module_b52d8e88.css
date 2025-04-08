@@ -1,0 +1,21 @@
+/* [project]/components/Navbar/sacramento_2182b52f.module.css [app-client] (css) */
+@font-face {
+  font-family: sacramento;
+  src: url("../media/Sacramento_Regular-s.p.994356b2.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: sacramento Fallback;
+  src: local(Arial);
+  ascent-override: 139.75%;
+  descent-override: 79.52%;
+  line-gap-override: 0.0%;
+  size-adjust: 66.56%;
+}
+
+.sacramento_2182b52f-module__323dUa__className {
+  font-family: sacramento, sacramento Fallback;
+}
+
+/*# sourceMappingURL=components_Navbar_sacramento_2182b52f_module_b52d8e88.css.map*/

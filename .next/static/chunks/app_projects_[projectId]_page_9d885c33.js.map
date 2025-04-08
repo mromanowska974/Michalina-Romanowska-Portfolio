@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://D%3A/Kodowanko/React/portfolio/app/projects/%5BprojectId%5D/page.js"],"sourcesContent":["'use client';\r\n\r\nimport { useSearchParams } from 'next/navigation';\r\nimport React from 'react';\r\n\r\nfunction ProjectDetails(props) {\r\n    const searchParams = useSearchParams();\r\n    const projectId = searchParams.get('id');\r\n\r\n    console.log(projectId)\r\n    return (\r\n        <div>\r\n            Projekt\r\n        </div>\r\n    );\r\n}\r\n\r\nexport default ProjectDetails;"],"names":[],"mappings":";;;;AAEA;AACA;;;AAHA;;;AAKA,SAAS,eAAe,KAAK;;IACzB,MAAM,eAAe,CAAA,GAAA,qIAAA,CAAA,kBAAe,AAAD;IACnC,MAAM,YAAY,aAAa,GAAG,CAAC;IAEnC,QAAQ,GAAG,CAAC;IACZ,qBACI,6LAAC;kBAAI;;;;;;AAIb;GAVS;;QACgB,qIAAA,CAAA,kBAAe;;;KAD/B;uCAYM","debugId":null}}]
+}

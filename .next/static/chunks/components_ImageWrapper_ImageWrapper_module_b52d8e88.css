@@ -1,0 +1,19 @@
+/* [project]/components/ImageWrapper/ImageWrapper.module.css [app-client] (css) */
+.ImageWrapper-module__Limqsa__imageWrap {
+  background: #20b2aa;
+  align-self: center;
+}
+
+.ImageWrapper-module__Limqsa__isRound {
+  box-shadow: 5px 5px 20px var(--violet-900);
+}
+
+.ImageWrapper-module__Limqsa__isRound, .ImageWrapper-module__Limqsa__isRound img {
+  border-radius: 50%;
+}
+
+.ImageWrapper-module__Limqsa__imageWrap img {
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=components_ImageWrapper_ImageWrapper_module_b52d8e88.css.map*/

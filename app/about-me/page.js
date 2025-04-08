@@ -2,12 +2,13 @@
 
 import React from 'react';
 import styles from './page.module.css';
-import ImageWrapper from '../../components/UI/ImageWrapper/ImageWrapper.jsx';
-import Paragraph from '../../components/UI/Paragraph/Paragraph.jsx';
-import List from '../../components/UI/List/List.jsx';
+import ImageWrapper from '../../components/ImageWrapper/ImageWrapper.jsx';
+import Paragraph from '../../components/Paragraph/Paragraph.jsx';
+import List from '../../components/List/List.jsx';
 import { useMessages, useTranslations } from 'next-intl';
 import myPhoto from '../my_photo.jpg';
-import Title from '../../components/UI/Title/title.js';
+import Title from '../../components/Title/title.js';
+import Scrollable from '../../components/Scrollable/scrollable.js';
 
 function AboutMe() {
   const translate = useTranslations("aboutMe");
@@ -37,7 +38,7 @@ function AboutMe() {
         height={'calc(15vh + 15vw)'}
         src={myPhoto.src}
       />
-      <div className={styles.content}>
+      <Scrollable className={styles.content} axis={'y'}>
         <Title>{translate('title')}</Title>
         <Paragraph 
           title={translate('whoAmI.title')}
@@ -56,7 +57,7 @@ function AboutMe() {
           title={translate('skills.title')}
           content={skills}
         />        
-      </div>
+      </Scrollable>
     </div>
   )
 }

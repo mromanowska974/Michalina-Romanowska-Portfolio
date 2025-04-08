@@ -1,5 +1,5 @@
-import Footer from "../components/UI/Footer/Footer";
-import Navbar from "../components/UI/Navbar/Navbar";
+import Footer from "../components/Footer/Footer";
+import Navbar from "../components/Navbar/Navbar";
 import styles from './layout.module.css';
 import './globals.css';
 import { NextIntlClientProvider } from "next-intl";

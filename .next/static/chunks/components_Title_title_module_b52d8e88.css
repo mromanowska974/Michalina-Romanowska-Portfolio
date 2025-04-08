@@ -1,0 +1,12 @@
+/* [project]/components/Title/title.module.css [app-client] (css) */
+.title-module__Qjx9Ca__title {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  background: linear-gradient(45deg, var(--violet-200), var(--aqua-200));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(3px 3px 5px var(--aqua-900));
+}
+
+/*# sourceMappingURL=components_Title_title_module_b52d8e88.css.map*/

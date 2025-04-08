@@ -1,0 +1,11 @@
+.btn {
+    border: none;
+    border-radius: 10px;
+    background-color: var(--orange-cta);
+    color: var(--blue_gray-800);
+    cursor: pointer;
+    font-size: 1em;
+    padding: 5px;
+    text-decoration: none;
+    text-align: center;
+}

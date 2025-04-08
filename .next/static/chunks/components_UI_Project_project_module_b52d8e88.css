@@ -24,6 +24,7 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  height: 4rem;
 }
 
 .project-module__cMAqrG__project h2, .project-module__cMAqrG__project p {

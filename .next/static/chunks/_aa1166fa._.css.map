@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file://D%3A/Kodowanko/React/portfolio/components/Title/title.module.css"],"sourcesContent":[".title {\r\n    width: 100%;\r\n    margin: 0;\r\n    text-align: center; \r\n    background: linear-gradient(45deg, var(--violet-200), var(--aqua-200));\r\n    background-clip: text;\r\n    -webkit-text-fill-color: transparent;\r\n    filter: drop-shadow(3px 3px 5px var(--aqua-900));\r\n}"],"names":[],"mappings":"AAAA","debugId":null}},
+    {"offset": {"line": 13, "column": 0}, "map": {"version":3,"sources":["file://D%3A/Kodowanko/React/portfolio/app/projects/%5BprojectId%5D/page.module.css"],"sourcesContent":[".container {\r\n    display: flex;\r\n}"],"names":[],"mappings":"AAAA","debugId":null}},
+    {"offset": {"line": 19, "column": 0}, "map": {"version":3,"sources":["file://D%3A/Kodowanko/React/portfolio/components/Paragraph/Paragraph.module.css"],"sourcesContent":[".line {\r\n    margin-top: 15px;\r\n    /* box-shadow: 5px 5px 5px var(--blue_gray-700); */\r\n    width: 95%;\r\n    height: 2px;\r\n    border: transparent;\r\n    background: linear-gradient(45deg, var(--violet-400), var(--aqua-400));\r\n}"],"names":[],"mappings":"AAAA","debugId":null}},
+    {"offset": {"line": 29, "column": 0}, "map": {"version":3,"sources":["file://D%3A/Kodowanko/React/portfolio/components/ImageWrapper/ImageWrapper.module.css"],"sourcesContent":[".imageWrap {\r\n    background: lightseagreen;\r\n    align-self: center;\r\n  }\r\n\r\n  .isRound {\r\n    box-shadow: 5px 5px 20px var(--violet-900);\r\n  }\r\n\r\n  .isRound, .isRound img {\r\n    border-radius: 50%;\r\n  }\r\n\r\n  .imageWrap img {\r\n    object-fit: cover;\r\n  }"],"names":[],"mappings":"AAAA;;;;;AAKE;;;;AAIA;;;;AAIA","debugId":null}}]
+}

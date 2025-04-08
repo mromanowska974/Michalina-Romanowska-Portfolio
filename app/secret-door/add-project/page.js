@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from '../../../components/UI/Button/button';
-import Input from '../../../components/UI/Input/input';
+import Button from '../../../components/Button/button';
+import Input from '../../../components/Input/input';
 import styles from './page.module.css';
 import { addProject } from '../../../lib/action';
 

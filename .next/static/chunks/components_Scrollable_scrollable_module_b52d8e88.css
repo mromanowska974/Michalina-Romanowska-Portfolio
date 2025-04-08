@@ -1,0 +1,51 @@
+/* [project]/components/Scrollable/scrollable.module.css [app-client] (css) */
+.scrollable-module__hiIgJq__container {
+  scrollbar-gutter: stable;
+  overflow: hidden;
+}
+
+.scrollable-module__hiIgJq__y:hover {
+  overflow-y: auto;
+}
+
+.scrollable-module__hiIgJq__x:hover {
+  overflow-x: auto;
+}
+
+.scrollable-module__hiIgJq__portraitY:hover {
+  overflow-y: auto;
+}
+
+.scrollable-module__hiIgJq__portraitX:hover {
+  overflow-x: auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  border: #0000;
+  background-color: #fff3;
+}
+
+@media (orientation: portrait) {
+  .scrollable-module__hiIgJq__y:hover {
+    overflow-y: auto;
+  }
+
+  .scrollable-module__hiIgJq__x:hover {
+    overflow-x: auto;
+  }
+
+  .scrollable-module__hiIgJq__portraitY:hover {
+    overflow-y: auto;
+  }
+
+  .scrollable-module__hiIgJq__portraitX:hover {
+    overflow-x: auto;
+  }
+}
+
+/*# sourceMappingURL=components_Scrollable_scrollable_module_b52d8e88.css.map*/

@@ -1,0 +1,21 @@
+.span {
+    display: flex;
+    width: 100%;
+}
+
+.span ul {
+    display: flex;
+    justify-content: start;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    gap: 5%
+}
+
+.span ul li {
+    font-size: 10px;
+    text-transform: uppercase;
+    border: 1px solid var(--blue_gray-100);
+    border-radius: 5px;
+    padding: 3px;
+}
