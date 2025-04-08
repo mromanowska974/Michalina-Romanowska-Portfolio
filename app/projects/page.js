@@ -4,13 +4,15 @@ import Project from '../../components/Project/project';
 import Title from '../../components/Title/title';
 import { getProjects } from '../../lib/projects';
 import Scrollable from '../../components/Scrollable/scrollable';
+import { useTranslations } from 'next-intl';
 
 function Projects() {
   const projects = getProjects();
+  const translate = useTranslations('projects');
 
   return (
     <div className={styles.projects}>
-      <Title>Moje Projekty</Title>
+      <Title>{translate('title')}</Title>
       <ul className={styles.list}>
         <Scrollable className={styles.scrollable} axis={'x'} portraitAxis={'portraitY'}>
           {projects.map(project => (

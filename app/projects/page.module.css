@@ -21,20 +21,29 @@
     padding-inline: 10px;
 }
 
-.list li {
+.scrollable li {
     list-style: none;
 }
 
 @media (orientation: portrait) {
     .projects {
-        height: 90%;
-        align-self: center;
+        height: 95%;
+        align-items: center;
+        gap: 2vh;
+        width: 90%;
     }
 
     .list {
-        align-items: center;
+        display: flex;
         justify-content: center;
+        height: 90%;
         width: 90%;
+    }
+    
+    .scrollable {
+        width: 600px;
+        height: 100%;
         flex-flow: row wrap;
+        justify-content: center;
     }
 }

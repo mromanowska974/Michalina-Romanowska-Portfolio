@@ -61,5 +61,9 @@
     },
     "home": {
         "introText": "Tworzę aplikacje internetowe z pasją, ciekawością i chęcią zdobywania nowych doświadczeń."
+    },
+    "projects": {
+        "title": "Moje Projekty",
+        "moreBtn": "Więcej"
     }
 }

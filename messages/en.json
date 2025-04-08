@@ -61,5 +61,9 @@
     },
     "home": {
         "introText": "I'm creating web apps with passion, curiosity and desire to gain new experience."
+    },
+    "projects": {
+        "title": "My Projects",
+        "moreBtn": "More"
     }
 }

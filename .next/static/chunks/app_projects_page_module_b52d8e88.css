@@ -22,21 +22,30 @@
   padding-inline: 10px;
 }
 
-.page-module__4ccqhG__list li {
+.page-module__4ccqhG__scrollable li {
   list-style: none;
 }
 
 @media (orientation: portrait) {
   .page-module__4ccqhG__projects {
-    height: 90%;
-    align-self: center;
+    height: 95%;
+    align-items: center;
+    gap: 2vh;
+    width: 90%;
   }
 
   .page-module__4ccqhG__list {
-    align-items: center;
+    display: flex;
     justify-content: center;
+    height: 90%;
     width: 90%;
+  }
+
+  .page-module__4ccqhG__scrollable {
+    width: 600px;
+    height: 100%;
     flex-flow: wrap;
+    justify-content: center;
   }
 }
 
