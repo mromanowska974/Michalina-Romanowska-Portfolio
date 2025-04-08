@@ -2,5 +2,5 @@
   "version": 3,
   "sources": [],
   "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/components/Technologies/technologies.module.css"],"sourcesContent":[".span {\r\n    display: flex;\r\n    width: 100%;\r\n}\r\n\r\n.span ul {\r\n    display: flex;\r\n    justify-content: start;\r\n    list-style: none;\r\n    width: 100%;\r\n    padding: 0;\r\n    gap: 5%\r\n}\r\n\r\n.span ul li {\r\n    font-size: 10px;\r\n    text-transform: uppercase;\r\n    border: 1px solid var(--blue_gray-100);\r\n    border-radius: 5px;\r\n    padding: 3px;\r\n}"],"names":[],"mappings":"AAAA;;;;;AAKA;;;;;;;;;AASA"}}]
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/components/Technologies/technologies.module.css"],"sourcesContent":[".technologies {\r\n    display: flex;\r\n    width: 100%;\r\n}\r\n\r\n.technologies ul {\r\n    display: flex;\r\n    justify-content: start;\r\n    list-style: none;\r\n    width: 100%;\r\n    padding: 0;\r\n    gap: 5%\r\n}\r\n\r\n.technologies ul li {\r\n    font-size: 10px;\r\n    text-transform: uppercase;\r\n    border: 1px solid var(--blue_gray-100);\r\n    border-radius: 5px;\r\n    padding: 3px;\r\n}"],"names":[],"mappings":"AAAA;;;;;AAKA;;;;;;;;;AASA"}}]
 }

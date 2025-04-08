@@ -1,9 +1,9 @@
-.span {
+.technologies {
     display: flex;
     width: 100%;
 }
 
-.span ul {
+.technologies ul {
     display: flex;
     justify-content: start;
     list-style: none;
@@ -12,7 +12,7 @@
     gap: 5%
 }
 
-.span ul li {
+.technologies ul li {
     font-size: 10px;
     text-transform: uppercase;
     border: 1px solid var(--blue_gray-100);

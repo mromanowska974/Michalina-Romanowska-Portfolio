@@ -46,6 +46,10 @@
   background-color: transparent;
 }
 
+/* .container div img {
+  align-self: center;
+} */
+
 @media (orientation: portrait) {
   .container{
     flex-direction: column;

@@ -3,13 +3,13 @@ import styles from './technologies.module.css';
 
 function Technologies({ technologies }) {
     return (
-        <span className={styles.span}>
+        <div className={styles.technologies}>
             <ul>
                 {technologies.map(tech => (
                     <li key={tech}>{tech}</li>
                 ))}
             </ul>           
-        </span>
+        </div>
     );
 }
 

@@ -12,7 +12,9 @@ function Project({ project }) {
 
     return (
         <section className={styles.project}>
-            <ImageWrapper width={'calc(200px)'} height={'calc(250px)'}/>
+            <div className={styles.imageWrap}>
+                <ImageWrapper width={'calc(200px)'} height={'100%'}/>
+            </div>
             <div className={styles.status}>W trakcie pracy</div>
             <Technologies technologies={technologies}/>
             <h2>{ project.name }</h2>

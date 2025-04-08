@@ -14,18 +14,18 @@ export default function HomePage() {
 
     return (
         <div className={styles.container}>
-        <ImageWrapper 
-            isRound 
-            width={'calc(20vh + 20vw)'} 
-            height={'calc(20vh + 20vw)'}
-            src={myPhoto.src}
-        />
-        <div className={styles.introduction}>
-            <h1 className={sacramento.className}>Michalina Romanowska</h1>
-            <p>
-                {t("introText")}
-            </p>
-        </div>
+            <ImageWrapper 
+                isRound 
+                width={'calc(20vh + 20vw)'} 
+                height={'calc(20vh + 20vw)'}
+                src={myPhoto.src}
+            />
+            <div className={styles.introduction}>
+                <h1 className={sacramento.className}>Michalina Romanowska</h1>
+                <p>
+                    {t("introText")}
+                </p>
+            </div>
         </div>
     );
 }

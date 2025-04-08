@@ -11,15 +11,15 @@ function Projects() {
   return (
     <div className={styles.projects}>
       <Title>Moje Projekty</Title>
-      <Scrollable className={styles.scrollable} axis={'x'} portraitAxis={'portraitY'}>
-        <ul className={styles.list}>
+      <ul className={styles.list}>
+        <Scrollable className={styles.scrollable} axis={'x'} portraitAxis={'portraitY'}>
           {projects.map(project => (
             <li key={project.id}>
               <Project project={project}/>
             </li>
           ))}
-        </ul>
-      </Scrollable>
+        </Scrollable>
+      </ul>
     </div>
   );
 }

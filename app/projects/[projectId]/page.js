@@ -18,7 +18,7 @@ async function ProjectPage({ searchParams }) {
         <div className={styles.container}>
             <div className={styles.demo}>
                 <Link href='/projects' className={styles.backLink}> ... Wróć do Projektów</Link>
-                <ImageWrapper width={'250px'} height={'calc(80%)'}/>
+                <ImageWrapper width={'100%'} height={'80%'}/>
             </div>
             <div className={styles.info}>
                 <Title>{project.name}</Title>

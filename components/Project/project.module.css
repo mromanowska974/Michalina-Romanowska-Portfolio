@@ -9,12 +9,18 @@
     box-shadow: 3px 3px 3px var(--blue_gray-600);
     gap: 10px;
     width: 200px;
+    height: 55vh;
+    max-height: 420px;
+}
+
+.imageWrap {
+    height: 45%;
 }
 
 .project h2 {
     white-space: nowrap;
     text-overflow: ellipsis;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .project p {
@@ -32,14 +38,68 @@
 }
 
 .status {
-    position: relative;
-    bottom: 35;
-    width: 95%;
+    width: 97%;
     border-radius: 5px;
     padding: 3px;
     background-color: var(--violet-200);
     color: var(--blue_gray-600);
-    margin-bottom: -30px;
     text-align: center;
     font-size: small;
+}
+
+@media (max-height: 700px) {
+    .project {
+        height: 60vh;
+    }
+}
+
+@media (max-height: 625px) {
+    .project p {
+        line-clamp: 2;
+        -webkit-line-clamp: 2;
+        height: 3rem;
+    }
+}
+
+@media (max-height: 530px) {
+    .imageWrap {
+        display: none;
+    }
+
+    .project {
+        height: 40vh;
+    }
+
+    .project p {
+        line-clamp: 3;
+        -webkit-line-clamp: 3;
+        height: 4rem;
+    }
+}
+
+@media (max-height: 500px) {
+    .project p {
+        line-clamp: 2;
+        -webkit-line-clamp: 2;
+        height: 3rem;
+    }
+}
+
+@media (max-height: 440px) {
+    .project p {
+        line-clamp: 1;
+        -webkit-line-clamp: 1;
+        height: 1.5rem;
+    }
+}
+
+@media (max-height: 395px) {
+    .project {
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .project p {
+        display: none;
+    }
 }

@@ -1,10 +1,10 @@
 /* [project]/components/Technologies/technologies.module.css [app-client] (css) */
-.technologies-module__a6s4fq__span {
+.technologies-module__a6s4fq__technologies {
   display: flex;
   width: 100%;
 }
 
-.technologies-module__a6s4fq__span ul {
+.technologies-module__a6s4fq__technologies ul {
   display: flex;
   justify-content: start;
   list-style: none;
@@ -13,7 +13,7 @@
   gap: 5%;
 }
 
-.technologies-module__a6s4fq__span ul li {
+.technologies-module__a6s4fq__technologies ul li {
   font-size: 10px;
   text-transform: uppercase;
   border: 1px solid var(--blue_gray-100);
