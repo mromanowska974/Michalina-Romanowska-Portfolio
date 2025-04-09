@@ -64,6 +64,9 @@
     },
     "projects": {
         "title": "My Projects",
-        "moreBtn": "More"
+        "moreBtn": "More",
+        "backToProjects": "Go Back to Projects",
+        "viewProject": "View Project",
+        "viewRepository": "Github Repository"
     }
 }

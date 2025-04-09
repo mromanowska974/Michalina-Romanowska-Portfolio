@@ -7,9 +7,11 @@ import Technologies from '../../../components/Technologies/technologies';
 import Scrollable from '../../../components/Scrollable/scrollable';
 import Button from '../../../components/Button/button';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
-async function ProjectPage({ searchParams }) {
-    const projectId = await searchParams.id;
+function ProjectPage({ searchParams }) {
+    const projectId = searchParams.id;
+    const translate = useTranslations("projects");
 
     const project = getProject(projectId);
     const technologies = project.technologies.split(',');
@@ -17,8 +19,10 @@ async function ProjectPage({ searchParams }) {
     return (
         <div className={styles.container}>
             <div className={styles.demo}>
-                <Link href='/projects' className={styles.backLink}> ... Wróć do Projektów</Link>
-                <ImageWrapper width={'100%'} height={'80%'}/>
+                <Link href='/projects' className={styles.backLink}> ... {translate("backToProjects")}</Link>
+                <div className={styles.imageWrap}>
+                    <ImageWrapper width={'100%'} height={'100%'}/>
+                </div>
             </div>
             <div className={styles.info}>
                 <Title>{project.name}</Title>
@@ -27,8 +31,8 @@ async function ProjectPage({ searchParams }) {
                     <p>{project.description}</p>
                 </Scrollable>
                 <div className={styles.links}>
-                    <Button link href={project.app_link} text={'Przejdź do Projektu'}/>
-                    <Button link href={project.repo_link} text={'Repozytorium Github'} />
+                    <Button link href={project.app_link} text={translate('viewProject')}/>
+                    <Button link href={project.repo_link} text={translate('viewRepository')} />
                 </div>
             </div>
         </div>
