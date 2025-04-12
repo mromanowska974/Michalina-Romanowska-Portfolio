@@ -40,6 +40,7 @@ var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "getProject": (()=>getProject),
+    "getProjectImages": (()=>getProjectImages),
     "getProjects": (()=>getProjects),
     "saveProject": (()=>saveProject)
 });
@@ -98,6 +99,9 @@ function saveProject(project, images) {
 }
 function getProjects() {
     return db.prepare('select * from projects').all();
+}
+function getProjectImages(projectId) {
+    return db.prepare('select * from images where project_id=?').all(projectId);
 }
 function getProject(id) {
     return db.prepare('select * from projects where id=?').get(id);

@@ -154,6 +154,96 @@ function Technologies({ technologies }) {
 }
 const __TURBOPACK__default__export__ = Technologies;
 }}),
+"[externals]/better-sqlite3 [external] (better-sqlite3, cjs)": (function(__turbopack_context__) {
+
+var { g: global, __dirname, m: module, e: exports } = __turbopack_context__;
+{
+const mod = __turbopack_context__.x("better-sqlite3", () => require("better-sqlite3"));
+
+module.exports = mod;
+}}),
+"[externals]/node:fs [external] (node:fs, cjs)": (function(__turbopack_context__) {
+
+var { g: global, __dirname, m: module, e: exports } = __turbopack_context__;
+{
+const mod = __turbopack_context__.x("node:fs", () => require("node:fs"));
+
+module.exports = mod;
+}}),
+"[project]/lib/projects.js [app-ssr] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { g: global, __dirname } = __turbopack_context__;
+{
+__turbopack_context__.s({
+    "getProject": (()=>getProject),
+    "getProjectImages": (()=>getProjectImages),
+    "getProjects": (()=>getProjects),
+    "saveProject": (()=>saveProject)
+});
+var __TURBOPACK__imported__module__$5b$externals$5d2f$better$2d$sqlite3__$5b$external$5d$__$28$better$2d$sqlite3$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/better-sqlite3 [external] (better-sqlite3, cjs)");
+var __TURBOPACK__imported__module__$5b$externals$5d2f$node$3a$fs__$5b$external$5d$__$28$node$3a$fs$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/node:fs [external] (node:fs, cjs)");
+;
+;
+const db = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$better$2d$sqlite3__$5b$external$5d$__$28$better$2d$sqlite3$2c$__cjs$29$__["default"])('portfolio.db');
+async function addImages(images, projectName) {
+    if (!__TURBOPACK__imported__module__$5b$externals$5d2f$node$3a$fs__$5b$external$5d$__$28$node$3a$fs$2c$__cjs$29$__["default"].existsSync(`public/images/${projectName}`)) {
+        __TURBOPACK__imported__module__$5b$externals$5d2f$node$3a$fs__$5b$external$5d$__$28$node$3a$fs$2c$__cjs$29$__["default"].mkdirSync(`public/images/${projectName}`);
+    }
+    images.forEach((image)=>{
+        const stream = __TURBOPACK__imported__module__$5b$externals$5d2f$node$3a$fs__$5b$external$5d$__$28$node$3a$fs$2c$__cjs$29$__["default"].createWriteStream(`public/images/${projectName}/${image.name}`);
+        image.arrayBuffer().then((buffer)=>{
+            stream.write(Buffer.from(buffer), (error)=>{
+                if (error) {
+                    throw new Error('Saving image failed.');
+                }
+            });
+            stream.end();
+        });
+    });
+}
+function saveProject(project, images) {
+    const query = db.prepare(`
+        INSERT INTO projects
+            (name, technologies, descriptionPL, descriptionEN, status, app_link, repo_link)
+        VALUES (
+            @name,
+            @technologies,
+            @descriptionPL,
+            @descriptionEN,
+            @status,
+            @app_link,
+            @repo_link
+        )
+    `);
+    const result = query.run(project);
+    const projectId = result.lastInsertRowid;
+    images.forEach((image)=>{
+        const imageData = {
+            name: image.name,
+            project_id: projectId
+        };
+        db.prepare(`
+            INSERT INTO images
+                (name, project_id)
+            VALUES (
+                @name,
+                @project_id
+            )
+        `).run(imageData);
+    });
+    addImages(images, project.name);
+}
+function getProjects() {
+    return db.prepare('select * from projects').all();
+}
+function getProjectImages(projectId) {
+    return db.prepare('select * from images where project_id=?').all(projectId);
+}
+function getProject(id) {
+    return db.prepare('select * from projects where id=?').get(id);
+}
+}}),
 "[project]/components/Project/project.js [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
@@ -170,7 +260,9 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Button$2f$butt
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Technologies$2f$technologies$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/Technologies/technologies.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$slugify$2f$slugify$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/slugify/slugify.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$intl$2f$dist$2f$esm$2f$development$2f$react$2d$client$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/node_modules/next-intl/dist/esm/development/react-client/index.js [app-ssr] (ecmascript) <locals>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$projects$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/projects.js [app-ssr] (ecmascript)");
 'use client';
+;
 ;
 ;
 ;
@@ -182,6 +274,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$intl
 function Project({ project }) {
     const technologies = project.technologies.split(',');
     const translate = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$intl$2f$dist$2f$esm$2f$development$2f$react$2d$client$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__["useTranslations"])('projects');
+    const images = (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$projects$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getProjectImages"])(project.id);
     const slug = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$slugify$2f$slugify$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"])(project.name, {
         lower: true
     });
@@ -197,12 +290,12 @@ function Project({ project }) {
                     height: '100%'
                 }, void 0, false, {
                     fileName: "[project]/components/Project/project.js",
-                    lineNumber: 25,
+                    lineNumber: 27,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/Project/project.js",
-                lineNumber: 24,
+                lineNumber: 26,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -210,28 +303,28 @@ function Project({ project }) {
                 children: translate(`status.${project.status}`)
             }, void 0, false, {
                 fileName: "[project]/components/Project/project.js",
-                lineNumber: 27,
+                lineNumber: 29,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Technologies$2f$technologies$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                 technologies: technologies
             }, void 0, false, {
                 fileName: "[project]/components/Project/project.js",
-                lineNumber: 28,
+                lineNumber: 30,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                 children: project.name
             }, void 0, false, {
                 fileName: "[project]/components/Project/project.js",
-                lineNumber: 29,
+                lineNumber: 31,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                 children: cookieLocale === 'pl' ? project.descriptionPL : project.descriptionEN
             }, void 0, false, {
                 fileName: "[project]/components/Project/project.js",
-                lineNumber: 30,
+                lineNumber: 32,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Button$2f$button$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -240,13 +333,13 @@ function Project({ project }) {
                 href: `/projects/${slug}?id=${project.id}`
             }, void 0, false, {
                 fileName: "[project]/components/Project/project.js",
-                lineNumber: 31,
+                lineNumber: 33,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/Project/project.js",
-        lineNumber: 23,
+        lineNumber: 25,
         columnNumber: 9
     }, this);
 }
@@ -309,4 +402,4 @@ var { g: global, __dirname, m: module, e: exports } = __turbopack_context__;
 
 };
 
-//# sourceMappingURL=_53106179._.js.map
+//# sourceMappingURL=%5Broot%20of%20the%20server%5D__f3c1f7ec._.js.map
