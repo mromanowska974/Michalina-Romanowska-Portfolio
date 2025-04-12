@@ -17,7 +17,7 @@ db.prepare(`
 db.prepare(`
     CREATE TABLE IF NOT EXISTS images (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        path TEXT NOT NULL UNIQUE,
+        name TEXT NOT NULL,
         project_id INTEGER NOT NULL
     )
 `).run();

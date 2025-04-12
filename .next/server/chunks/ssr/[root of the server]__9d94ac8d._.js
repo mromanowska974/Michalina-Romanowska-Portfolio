@@ -1,10 +1,26 @@
 module.exports = {
 
+"[externals]/node:inspector [external] (node:inspector, cjs)": (function(__turbopack_context__) {
+
+var { g: global, __dirname, m: module, e: exports } = __turbopack_context__;
+{
+const mod = __turbopack_context__.x("node:inspector", () => require("node:inspector"));
+
+module.exports = mod;
+}}),
 "[externals]/better-sqlite3 [external] (better-sqlite3, cjs)": (function(__turbopack_context__) {
 
 var { g: global, __dirname, m: module, e: exports } = __turbopack_context__;
 {
 const mod = __turbopack_context__.x("better-sqlite3", () => require("better-sqlite3"));
+
+module.exports = mod;
+}}),
+"[externals]/node:fs [external] (node:fs, cjs)": (function(__turbopack_context__) {
+
+var { g: global, __dirname, m: module, e: exports } = __turbopack_context__;
+{
+const mod = __turbopack_context__.x("node:fs", () => require("node:fs"));
 
 module.exports = mod;
 }}),
@@ -19,39 +35,54 @@ __turbopack_context__.s({
     "saveProject": (()=>saveProject)
 });
 var __TURBOPACK__imported__module__$5b$externals$5d2f$better$2d$sqlite3__$5b$external$5d$__$28$better$2d$sqlite3$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/better-sqlite3 [external] (better-sqlite3, cjs)");
+var __TURBOPACK__imported__module__$5b$externals$5d2f$node$3a$fs__$5b$external$5d$__$28$node$3a$fs$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/node:fs [external] (node:fs, cjs)");
+;
 ;
 const db = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$better$2d$sqlite3__$5b$external$5d$__$28$better$2d$sqlite3$2c$__cjs$29$__["default"])('portfolio.db');
-function addImages(paths) {
-    console.log('Adding images:', paths);
+async function addImages(images, projectName) {
+    images.forEach((image)=>{
+        const stream = __TURBOPACK__imported__module__$5b$externals$5d2f$node$3a$fs__$5b$external$5d$__$28$node$3a$fs$2c$__cjs$29$__["default"].createWriteStream(`public/images/${projectName}/${image.name}`);
+        image.arrayBuffer().then((buffer)=>{
+            stream.write(Buffer.from(buffer), (error)=>{
+                if (error) {
+                    throw new Error('Saving image failed.');
+                }
+            });
+            stream.end();
+        });
+    });
 }
 function saveProject(project, images) {
-    // const query = db.prepare(`
-    //     INSERT INTO projects
-    //         (name, technologies, descriptionPL, descriptionEN, status, app_link, repo_link)
-    //     VALUES (
-    //         @name,
-    //         @technologies,
-    //         @descriptionPL,
-    //         @descriptionEN,
-    //         @status,
-    //         @app_link,
-    //         @repo_link
-    //     )
-    // `);
-    // const result = query.run(project);
-    // const projectId = result.lastInsertRowid;
-    addImages(images);
-// images.forEach(image => {
-//     image.project_id = projectId;
-//     db.prepare(`
-//         INSERT INTO images
-//             (path, project_id)
-//         VALUES (
-//             @path,
-//             @project_id
-//         )
-//     `).run(image);
-// });
+    const query = db.prepare(`
+        INSERT INTO projects
+            (name, technologies, descriptionPL, descriptionEN, status, app_link, repo_link)
+        VALUES (
+            @name,
+            @technologies,
+            @descriptionPL,
+            @descriptionEN,
+            @status,
+            @app_link,
+            @repo_link
+        )
+    `);
+    const result = query.run(project);
+    const projectId = result.lastInsertRowid;
+    images.forEach((image)=>{
+        const imageData = {
+            path: image.name,
+            project_id: projectId
+        };
+        db.prepare(`
+            INSERT INTO images
+                (path, project_id)
+            VALUES (
+                @path,
+                @project_id
+            )
+        `).run(imageData);
+    });
+    addImages(images, project.name);
 }
 function getProjects() {
     return db.prepare('select * from projects').all();
@@ -70,8 +101,10 @@ var { g: global, __dirname } = __turbopack_context__;
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/build/webpack/loaders/next-flight-loader/server-reference.js [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$app$2d$render$2f$encryption$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/app-render/encryption.js [app-rsc] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$externals$5d2f$node$3a$inspector__$5b$external$5d$__$28$node$3a$inspector$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/node:inspector [external] (node:inspector, cjs)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$projects$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/projects.js [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$validate$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/build/webpack/loaders/next-flight-loader/action-validate.js [app-rsc] (ecmascript)");
+;
 ;
 ;
 ;
@@ -79,6 +112,7 @@ function isInvalidText(text) {
     return !text || text.trim() === '';
 }
 async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ addProject(formData) {
+    __TURBOPACK__imported__module__$5b$externals$5d2f$node$3a$inspector__$5b$external$5d$__$28$node$3a$inspector$2c$__cjs$29$__["console"].log('weszło do addProject');
     const project = {
         name: formData.get('project-name'),
         technologies: formData.get('technologies'),
@@ -89,11 +123,11 @@ async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ addProject(formData) {
         status: formData.get('status')
     };
     const images = formData.getAll('images');
-    const imagesPaths = images.map((image)=>{
-        return {
-            path: image.name
-        };
-    });
+    // const imagesPaths = images.map(image => {
+    //     // return {path: image.name}
+    //     console.log('Image:', image);
+    // });
+    // console.log(project, images);
     // if(
     //     isInvalidText(project.name) ||
     //     isInvalidText(project.technologies) ||
@@ -105,7 +139,7 @@ async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ addProject(formData) {
     // ) {
     //     throw new Error('Invalid Input');
     // }
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$projects$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["saveProject"])(project, imagesPaths);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$projects$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["saveProject"])(project, images);
 }
 ;
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$validate$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["ensureServerEntryExports"])([
@@ -531,4 +565,4 @@ __turbopack_context__.n(__turbopack_context__.i("[project]/app/secret-door/add-p
 
 };
 
-//# sourceMappingURL=%5Broot%20of%20the%20server%5D__5958e378._.js.map
+//# sourceMappingURL=%5Broot%20of%20the%20server%5D__9d94ac8d._.js.map
