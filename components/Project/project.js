@@ -17,7 +17,7 @@ function Project({ project }) {
             <div className={styles.imageWrap}>
                 <ImageWrapper width={'calc(200px)'} height={'100%'}/>
             </div>
-            <div className={styles.status}>STATUS</div>
+            <div className={styles.status}>{translate(`status.${project.status}`)}</div>
             <Technologies technologies={technologies}/>
             <h2>{ project.name }</h2>
             <p>{ project.description }</p>

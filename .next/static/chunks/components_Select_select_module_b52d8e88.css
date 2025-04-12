@@ -1,0 +1,21 @@
+/* [project]/components/Select/select.module.css [app-client] (css) */
+.select-module__wkJlQa__select {
+  width: fit-content;
+  height: fit-content;
+  border: none;
+  background-color: #0000;
+  color: var(--blue_gray-100);
+  text-decoration: none;
+  margin-block: 0;
+  cursor: pointer;
+}
+
+.select-module__wkJlQa__aqua option {
+  background-color: var(--aqua-700);
+}
+
+.select-module__wkJlQa__violet option {
+  background-color: var(--violet-700);
+}
+
+/*# sourceMappingURL=components_Select_select_module_b52d8e88.css.map*/

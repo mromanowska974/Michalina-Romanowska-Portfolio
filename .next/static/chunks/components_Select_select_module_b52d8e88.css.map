@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/components/Select/select.module.css"],"sourcesContent":[".select {\r\n    width: fit-content;\r\n    height: fit-content;\r\n    border: none;\r\n    background-color: transparent;\r\n    color: var(--blue_gray-100);\r\n    text-decoration: none;\r\n    margin-block: 0;\r\n    cursor: pointer;\r\n}\r\n\r\n.aqua option{\r\n    background-color: var(--aqua-700);\r\n}\r\n\r\n.violet option{\r\n    background-color: var(--violet-700);\r\n}"],"names":[],"mappings":"AAAA;;;;;;;;;;;AAWA;;;;AAIA"}}]
+}

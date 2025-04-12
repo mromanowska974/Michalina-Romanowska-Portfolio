@@ -7,6 +7,7 @@ import { useTranslations } from 'next-intl';
 import { usePathname, useRouter } from 'next/navigation';
 
 import localFont from 'next/font/local';
+import Select from '../Select/select';
 
 const sacramento = localFont({src: '../../app/fonts/Sacramento-Regular.ttf'})
 
@@ -73,10 +74,16 @@ function Navbar(props) {
                         {translate("contact")}
                     </p>
                 </Link>
-                <select name='language' defaultValue={locale} onChange={handleChangeLanguage}>
-                    <option value={'pl'}>PL</option>
-                    <option value={'en'}>EN</option>
-                </select>
+                <Select 
+                    name={'language'} 
+                    defaultValue={locale} 
+                    onChange={handleChangeLanguage}
+                    bgColor={'aqua'}
+                    options={[
+                        {value: 'pl', description: 'PL'},
+                        {value: 'en', description: 'EN'}
+                    ]}
+                />
             </div>
         </nav>
     );

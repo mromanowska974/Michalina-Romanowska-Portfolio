@@ -67,6 +67,10 @@
         "moreBtn": "Więcej",
         "backToProjects": "Wróć do Projektów",
         "viewProject": "Przejdź do Projektu",
-        "viewRepository": "Repozytorium Github"
+        "viewRepository": "Repozytorium Github",
+        "status": {
+            "completed": "Ukończony",
+            "stillInProgress": "Jeszcze pracuję"
+        }
     }
 }

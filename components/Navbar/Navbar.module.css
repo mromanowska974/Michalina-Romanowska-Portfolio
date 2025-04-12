@@ -6,7 +6,7 @@
   padding-right: calc(1vh + 1vw);
 }
 
-.btnBox a, .btnBox select{
+.btnBox a{
   width: fit-content;
   height: fit-content;
   border: none;
@@ -17,7 +17,7 @@
   cursor: pointer;
 }
 
-.btnBox a:hover, .btnBox select:hover, .active {
+.btnBox a:hover, .active {
   text-decoration: underline var(--orange-cta);
   text-decoration-thickness: 3px;
   text-underline-offset: 5px;
@@ -25,14 +25,6 @@
 
 .btnBox a p{
   margin: 0;
-}
-
-.btnBox select option {
-  background-color: var(--aqua-700);
-}
-
-.btnBox select option:hover {
-  background: var(--orange-cta);
 }
 
 .navbar {

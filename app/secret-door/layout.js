@@ -1,9 +1,10 @@
 import React from 'react';
 import AdminNavbar from '../../components/AdminNavbar/AdminNavbar.js';
+import styles from './layout.module.css'; 
 
 function AdminLayout({ children }) {
     return (
-        <div>
+        <div className={styles.container}>
             <AdminNavbar />
             { children }
         </div>

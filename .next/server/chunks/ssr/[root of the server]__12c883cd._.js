@@ -231,7 +231,7 @@ function Project({ project }) {
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Project$2f$project$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].status,
-                children: "STATUS"
+                children: translate(`status.${project.status}`)
             }, void 0, false, {
                 fileName: "[project]/components/Project/project.js",
                 lineNumber: 20,
@@ -331,18 +331,33 @@ __turbopack_context__.s({
 var __TURBOPACK__imported__module__$5b$externals$5d2f$better$2d$sqlite3__$5b$external$5d$__$28$better$2d$sqlite3$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/better-sqlite3 [external] (better-sqlite3, cjs)");
 ;
 const db = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$better$2d$sqlite3__$5b$external$5d$__$28$better$2d$sqlite3$2c$__cjs$29$__["default"])('portfolio.db');
-function saveProject(project) {
-    db.prepare(`
+function saveProject(project, images) {
+    const query = db.prepare(`
         INSERT INTO projects
-            (name, technologies, description, app_link, repo_link)
+            (name, technologies, descriptionPL, descriptionEN, status, app_link, repo_link)
         VALUES (
             @name,
             @technologies,
-            @description,
+            @descriptionPL,
+            @descriptionEN,
+            @status,
             @app_link,
             @repo_link
         )
-    `).run(project);
+    `);
+    const result = query.run(project);
+    const projectId = result.lastInsertRowid;
+    images.forEach((image)=>{
+        image.project_id = projectId;
+        db.prepare(`
+            INSERT INTO images
+                (path, project_id)
+            VALUES (
+                @path,
+                @project_id
+            )
+        `).run(image);
+    });
 }
 function getProjects() {
     return db.prepare('select * from projects').all();

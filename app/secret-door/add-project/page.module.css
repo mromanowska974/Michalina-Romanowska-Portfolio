@@ -3,16 +3,29 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 60%;
+    width: 100%;
+    height: 80%;
     gap: 5%;
 }
 
-.form button {
-    border: none;
-    border-radius: 10px;
-    background-color: var(--orange-cta);
-    color: var(--blue_gray-900);
-    cursor: pointer;
-    font-size: calc(0.4em + 0.8vw + 0.8vh);
-    padding: 5px;
+.scrollable {
+    display: flex;
+    flex-direction: column;
+    max-height: 80vh;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+}
+
+.statusSelect {
+    display: flex;
+    justify-content: start;
+    width: 80%;
+    gap: 10px;
+    align-items: center;
+}
+
+.statusSelect label {
+    color: var(--blue_gray-100);
 }

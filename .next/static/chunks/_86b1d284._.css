@@ -44,7 +44,7 @@
   padding-right: calc(1vh + 1vw);
 }
 
-.Navbar-module__dVeNwG__btnBox a, .Navbar-module__dVeNwG__btnBox select {
+.Navbar-module__dVeNwG__btnBox a {
   width: fit-content;
   height: fit-content;
   border: none;
@@ -55,7 +55,7 @@
   cursor: pointer;
 }
 
-.Navbar-module__dVeNwG__btnBox a:hover, .Navbar-module__dVeNwG__btnBox select:hover, .Navbar-module__dVeNwG__active {
+.Navbar-module__dVeNwG__btnBox a:hover, .Navbar-module__dVeNwG__active {
   text-decoration: underline var(--orange-cta);
   text-decoration-thickness: 3px;
   text-underline-offset: 5px;
@@ -63,14 +63,6 @@
 
 .Navbar-module__dVeNwG__btnBox a p {
   margin: 0;
-}
-
-.Navbar-module__dVeNwG__btnBox select option {
-  background-color: var(--aqua-700);
-}
-
-.Navbar-module__dVeNwG__btnBox select option:hover {
-  background: var(--orange-cta);
 }
 
 .Navbar-module__dVeNwG__navbar {

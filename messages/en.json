@@ -67,6 +67,10 @@
         "moreBtn": "More",
         "backToProjects": "Go Back to Projects",
         "viewProject": "View Project",
-        "viewRepository": "Github Repository"
+        "viewRepository": "Github Repository",
+        "status": {
+            "completed": "Completed",
+            "stillInProgress": "Still in progress"
+        }
     }
 }
