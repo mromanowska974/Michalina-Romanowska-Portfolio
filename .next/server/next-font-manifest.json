@@ -1,5 +1,18 @@
 {
   "app": {
+    "[project]/app/_not-found/page": [
+      "static/media/Sacramento_Regular-s.p.994356b2.ttf"
+    ],
+    "[project]/app/page": [
+      "static/media/Sacramento_Regular-s.p.994356b2.ttf",
+      "static/media/Sacramento_Regular-s.p.994356b2.ttf"
+    ],
+    "[project]/app/projects/[projectId]/page": [
+      "static/media/Sacramento_Regular-s.p.994356b2.ttf"
+    ],
+    "[project]/app/projects/page": [
+      "static/media/Sacramento_Regular-s.p.994356b2.ttf"
+    ],
     "[project]/app/secret-door/add-project/page": [
       "static/media/Sacramento_Regular-s.p.994356b2.ttf"
     ]

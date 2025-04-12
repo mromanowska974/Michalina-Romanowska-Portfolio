@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import styles from './project.module.css';
 import ImageWrapper from '../ImageWrapper/ImageWrapper.jsx';
@@ -10,7 +12,12 @@ function Project({ project }) {
     const technologies = project.technologies.split(',');
     const translate = useTranslations('projects');
 
-    const slug = slugify(project.name, {lower: true})
+    const slug = slugify(project.name, {lower: true});
+
+    const cookieLocale = document.cookie
+    .split("; ")
+    .find(row => row.startsWith("PORTFOLIO_LOCALE="))
+    ?.split("=")[1];
 
     return (
         <section className={styles.project}>
@@ -20,7 +27,7 @@ function Project({ project }) {
             <div className={styles.status}>{translate(`status.${project.status}`)}</div>
             <Technologies technologies={technologies}/>
             <h2>{ project.name }</h2>
-            <p>{ project.description }</p>
+            <p>{ cookieLocale === 'pl' ? project.descriptionPL : project.descriptionEN }</p>
             <Button link text={translate('moreBtn')} href={`/projects/${slug}?id=${project.id}`}/>
         </section>
     );

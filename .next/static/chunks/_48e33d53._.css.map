@@ -2,6 +2,6 @@
   "version": 3,
   "sources": [],
   "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file://D%3A/Kodowanko/React/portfolio/components/AdminNavbar/AdminNavbar.module.css"],"sourcesContent":[".navbar {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  padding: 10px 20px;\r\n  gap: 10px;\r\n}\r\n\r\n.navbar a {\r\n    text-decoration: none;\r\n    color: var(--blue_gray-100);\r\n}"],"names":[],"mappings":"AAAA;;;;;;;;AAQA","debugId":null}},
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file://D%3A/Kodowanko/React/portfolio/components/AdminNavbar/AdminNavbar.module.css"],"sourcesContent":[".navbar {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  padding: 10px 20px;\r\n  gap: 20px;\r\n}\r\n\r\n.navbar a {\r\n    text-decoration: none;\r\n    color: var(--blue_gray-100);\r\n}"],"names":[],"mappings":"AAAA;;;;;;;;AAQA","debugId":null}},
     {"offset": {"line": 16, "column": 0}, "map": {"version":3,"sources":["file://D%3A/Kodowanko/React/portfolio/app/secret-door/layout.module.css"],"sourcesContent":[".container {\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    justify-content: start;\r\n    gap: 20px;\r\n}"],"names":[],"mappings":"AAAA","debugId":null}}]
 }

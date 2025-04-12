@@ -7,15 +7,21 @@ import Technologies from '../../../components/Technologies/technologies';
 import Scrollable from '../../../components/Scrollable/scrollable';
 import Button from '../../../components/Button/button';
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
 
-function ProjectPage({ searchParams }) {
-    const projectId = searchParams.id;
-    const translate = useTranslations("projects");
+import { cookies } from 'next/headers';
+import { getTranslations } from 'next-intl/server';
+
+async function ProjectPage({ searchParams }) {
+    const projectId = await searchParams.id;
+    const cookieLocale = (await cookies()).get("PORTFOLIO_LOCALE")?.value || "en";
+
+    const translate = await getTranslations('projects', {
+        locale: cookieLocale
+    });
 
     const project = getProject(projectId);
     const technologies = project.technologies.split(',');
-    console.log(project)
+
     return (
         <div className={styles.container}>
             <div className={styles.demo}>
@@ -28,7 +34,7 @@ function ProjectPage({ searchParams }) {
                 <Title>{project.name}</Title>
                 <Technologies technologies={technologies}/>
                 <Scrollable className={styles.paragraph} axis={'y'}>
-                    <p>{project.description}</p>
+                    <p>{cookieLocale === 'pl' ? project.descriptionPL : project.descriptionEN}</p>
                 </Scrollable>
                 <div className={styles.links}>
                     <Button link href={project.app_link} text={translate('viewProject')}/>
