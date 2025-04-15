@@ -10,6 +10,28 @@
       "layer": {
         "app/secret-door/add-project/page": "rsc"
       }
+    },
+    "4065b387cad713ff2e849fac712b0a8a2e3cbfb663": {
+      "workers": {
+        "app/secret-door/add-project/page": {
+          "moduleId": "[project]/.next-internal/server/app/secret-door/add-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/action.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/secret-door/add-project/page": "rsc"
+      }
+    },
+    "60f71897cea2ef91d8041e45cd3a21df077434871a": {
+      "workers": {
+        "app/secret-door/add-project/page": {
+          "moduleId": "[project]/.next-internal/server/app/secret-door/add-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/action.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/secret-door/add-project/page": "rsc"
+      }
     }
   },
   "edge": {}

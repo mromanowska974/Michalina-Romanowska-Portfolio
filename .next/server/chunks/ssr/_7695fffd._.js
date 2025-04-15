@@ -157,7 +157,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Button$2f$butt
 ;
 ;
 ;
-function page(props) {
+function Questions(props) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$secret$2d$door$2f$questions$2f$page$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].container,
         children: [
@@ -192,6 +192,7 @@ function page(props) {
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Input$2f$input$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                        type: "password",
                         label: 'Odpowiedź'
                     }, void 0, false, {
                         fileName: "[project]/app/secret-door/questions/page.js",
@@ -218,7 +219,7 @@ function page(props) {
         columnNumber: 9
     }, this);
 }
-const __TURBOPACK__default__export__ = page;
+const __TURBOPACK__default__export__ = Questions;
 }}),
 "[project]/app/secret-door/questions/page.js [app-rsc] (ecmascript, Next.js server component)": ((__turbopack_context__) => {
 

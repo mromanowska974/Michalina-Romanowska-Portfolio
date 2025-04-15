@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/components/Button/button.module.css [app-ssr] (css module)"],"sourcesContent":["__turbopack_context__.v({\n  \"btn\": \"button-module__RUbLPq__btn\",\n});\n"],"names":[],"mappings":"AAAA;AACA;AACA"}},
+    {"offset": {"line": 15, "column": 0}, "map": {"version":3,"sources":["file://D%3A/Kodowanko/React/portfolio/components/Button/button.js"],"sourcesContent":["'use client';\r\n\r\nimport React from 'react';\r\nimport styles from './button.module.css';\r\nimport Link from 'next/link';\r\n\r\nfunction Button({text, link, ...props}) {\r\n    return (\r\n        <>\r\n            {link ? \r\n                <Link className={styles.btn} {...props}>\r\n                    {text}\r\n                </Link> : \r\n                <button className={styles.btn} {...props}>\r\n                    {text}\r\n                </button>\r\n            }\r\n        </>\r\n        \r\n    );\r\n}\r\n\r\nexport default Button;"],"names":[],"mappings":";;;;AAEA;AACA;AACA;AAJA;;;;;AAMA,SAAS,OAAO,EAAC,IAAI,EAAE,IAAI,EAAE,GAAG,OAAM;IAClC,qBACI;kBACK,qBACG,8OAAC,4JAAA,CAAA,UAAI;YAAC,WAAW,0IAAA,CAAA,UAAM,CAAC,GAAG;YAAG,GAAG,KAAK;sBACjC;;;;;iCAEL,8OAAC;YAAO,WAAW,0IAAA,CAAA,UAAM,CAAC,GAAG;YAAG,GAAG,KAAK;sBACnC;;;;;;;AAMrB;uCAEe","debugId":null}}]
+}
