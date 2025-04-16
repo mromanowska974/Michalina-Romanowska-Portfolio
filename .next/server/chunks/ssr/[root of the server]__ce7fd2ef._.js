@@ -94,7 +94,9 @@ function deleteProject(id) {
     const project = getProject(id);
     db.prepare('delete from projects where id=?').run(id);
     db.prepare('delete from images where project_id=?').run(id);
-    __TURBOPACK__imported__module__$5b$externals$5d2f$node$3a$fs__$5b$external$5d$__$28$node$3a$fs$2c$__cjs$29$__["default"].rmSync(`public/images/${project.name}`);
+    __TURBOPACK__imported__module__$5b$externals$5d2f$node$3a$fs__$5b$external$5d$__$28$node$3a$fs$2c$__cjs$29$__["default"].rmdirSync(`public/images/${project.name}`, {
+        recursive: true
+    });
 }
 }}),
 "[project]/lib/questions.js [app-rsc] (ecmascript)": ((__turbopack_context__) => {
@@ -206,10 +208,11 @@ async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ addQuestion(formData) {
 async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ deleteResource(resourceId, resourceType) {
     if (resourceType === 'project') {
         (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$projects$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["deleteProject"])(resourceId);
+        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["redirect"])(`/secret-door/edit-projects`);
     } else if (resourceType === 'question') {
         (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$questions$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["deleteQuestion"])(resourceId);
+        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["redirect"])(`/secret-door/questions`);
     }
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["redirect"])(`/secret-door/${resourceType}s`);
 }
 ;
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$validate$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["ensureServerEntryExports"])([
