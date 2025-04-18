@@ -106,8 +106,8 @@ var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "deleteQuestion": (()=>deleteQuestion),
-    "getQuestion": (()=>getQuestion),
     "getQuestions": (()=>getQuestions),
+    "getRandomQuestion": (()=>getRandomQuestion),
     "saveQuestion": (()=>saveQuestion),
     "updateQuestion": (()=>updateQuestion)
 });
@@ -127,8 +127,8 @@ function saveQuestion(question) {
 function getQuestions() {
     return db.prepare(`SELECT * FROM questions`).all();
 }
-function getQuestion(id) {
-    return db.prepare(`SELECT * FROM questions WHERE id = ?`).run(id);
+function getRandomQuestion() {
+    return db.prepare(`SELECT * FROM questions ORDER BY RANDOM() LIMIT 1`).get();
 }
 function deleteQuestion(id) {
     db.prepare(`DELETE FROM questions WHERE id = ?`).run(id);
@@ -155,10 +155,11 @@ module.exports = mod;
 
 var { g: global, __dirname } = __turbopack_context__;
 {
-/* __next_internal_action_entry_do_not_use__ {"405b4a211d6b7d1c59ae147518bcb565669b058e0b":"addProject","4065b387cad713ff2e849fac712b0a8a2e3cbfb663":"addQuestion","60f71897cea2ef91d8041e45cd3a21df077434871a":"deleteResource"} */ __turbopack_context__.s({
+/* __next_internal_action_entry_do_not_use__ {"405b4a211d6b7d1c59ae147518bcb565669b058e0b":"addProject","4065b387cad713ff2e849fac712b0a8a2e3cbfb663":"addQuestion","60bab89bc14fb320bf53e99866919283ab4e3aa181":"validateAnswer","60f71897cea2ef91d8041e45cd3a21df077434871a":"deleteResource"} */ __turbopack_context__.s({
     "addProject": (()=>addProject),
     "addQuestion": (()=>addQuestion),
-    "deleteResource": (()=>deleteResource)
+    "deleteResource": (()=>deleteResource),
+    "validateAnswer": (()=>validateAnswer)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/build/webpack/loaders/next-flight-loader/server-reference.js [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$app$2d$render$2f$encryption$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/app-render/encryption.js [app-rsc] (ecmascript)");
@@ -214,15 +215,24 @@ async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ deleteResource(resource
         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["redirect"])(`/secret-door/questions`);
     }
 }
+async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ validateAnswer(formData, question) {
+    const enteredAnswer = formData.get('answer');
+    const answerIsValid = await __TURBOPACK__imported__module__$5b$externals$5d2f$bcrypt__$5b$external$5d$__$28$bcrypt$2c$__cjs$29$__["default"].compare(enteredAnswer, question.answer);
+    if (answerIsValid) {
+        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["redirect"])('/secret-door/add-project');
+    }
+}
 ;
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$validate$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["ensureServerEntryExports"])([
     addProject,
     addQuestion,
-    deleteResource
+    deleteResource,
+    validateAnswer
 ]);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(addProject, "405b4a211d6b7d1c59ae147518bcb565669b058e0b", null);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(addQuestion, "4065b387cad713ff2e849fac712b0a8a2e3cbfb663", null);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(deleteResource, "60f71897cea2ef91d8041e45cd3a21df077434871a", null);
+(0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(validateAnswer, "60bab89bc14fb320bf53e99866919283ab4e3aa181", null);
 }}),
 "[project]/.next-internal/server/app/secret-door/add-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/action.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript) <locals>": ((__turbopack_context__) => {
 "use strict";
@@ -230,6 +240,7 @@ async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ deleteResource(resource
 var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({});
+;
 ;
 ;
 ;
@@ -251,6 +262,7 @@ var { g: global, __dirname } = __turbopack_context__;
 __turbopack_context__.s({
     "405b4a211d6b7d1c59ae147518bcb565669b058e0b": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$action$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["addProject"]),
     "4065b387cad713ff2e849fac712b0a8a2e3cbfb663": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$action$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["addQuestion"]),
+    "60bab89bc14fb320bf53e99866919283ab4e3aa181": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$action$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["validateAnswer"]),
     "60f71897cea2ef91d8041e45cd3a21df077434871a": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$action$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["deleteResource"])
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$action$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/action.js [app-rsc] (ecmascript)");
@@ -264,6 +276,7 @@ var { g: global, __dirname } = __turbopack_context__;
 __turbopack_context__.s({
     "405b4a211d6b7d1c59ae147518bcb565669b058e0b": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$secret$2d$door$2f$add$2d$project$2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$lib$2f$action$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$server__actions__loader$2c$__ecmascript$29$__$3c$exports$3e$__["405b4a211d6b7d1c59ae147518bcb565669b058e0b"]),
     "4065b387cad713ff2e849fac712b0a8a2e3cbfb663": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$secret$2d$door$2f$add$2d$project$2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$lib$2f$action$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$server__actions__loader$2c$__ecmascript$29$__$3c$exports$3e$__["4065b387cad713ff2e849fac712b0a8a2e3cbfb663"]),
+    "60bab89bc14fb320bf53e99866919283ab4e3aa181": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$secret$2d$door$2f$add$2d$project$2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$lib$2f$action$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$server__actions__loader$2c$__ecmascript$29$__$3c$exports$3e$__["60bab89bc14fb320bf53e99866919283ab4e3aa181"]),
     "60f71897cea2ef91d8041e45cd3a21df077434871a": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$secret$2d$door$2f$add$2d$project$2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$lib$2f$action$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$server__actions__loader$2c$__ecmascript$29$__$3c$exports$3e$__["60f71897cea2ef91d8041e45cd3a21df077434871a"])
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$secret$2d$door$2f$add$2d$project$2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$lib$2f$action$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$server__actions__loader$2c$__ecmascript$29$__$3c$module__evaluation$3e$__ = __turbopack_context__.i('[project]/.next-internal/server/app/secret-door/add-project/page/actions.js { ACTIONS_MODULE0 => "[project]/lib/action.js [app-rsc] (ecmascript)" } [app-rsc] (server actions loader, ecmascript) <module evaluation>');
