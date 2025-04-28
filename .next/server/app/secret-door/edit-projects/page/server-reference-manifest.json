@@ -22,6 +22,17 @@
         "app/secret-door/edit-projects/page": "action-browser"
       }
     },
+    "60bab89bc14fb320bf53e99866919283ab4e3aa181": {
+      "workers": {
+        "app/secret-door/edit-projects/page": {
+          "moduleId": "[project]/.next-internal/server/app/secret-door/edit-projects/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/action.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/secret-door/edit-projects/page": "action-browser"
+      }
+    },
     "60f71897cea2ef91d8041e45cd3a21df077434871a": {
       "workers": {
         "app/secret-door/edit-projects/page": {

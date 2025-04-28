@@ -4,10 +4,12 @@ import { getRandomQuestion } from '../../lib/questions';
 import Input from '../../components/Input/input';
 import Button from '../../components/Button/button';
 import { validateAnswer } from '../../lib/action';
+import { auth } from '../auth';
 
-function DefaultAdminPage() {
+async function DefaultAdminPage() {
     const question = getRandomQuestion();
     let errorMessage = null;
+    const session = await auth();
 
     return (
         <div className={styles.container}>
