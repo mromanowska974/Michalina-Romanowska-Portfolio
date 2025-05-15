@@ -220,7 +220,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$questions$2e$js__$5b$
 const { auth, handlers, signIn, signOut } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$locals$3e$__["default"])({
     session: {
         strategy: 'jwt',
-        maxAge: 60 * 10
+        maxAge: 60 * 5
     },
     providers: [
         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$auth$2f$core$2f$providers$2f$credentials$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"])({
@@ -232,7 +232,9 @@ const { auth, handlers, signIn, signOut } = (0, __TURBOPACK__imported__module__$
                     const answer = credentials.answer;
                     const question = (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$questions$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getQuestion"])(credentials.questionId);
                     if (await __TURBOPACK__imported__module__$5b$externals$5d2f$bcrypt__$5b$external$5d$__$28$bcrypt$2c$__cjs$29$__["default"].compare(answer, question.answer)) {
-                        return req;
+                        return {
+                            message: 'Authorized'
+                        };
                     } else {
                         throw new Error('Invalid answer');
                     }
@@ -625,7 +627,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Select$2f$sele
 ;
 ;
 ;
-function AddProject() {
+async function AddProject() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
         className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$secret$2d$door$2f$add$2d$project$2f$page$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].form,
         action: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$action$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["addProject"],

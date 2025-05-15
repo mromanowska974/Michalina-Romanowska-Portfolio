@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 23, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/middleware.ts"],"sourcesContent":["import { NextResponse } from \"next/server\";\r\nimport { auth } from \"./src/auth\";\r\n\r\nconst protectedRoutes = [\r\n    '/secret-door/questions',\r\n    '/secret-door/edit-projects',\r\n    '/secret-door/add-project'\r\n];\r\n\r\nexport default async function middleware(request) {\r\n    const session = await auth();\r\n\r\n    const isProtected = protectedRoutes.some((route) => request.nextUrl.pathname.startsWith(route));\r\n\r\n    if(!session && isProtected) {\r\n        return NextResponse.redirect(new URL('/secret-door', request.url));\r\n    }\r\n\r\n    return NextResponse.next();\r\n}"],"names":[],"mappings":";;;AAAA;AAAA;;;;;;;;AAGA,MAAM,kBAAkB;IACpB;IACA;IACA;CACH;AAEc,eAAe,WAAW,OAAO;IAC5C,MAAM,UAAU,MAAM;IAEtB,MAAM,cAAc,gBAAgB,IAAI,CAAC,CAAC,QAAU,QAAQ,OAAO,CAAC,QAAQ,CAAC,UAAU,CAAC;IAExF,IAAG,CAAC,WAAW,aAAa;QACxB,OAAO,6LAAA,CAAA,eAAY,CAAC,QAAQ,CAAC,IAAI,IAAI,gBAAgB,QAAQ,GAAG;IACpE;IAEA,OAAO,6LAAA,CAAA,eAAY,CAAC,IAAI;AAC5B"}}]
+}

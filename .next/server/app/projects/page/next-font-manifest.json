@@ -1,7 +1,7 @@
 {
   "pages": {},
   "app": {
-    "[project]/app/projects/page": [
+    "[project]/src/app/projects/page": [
       "static/media/Sacramento_Regular-s.p.994356b2.ttf"
     ]
   },

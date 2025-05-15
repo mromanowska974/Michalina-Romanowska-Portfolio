@@ -1,9 +1,9 @@
 {
   "node": {
-    "405b4a211d6b7d1c59ae147518bcb565669b058e0b": {
+    "40869516f1ad3d2a484d2480294ad21ea7be747746": {
       "workers": {
         "app/secret-door/questions/page": {
-          "moduleId": "[project]/.next-internal/server/app/secret-door/questions/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/action.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "moduleId": "[project]/.next-internal/server/app/secret-door/questions/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/action.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false
         }
       },
@@ -11,10 +11,10 @@
         "app/secret-door/questions/page": "action-browser"
       }
     },
-    "4065b387cad713ff2e849fac712b0a8a2e3cbfb663": {
+    "40b52d3ac1cf8f1b3a7353cbb10222ae0de44c3852": {
       "workers": {
         "app/secret-door/questions/page": {
-          "moduleId": "[project]/.next-internal/server/app/secret-door/questions/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/action.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "moduleId": "[project]/.next-internal/server/app/secret-door/questions/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/action.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false
         }
       },
@@ -22,10 +22,21 @@
         "app/secret-door/questions/page": "action-browser"
       }
     },
-    "60f71897cea2ef91d8041e45cd3a21df077434871a": {
+    "607e89cf6a3eb0b3e9181037ac734b32084aa2b432": {
       "workers": {
         "app/secret-door/questions/page": {
-          "moduleId": "[project]/.next-internal/server/app/secret-door/questions/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/action.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "moduleId": "[project]/.next-internal/server/app/secret-door/questions/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/action.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/secret-door/questions/page": "action-browser"
+      }
+    },
+    "60e21f36b9c63b9182a73b8ccf38b6f996619bee14": {
+      "workers": {
+        "app/secret-door/questions/page": {
+          "moduleId": "[project]/.next-internal/server/app/secret-door/questions/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/action.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false
         }
       },

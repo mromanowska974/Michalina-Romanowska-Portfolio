@@ -1,0 +1,22 @@
+/* [project]/src/app/layout.module.css [app-client] (css) */
+#layout-module__L5FxyW__root {
+  background: linear-gradient(45deg, var(--violet-700), var(--aqua-700));
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.layout-module__L5FxyW__content {
+  flex-grow: 1;
+  width: 100%;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=src_app_layout_module_b52d8e88.css.map*/

@@ -1,0 +1,124 @@
+/* [project]/src/app/about-me/page.module.css [app-client] (css) */
+.page-module__46WyTq__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  height: 100%;
+}
+
+.page-module__46WyTq__content {
+  color: var(--blue_gray-100);
+  width: 50%;
+  height: 80%;
+}
+
+.page-module__46WyTq__content h2, .page-module__46WyTq__content h3 {
+  text-shadow: 3px 3px 5px var(--aqua-900);
+}
+
+@media (orientation: portrait) {
+  .page-module__46WyTq__container {
+    flex-direction: column;
+  }
+
+  .page-module__46WyTq__content {
+    width: 80%;
+    height: 60%;
+  }
+}
+
+
+/* [project]/src/components/ImageWrapper/ImageWrapper.module.css [app-client] (css) */
+.ImageWrapper-module__4Ijjwa__imageWrap {
+  background: #20b2aa;
+  align-self: center;
+}
+
+.ImageWrapper-module__4Ijjwa__isRound {
+  box-shadow: 5px 5px 20px var(--violet-900);
+}
+
+.ImageWrapper-module__4Ijjwa__isRound, .ImageWrapper-module__4Ijjwa__isRound img {
+  border-radius: 50%;
+}
+
+.ImageWrapper-module__4Ijjwa__imageWrap img {
+  object-fit: cover;
+}
+
+
+/* [project]/src/components/Paragraph/Paragraph.module.css [app-client] (css) */
+.Paragraph-module__6SuPnG__line {
+  margin-top: 15px;
+  width: 95%;
+  height: 2px;
+  border: #0000;
+  background: linear-gradient(45deg, var(--violet-400), var(--aqua-400));
+}
+
+
+/* [project]/src/components/Title/title.module.css [app-client] (css) */
+.title-module__9EsE3G__title {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  background: linear-gradient(45deg, var(--violet-200), var(--aqua-200));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(3px 3px 5px var(--aqua-900));
+}
+
+
+/* [project]/src/components/Scrollable/scrollable.module.css [app-client] (css) */
+.scrollable-module__V-3v8W__container {
+  scrollbar-gutter: stable;
+  overflow: hidden;
+}
+
+.scrollable-module__V-3v8W__y:hover {
+  overflow-y: auto;
+}
+
+.scrollable-module__V-3v8W__x:hover {
+  overflow-x: auto;
+}
+
+.scrollable-module__V-3v8W__portraitY:hover {
+  overflow-y: auto;
+}
+
+.scrollable-module__V-3v8W__portraitX:hover {
+  overflow-x: auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  border: #0000;
+  background-color: #fff3;
+}
+
+@media (orientation: portrait) {
+  .scrollable-module__V-3v8W__y:hover {
+    overflow-y: auto;
+  }
+
+  .scrollable-module__V-3v8W__x:hover {
+    overflow-x: auto;
+  }
+
+  .scrollable-module__V-3v8W__portraitY:hover {
+    overflow-y: auto;
+  }
+
+  .scrollable-module__V-3v8W__portraitX:hover {
+    overflow-x: auto;
+  }
+}
+
+
+/*# sourceMappingURL=src_e036dac2._.css.map*/

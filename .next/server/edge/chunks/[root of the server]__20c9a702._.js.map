@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 22, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/middleware.js"],"sourcesContent":["// import { NextResponse } from \"next/server\";\r\n// import { auth } from \"./auth\";\r\n\r\n// const protectedRoutes = [\r\n//     '/secret-door/questions',\r\n//     '/secret-door/edit-projects',\r\n//     '/secret-door/add-project'\r\n// ];\r\n\r\n// export default async function middleware(request) {\r\n//     const session = await auth();\r\n\r\n//     const isProtected = protectedRoutes.some((route) => request.nextUrl.pathname.startsWith(route));\r\n\r\n//     if(!session && isProtected) {\r\n//         return NextResponse.redirect(new URL('/secret-door', request.url));\r\n//     }\r\n\r\n//     return NextResponse.next();\r\n// }"],"names":[],"mappings":"AAAA,8CAA8C;AAC9C,iCAAiC;AAEjC,4BAA4B;AAC5B,gCAAgC;AAChC,oCAAoC;AACpC,iCAAiC;AACjC,KAAK;AAEL,sDAAsD;AACtD,oCAAoC;AAEpC,uGAAuG;AAEvG,oCAAoC;AACpC,8EAA8E;AAC9E,QAAQ;AAER,kCAAkC;AAClC,IAAI"}}]
+}

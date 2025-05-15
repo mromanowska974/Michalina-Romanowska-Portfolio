@@ -220,7 +220,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$questions$2e$js__$5b$
 const { auth, handlers, signIn, signOut } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$locals$3e$__["default"])({
     session: {
         strategy: 'jwt',
-        maxAge: 60 * 10
+        maxAge: 60 * 5
     },
     providers: [
         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$auth$2f$core$2f$providers$2f$credentials$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"])({
@@ -232,14 +232,14 @@ const { auth, handlers, signIn, signOut } = (0, __TURBOPACK__imported__module__$
                     const answer = credentials.answer;
                     const question = (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$questions$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getQuestion"])(credentials.questionId);
                     if (await __TURBOPACK__imported__module__$5b$externals$5d2f$bcrypt__$5b$external$5d$__$28$bcrypt$2c$__cjs$29$__["default"].compare(answer, question.answer)) {
-                        console.log('Authentication successful!');
-                        return req;
+                        return {
+                            message: 'Authorized'
+                        };
                     } else {
                         throw new Error('Invalid answer');
                     }
                 } catch (error) {
-                    console.error('Error during authentication:', error);
-                // return { message: error.message }; // Return an error message
+                    console.error('Error during authorization:', error);
                 }
             }
         })
@@ -321,7 +321,6 @@ async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ validateAnswer(formData
             questionId: question.id,
             redirect: false
         });
-        console.log('Response:', response); // Log the response for debugging
         if (!response) {
             throw new Error('Invalid answer');
         }

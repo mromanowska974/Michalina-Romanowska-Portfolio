@@ -1,0 +1,52 @@
+/* [project]/src/app/projects/page.module.css [app-client] (css) */
+.page-module__q81_BW__projects {
+  color: var(--blue_gray-100);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  width: 80%;
+  overflow: hidden;
+  gap: 5vh;
+}
+
+.page-module__q81_BW__list {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page-module__q81_BW__scrollable {
+  display: flex;
+  gap: 50px;
+  padding-inline: 10px;
+}
+
+.page-module__q81_BW__scrollable li {
+  list-style: none;
+}
+
+@media (orientation: portrait) {
+  .page-module__q81_BW__projects {
+    height: 95%;
+    align-items: center;
+    gap: 2vh;
+    width: 90%;
+  }
+
+  .page-module__q81_BW__list {
+    display: flex;
+    justify-content: center;
+    height: 90%;
+    width: 90%;
+  }
+
+  .page-module__q81_BW__scrollable {
+    width: 600px;
+    height: 100%;
+    flex-flow: wrap;
+    justify-content: center;
+  }
+}
+
+/*# sourceMappingURL=src_app_projects_page_module_b52d8e88.css.map*/
