@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './page.module.css';
 import Scrollable from '../../../components/Scrollable/scrollable';
-import { getProjects } from '../../../lib/projects';
+import { getProjects } from '../../../lib/db/projects';
 import Actions from '../../../components/Actions/actions';
 
 function EditProjects() {

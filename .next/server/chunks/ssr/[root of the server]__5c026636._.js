@@ -216,10 +216,6 @@ const { auth, handlers, signIn, signOut } = (0, __TURBOPACK__imported__module__$
     },
     providers: [
         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$auth$2f$core$2f$providers$2f$credentials$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"])({
-            credentials: {
-                username: {},
-                password: {}
-            },
             authorize: async (credentials)=>{
                 if (!credentials) {
                     return null;
@@ -227,7 +223,6 @@ const { auth, handlers, signIn, signOut } = (0, __TURBOPACK__imported__module__$
                 let user = null;
                 const question = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$questions$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getQuestion"])(credentials.username);
                 const answer = credentials.password;
-                console.log('Question:', question);
                 if (await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$bcryptjs$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"].compare(answer, question.answer)) {
                     user = question;
                     return user;
@@ -237,24 +232,7 @@ const { auth, handlers, signIn, signOut } = (0, __TURBOPACK__imported__module__$
             }
         })
     ]
-}); // {
- //     async authorize(credentials) {
- //         if (!credentials) {
- //             return null; 
- //         }
- //         try {
- //             const answer = credentials.answer;
- //             const question = getQuestion(credentials.questionId); 
- //             if(await bcrypt.compare(answer, question.answer)) {
- //                 return {user: 'Authorized'}; 
- //             } else {
- //                 throw new Error('Invalid answer'); 
- //             }
- //         } catch (error) {
- //             console.error('Error during authorization:', error);
- //         }
- //     }
- // }
+});
 }}),
 "[project]/src/lib/action.js [app-rsc] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
@@ -323,7 +301,7 @@ async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ deleteResource(resource
         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["redirect"])(`/secret-door/questions`);
     }
 }
-async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ validateAnswer(formData, question) {
+async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ validateAnswer(question, formData) {
     let redirectUrl = '/secret-door/add-project';
     try {
         const response = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$auth$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["signIn"])("credentials", {
@@ -634,6 +612,12 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Actions
 ;
 function Questions() {
     let questions = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$questions$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getQuestions"])();
+    // function handleEdit() {
+    //     'use client';
+    //     console.log('Edit question');
+    //     // Implement edit functionality here
+    //     // console.log('Edit question with id:', id);
+    // }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$secret$2d$door$2f$questions$2f$page$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].container,
         children: [
@@ -641,7 +625,7 @@ function Questions() {
                 children: "Pytania weryfikacyjne"
             }, void 0, false, {
                 fileName: "[project]/src/app/secret-door/questions/page.js",
-                lineNumber: 15,
+                lineNumber: 23,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Scrollable$2f$scrollable$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -655,7 +639,7 @@ function Questions() {
                                     children: question.question
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/secret-door/questions/page.js",
-                                    lineNumber: 20,
+                                    lineNumber: 28,
                                     columnNumber: 29
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Actions$2f$actions$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -663,29 +647,29 @@ function Questions() {
                                     resourceType: 'question'
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/secret-door/questions/page.js",
-                                    lineNumber: 21,
+                                    lineNumber: 29,
                                     columnNumber: 29
                                 }, this)
                             ]
                         }, question.id, true, {
                             fileName: "[project]/src/app/secret-door/questions/page.js",
-                            lineNumber: 19,
+                            lineNumber: 27,
                             columnNumber: 25
                         }, this)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         children: "Brak pytań weryfikacyjnych"
                     }, void 0, false, {
                         fileName: "[project]/src/app/secret-door/questions/page.js",
-                        lineNumber: 23,
+                        lineNumber: 31,
                         columnNumber: 26
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/secret-door/questions/page.js",
-                    lineNumber: 17,
+                    lineNumber: 25,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/secret-door/questions/page.js",
-                lineNumber: 16,
+                lineNumber: 24,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -697,7 +681,7 @@ function Questions() {
                         label: 'Pytanie'
                     }, void 0, false, {
                         fileName: "[project]/src/app/secret-door/questions/page.js",
-                        lineNumber: 27,
+                        lineNumber: 35,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Input$2f$input$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -705,7 +689,7 @@ function Questions() {
                         label: 'Odpowiedź'
                     }, void 0, false, {
                         fileName: "[project]/src/app/secret-door/questions/page.js",
-                        lineNumber: 28,
+                        lineNumber: 36,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Button$2f$button$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -713,19 +697,19 @@ function Questions() {
                         text: 'Dodaj'
                     }, void 0, false, {
                         fileName: "[project]/src/app/secret-door/questions/page.js",
-                        lineNumber: 29,
+                        lineNumber: 37,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/secret-door/questions/page.js",
-                lineNumber: 26,
+                lineNumber: 34,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/secret-door/questions/page.js",
-        lineNumber: 14,
+        lineNumber: 22,
         columnNumber: 9
     }, this);
 }

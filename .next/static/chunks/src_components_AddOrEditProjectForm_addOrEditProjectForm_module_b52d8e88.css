@@ -1,0 +1,34 @@
+/* [project]/src/components/AddOrEditProjectForm/addOrEditProjectForm.module.css [app-client] (css) */
+.addOrEditProjectForm-module__iN_BaW__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80%;
+  gap: 5%;
+}
+
+.addOrEditProjectForm-module__iN_BaW__scrollable {
+  display: flex;
+  flex-direction: column;
+  max-height: 80vh;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+}
+
+.addOrEditProjectForm-module__iN_BaW__statusSelect {
+  display: flex;
+  justify-content: start;
+  width: 80%;
+  gap: 10px;
+  align-items: center;
+}
+
+.addOrEditProjectForm-module__iN_BaW__statusSelect label {
+  color: var(--blue_gray-100);
+}
+
+/*# sourceMappingURL=src_components_AddOrEditProjectForm_addOrEditProjectForm_module_b52d8e88.css.map*/

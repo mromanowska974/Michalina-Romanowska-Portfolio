@@ -1,9 +1,9 @@
 {
   "node": {
-    "6085f66e938f4235c20fe450048ad5c02265f7441c": {
+    "404429a6882a5c88d0611c2ec8da749fc0f1581ac7": {
       "workers": {
         "app/secret-door/page": {
-          "moduleId": "[project]/.next-internal/server/app/secret-door/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/secret-door/page.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/action.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "moduleId": "[project]/.next-internal/server/app/secret-door/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false
         }
       },
@@ -11,10 +11,10 @@
         "app/secret-door/page": "rsc"
       }
     },
-    "40869516f1ad3d2a484d2480294ad21ea7be747746": {
+    "60b7b2e2478925d020a03f1a7243dcc2fb53d5fe3a": {
       "workers": {
         "app/secret-door/page": {
-          "moduleId": "[project]/.next-internal/server/app/secret-door/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/secret-door/page.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/action.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "moduleId": "[project]/.next-internal/server/app/secret-door/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false
         }
       },
@@ -22,32 +22,10 @@
         "app/secret-door/page": "rsc"
       }
     },
-    "40b52d3ac1cf8f1b3a7353cbb10222ae0de44c3852": {
+    "60ed85bb82904a91c612b23734b6f70a20192d20ac": {
       "workers": {
         "app/secret-door/page": {
-          "moduleId": "[project]/.next-internal/server/app/secret-door/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/secret-door/page.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/action.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false
-        }
-      },
-      "layer": {
-        "app/secret-door/page": "rsc"
-      }
-    },
-    "607e89cf6a3eb0b3e9181037ac734b32084aa2b432": {
-      "workers": {
-        "app/secret-door/page": {
-          "moduleId": "[project]/.next-internal/server/app/secret-door/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/secret-door/page.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/action.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false
-        }
-      },
-      "layer": {
-        "app/secret-door/page": "rsc"
-      }
-    },
-    "60e21f36b9c63b9182a73b8ccf38b6f996619bee14": {
-      "workers": {
-        "app/secret-door/page": {
-          "moduleId": "[project]/.next-internal/server/app/secret-door/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/secret-door/page.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/action.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "moduleId": "[project]/.next-internal/server/app/secret-door/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false
         }
       },

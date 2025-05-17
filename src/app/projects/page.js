@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './page.module.css';
 import Project from '../../components/Project/project';
 import Title from '../../components/Title/title';
-import { getProjects } from '../../lib/projects';
+import { getProjects } from '../../lib/db/projects';
 import Scrollable from '../../components/Scrollable/scrollable';
 import { useTranslations } from 'next-intl';
 

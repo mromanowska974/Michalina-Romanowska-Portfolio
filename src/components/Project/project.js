@@ -5,7 +5,7 @@ import Button from '../Button/button.js';
 import Technologies from '../Technologies/technologies.js';
 import slugify from 'slugify';
 import { useTranslations } from 'next-intl';
-import { getProjectImages } from '../../lib/projects.js';
+import { getProjectImages } from '../../lib/db/projects.js';
 import { cookies } from 'next/headers.js';
 
 async function Project({ project }) {

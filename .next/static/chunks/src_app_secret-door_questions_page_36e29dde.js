@@ -6,7 +6,7 @@
   "path": "static/chunks/src_app_secret-door_questions_page_36e29dde.js",
   "chunks": [
     "static/chunks/src_01906fb8._.css",
-    "static/chunks/_5cefc00b._.js"
+    "static/chunks/_21725eb4._.js"
   ],
   "source": "dynamic"
 });

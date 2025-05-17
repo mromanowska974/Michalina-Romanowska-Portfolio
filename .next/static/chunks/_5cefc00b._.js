@@ -91,43 +91,62 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Actions$2f$actions$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__ = __turbopack_context__.i("[project]/src/components/Actions/actions.module.css [app-client] (css module)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$action$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/action.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
 'use client';
 ;
 ;
 ;
 ;
 function Actions({ resourceId, resourceType }) {
+    _s();
+    const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
     function handleDelete() {
         const isSure = window.confirm('Czy na pewno chcesz usunąć ten element?');
         if (isSure) {
             (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$action$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["deleteResource"])(resourceId, resourceType);
         }
     }
+    function handleEdit() {
+        if (resourceType === 'question') {
+            router.push(`/secret-door/questions?id=${resourceId}`);
+        } else {
+            router.push(`/secret-door/edit-project?id=${resourceId}`);
+        // Implement edit functionality here
+        }
+    }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Actions$2f$actions$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].btnBox,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                onClick: handleEdit,
                 children: "Edytuj"
             }, void 0, false, {
                 fileName: "[project]/src/components/Actions/actions.js",
-                lineNumber: 18,
+                lineNumber: 30,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                onClick: ()=>handleDelete(),
+                onClick: handleDelete,
                 children: "Usuń"
             }, void 0, false, {
                 fileName: "[project]/src/components/Actions/actions.js",
-                lineNumber: 19,
+                lineNumber: 31,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/Actions/actions.js",
-        lineNumber: 17,
+        lineNumber: 29,
         columnNumber: 9
     }, this);
 }
+_s(Actions, "fN7XvhJ+p5oE6+Xlo0NJmXpxjC8=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"]
+    ];
+});
 _c = Actions;
 const __TURBOPACK__default__export__ = Actions;
 var _c;

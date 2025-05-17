@@ -3,7 +3,23 @@ import fs from 'node:fs';
 
 const db = sql('portfolio.db');
 
-async function addImages(images, projectName){
+function addImages(images, projectName, projectId) {
+    images.forEach(image => {
+        const imageData = {
+            name: image.name,
+            project_id: projectId,
+        }
+
+        db.prepare(`
+            INSERT INTO images
+                (name, project_id)
+            VALUES (
+                @name,
+                @project_id
+            )
+        `).run(imageData);
+    });
+
     if(!fs.existsSync(`public/images/${projectName}`)){
         fs.mkdirSync(`public/images/${projectName}`);
     }
@@ -19,6 +35,11 @@ async function addImages(images, projectName){
             stream.end();
         });
     })
+}
+
+function deleteImages(projectName, projectId) {
+    db.prepare('delete from images where project_id=?').run(projectId);
+    fs.rmdirSync(`public/images/${projectName}`, { recursive: true });
 }
 
 export function saveProject(project, images) {
@@ -39,23 +60,7 @@ export function saveProject(project, images) {
     const result = query.run(project);
     const projectId = result.lastInsertRowid;
 
-    images.forEach(image => {
-        const imageData = {
-            name: image.name,
-            project_id: projectId,
-        }
-
-        db.prepare(`
-            INSERT INTO images
-                (name, project_id)
-            VALUES (
-                @name,
-                @project_id
-            )
-        `).run(imageData);
-    });
-
-    addImages(images, project.name);
+    addImages(images, project.name, projectId);
 }
 
 export function getProjects() {
@@ -70,11 +75,31 @@ export function getProject(id) {
     return db.prepare('select * from projects where id=?').get(id);
 }
 
+export function editProject(id, project, images) {
+    const existingProject = getProject(id);
+
+    deleteImages(existingProject.name);
+    addImages(images, project.name, id);
+
+    db.prepare(`
+        update projects
+        set name = @name,
+            technologies = @technologies,
+            descriptionPL = @descriptionPL,
+            descriptionEN = @descriptionEN,
+            status = @status,
+            app_link = @app_link,
+            repo_link = @repo_link
+        where id = @id
+    `).run({
+        ...project,
+        id: id
+    });
+}
+
 export function deleteProject(id) {
     const project = getProject(id);
 
     db.prepare('delete from projects where id=?').run(id);
-    db.prepare('delete from images where project_id=?').run(id);
-
-    fs.rmdirSync(`public/images/${project.name}`, { recursive: true });
+    deleteImages(project.name, id);
 }

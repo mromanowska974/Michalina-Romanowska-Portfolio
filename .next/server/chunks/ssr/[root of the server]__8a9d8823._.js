@@ -212,7 +212,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$questions$2e$j
 const { auth, handlers, signIn, signOut } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$locals$3e$__["default"])({
     session: {
         strategy: 'jwt',
-        maxAge: 60 * 5
+        maxAge: 60 * 30
     },
     providers: [
         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$auth$2f$core$2f$providers$2f$credentials$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"])({
@@ -301,7 +301,7 @@ async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ deleteResource(resource
         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["redirect"])(`/secret-door/questions`);
     }
 }
-async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ validateAnswer(formData, question) {
+async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ validateAnswer(question, formData) {
     let redirectUrl = '/secret-door/add-project';
     try {
         const response = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$auth$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["signIn"])("credentials", {
@@ -615,7 +615,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Select$
 ;
 ;
 ;
-async function AddProject() {
+async function AddProject({ editedProject = null }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
         className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$secret$2d$door$2f$add$2d$project$2f$page$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].form,
         action: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$action$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["addProject"],
@@ -626,7 +626,8 @@ async function AddProject() {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Input$2f$input$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                         label: 'Nazwa Projektu',
-                        name: 'project-name'
+                        name: 'project-name',
+                        defaultValue: editedProject ? editedProject.name : undefined
                     }, void 0, false, {
                         fileName: "[project]/src/app/secret-door/add-project/page.js",
                         lineNumber: 13,
@@ -634,44 +635,49 @@ async function AddProject() {
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Input$2f$input$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                         label: 'Technologie (oddzielane przecinkiem)',
-                        name: 'technologies'
+                        name: 'technologies',
+                        defaultValue: editedProject ? editedProject.technologies : undefined
                     }, void 0, false, {
                         fileName: "[project]/src/app/secret-door/add-project/page.js",
-                        lineNumber: 14,
+                        lineNumber: 18,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Input$2f$input$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                         label: 'Link do Aplikacji',
-                        name: 'app-link'
+                        name: 'app-link',
+                        defaultValue: editedProject ? editedProject.app_link : undefined
                     }, void 0, false, {
                         fileName: "[project]/src/app/secret-door/add-project/page.js",
-                        lineNumber: 15,
+                        lineNumber: 23,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Input$2f$input$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                         label: 'Link do Repozytorium',
-                        name: 'repo-link'
+                        name: 'repo-link',
+                        defaultValue: editedProject ? editedProject.repo_link : undefined
                     }, void 0, false, {
                         fileName: "[project]/src/app/secret-door/add-project/page.js",
-                        lineNumber: 16,
+                        lineNumber: 28,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Input$2f$input$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                         textarea: true,
                         label: 'Opis Projektu (PL)',
-                        name: 'descriptionPL'
+                        name: 'descriptionPL',
+                        defaultValue: editedProject ? editedProject.descriptionPL : undefined
                     }, void 0, false, {
                         fileName: "[project]/src/app/secret-door/add-project/page.js",
-                        lineNumber: 17,
+                        lineNumber: 33,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Input$2f$input$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                         textarea: true,
                         label: 'Opis Projektu (EN)',
-                        name: 'descriptionEN'
+                        name: 'descriptionEN',
+                        defaultValue: editedProject ? editedProject.descriptionEN : undefined
                     }, void 0, false, {
                         fileName: "[project]/src/app/secret-door/add-project/page.js",
-                        lineNumber: 18,
+                        lineNumber: 39,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Input$2f$input$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -682,7 +688,7 @@ async function AddProject() {
                         multiple: true
                     }, void 0, false, {
                         fileName: "[project]/src/app/secret-door/add-project/page.js",
-                        lineNumber: 19,
+                        lineNumber: 45,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -692,7 +698,7 @@ async function AddProject() {
                                 children: "Status Projektu"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/secret-door/add-project/page.js",
-                                lineNumber: 27,
+                                lineNumber: 53,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Select$2f$select$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -710,13 +716,13 @@ async function AddProject() {
                                 ]
                             }, void 0, false, {
                                 fileName: "[project]/src/app/secret-door/add-project/page.js",
-                                lineNumber: 28,
+                                lineNumber: 54,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/secret-door/add-project/page.js",
-                        lineNumber: 26,
+                        lineNumber: 52,
                         columnNumber: 17
                     }, this)
                 ]
@@ -726,10 +732,10 @@ async function AddProject() {
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Button$2f$button$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                text: 'Dodaj Projekt'
+                text: editedProject ? 'Edytuj Projekt' : 'Dodaj Projekt'
             }, void 0, false, {
                 fileName: "[project]/src/app/secret-door/add-project/page.js",
-                lineNumber: 39,
+                lineNumber: 65,
                 columnNumber: 13
             }, this)
         ]

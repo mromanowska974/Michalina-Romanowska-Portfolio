@@ -212,14 +212,10 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$questions$2e$j
 const { auth, handlers, signIn, signOut } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$locals$3e$__["default"])({
     session: {
         strategy: 'jwt',
-        maxAge: 60 * 5
+        maxAge: 60 * 30
     },
     providers: [
         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$auth$2f$core$2f$providers$2f$credentials$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"])({
-            credentials: {
-                username: {},
-                password: {}
-            },
             authorize: async (credentials)=>{
                 if (!credentials) {
                     return null;
@@ -227,7 +223,6 @@ const { auth, handlers, signIn, signOut } = (0, __TURBOPACK__imported__module__$
                 let user = null;
                 const question = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$questions$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getQuestion"])(credentials.username);
                 const answer = credentials.password;
-                console.log('Question:', question);
                 if (await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$bcryptjs$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"].compare(answer, question.answer)) {
                     user = question;
                     return user;
@@ -237,24 +232,7 @@ const { auth, handlers, signIn, signOut } = (0, __TURBOPACK__imported__module__$
             }
         })
     ]
-}); // {
- //     async authorize(credentials) {
- //         if (!credentials) {
- //             return null; 
- //         }
- //         try {
- //             const answer = credentials.answer;
- //             const question = getQuestion(credentials.questionId); 
- //             if(await bcrypt.compare(answer, question.answer)) {
- //                 return {user: 'Authorized'}; 
- //             } else {
- //                 throw new Error('Invalid answer'); 
- //             }
- //         } catch (error) {
- //             console.error('Error during authorization:', error);
- //         }
- //     }
- // }
+});
 }}),
 "[project]/src/lib/action.js [app-rsc] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
@@ -323,7 +301,7 @@ async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ deleteResource(resource
         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["redirect"])(`/secret-door/questions`);
     }
 }
-async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ validateAnswer(formData, question) {
+async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ validateAnswer(question, formData) {
     let redirectUrl = '/secret-door/add-project';
     try {
         const response = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$auth$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["signIn"])("credentials", {

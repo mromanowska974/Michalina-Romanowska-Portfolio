@@ -3,8 +3,8 @@ import styles from './page.module.css';
 import Input from '../../../components/Input/input';
 import Button from '../../../components/Button/button';
 import Scrollable from '../../../components/Scrollable/scrollable';
-import { addQuestion } from '../../../lib/action';
-import { getQuestions } from '../../../lib/questions';
+import { addQuestion } from '../../../lib/actions/questions';
+import { getQuestions } from '../../../lib/db/questions';
 import Actions from '../../../components/Actions/actions';
 
 function Questions() {

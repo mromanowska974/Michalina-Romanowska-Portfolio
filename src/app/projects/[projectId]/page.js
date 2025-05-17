@@ -1,5 +1,5 @@
 import React from 'react';
-import { getProject } from '../../../lib/projects';
+import { getProject } from '../../../lib/db/projects';
 import Title from '../../../components/Title/title';
 import styles from './page.module.css';
 import ImageWrapper from '../../../components/ImageWrapper/ImageWrapper';
