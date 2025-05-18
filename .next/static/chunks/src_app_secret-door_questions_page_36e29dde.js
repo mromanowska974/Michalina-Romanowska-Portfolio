@@ -5,8 +5,8 @@
 (globalThis.TURBOPACK_CHUNK_LISTS = globalThis.TURBOPACK_CHUNK_LISTS || []).push({
   "path": "static/chunks/src_app_secret-door_questions_page_36e29dde.js",
   "chunks": [
-    "static/chunks/src_01906fb8._.css",
-    "static/chunks/_21725eb4._.js"
+    "static/chunks/src_64849105._.css",
+    "static/chunks/_9326b629._.js"
   ],
   "source": "dynamic"
 });

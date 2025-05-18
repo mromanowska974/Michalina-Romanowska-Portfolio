@@ -6,7 +6,7 @@ import { getQuestion } from './lib/db/questions';
 export const {auth, handlers, signIn, signOut} = NextAuth({
     session: {
         strategy: 'jwt',
-        maxAge: 60 * 30, // 5 minutes
+        maxAge: 60 * 5, // 5 minutes
     },
     providers: [
         CredentialsProvider({

@@ -6,12 +6,6 @@
     height: fit-content;
 }
 
-.newQuestion {
-    display: flex;
-    gap: 10px;
-    align-items: last baseline;
-}
-
 .scrollable {
     max-height: 50vh;
     width: 100%;

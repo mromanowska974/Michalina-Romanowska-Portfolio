@@ -11,17 +11,6 @@
         "app/secret-door/add-project/page": "rsc"
       }
     },
-    "6082271261ed90c1040b4315fadfea62da83e3a94d": {
-      "workers": {
-        "app/secret-door/add-project/page": {
-          "moduleId": "[project]/.next-internal/server/app/secret-door/add-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/projects.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false
-        }
-      },
-      "layer": {
-        "app/secret-door/add-project/page": "rsc"
-      }
-    },
     "60cfd366acccc452b1229a6601d670d0596d1cfd87": {
       "workers": {
         "app/secret-door/add-project/page": {

@@ -1,51 +1,25 @@
 {
   "node": {
-    "403a5f822e76bd7a75a4fbd453f7663f3ecef3174c": {
+    "40923e1f0ea8546471b0d9649ab82a92d65f5f2216": {
       "workers": {
-        "app/secret-door/add-project/page": {
-          "moduleId": "[project]/.next-internal/server/app/secret-door/add-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/projects.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false
-        },
-        "app/secret-door/edit-project/page": {
-          "moduleId": "[project]/.next-internal/server/app/secret-door/edit-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/projects.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+        "app/secret-door/questions/page": {
+          "moduleId": "[project]/.next-internal/server/app/secret-door/questions/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/secret-door/questions/page.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/lib/actions/questions.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false
         }
       },
       "layer": {
-        "app/secret-door/add-project/page": "rsc",
-        "app/secret-door/edit-project/page": "rsc"
+        "app/secret-door/questions/page": "rsc"
       }
     },
-    "6082271261ed90c1040b4315fadfea62da83e3a94d": {
+    "40a2c3b674f9e0494b825217c0b4f4ceb8fbf7b85a": {
       "workers": {
-        "app/secret-door/add-project/page": {
-          "moduleId": "[project]/.next-internal/server/app/secret-door/add-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/projects.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false
-        },
-        "app/secret-door/edit-project/page": {
-          "moduleId": "[project]/.next-internal/server/app/secret-door/edit-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/projects.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+        "app/secret-door/questions/page": {
+          "moduleId": "[project]/.next-internal/server/app/secret-door/questions/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/secret-door/questions/page.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/lib/actions/questions.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false
         }
       },
       "layer": {
-        "app/secret-door/add-project/page": "rsc",
-        "app/secret-door/edit-project/page": "rsc"
-      }
-    },
-    "60cfd366acccc452b1229a6601d670d0596d1cfd87": {
-      "workers": {
-        "app/secret-door/add-project/page": {
-          "moduleId": "[project]/.next-internal/server/app/secret-door/add-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/projects.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false
-        },
-        "app/secret-door/edit-project/page": {
-          "moduleId": "[project]/.next-internal/server/app/secret-door/edit-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/projects.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false
-        }
-      },
-      "layer": {
-        "app/secret-door/add-project/page": "rsc",
-        "app/secret-door/edit-project/page": "rsc"
+        "app/secret-door/questions/page": "rsc"
       }
     },
     "404429a6882a5c88d0611c2ec8da749fc0f1581ac7": {
@@ -67,7 +41,7 @@
           "async": false
         },
         "app/secret-door/questions/page": {
-          "moduleId": "[project]/.next-internal/server/app/secret-door/questions/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/questions.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "moduleId": "[project]/.next-internal/server/app/secret-door/questions/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/secret-door/questions/page.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/lib/actions/questions.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false
         }
       },
@@ -98,7 +72,7 @@
           "async": false
         },
         "app/secret-door/questions/page": {
-          "moduleId": "[project]/.next-internal/server/app/secret-door/questions/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/questions.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "moduleId": "[project]/.next-internal/server/app/secret-door/questions/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/secret-door/questions/page.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/lib/actions/questions.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false
         }
       },
@@ -129,7 +103,7 @@
           "async": false
         },
         "app/secret-door/questions/page": {
-          "moduleId": "[project]/.next-internal/server/app/secret-door/questions/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/questions.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "moduleId": "[project]/.next-internal/server/app/secret-door/questions/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/secret-door/questions/page.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/lib/actions/questions.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false
         }
       },
@@ -144,12 +118,55 @@
     "407a3e55a99aad127a2a5b9a9e4e404a658d6a47a8": {
       "workers": {
         "app/secret-door/questions/page": {
-          "moduleId": "[project]/.next-internal/server/app/secret-door/questions/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/questions.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "moduleId": "[project]/.next-internal/server/app/secret-door/questions/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/secret-door/questions/page.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/lib/actions/questions.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false
         }
       },
       "layer": {
-        "app/secret-door/questions/page": "rsc"
+        "app/secret-door/questions/page": "action-browser"
+      }
+    },
+    "60d476e660aeca26242ed09f18e10193fd8bd5d7d1": {
+      "workers": {
+        "app/secret-door/questions/page": {
+          "moduleId": "[project]/.next-internal/server/app/secret-door/questions/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/secret-door/questions/page.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/lib/actions/questions.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/secret-door/questions/page": "action-browser"
+      }
+    },
+    "403a5f822e76bd7a75a4fbd453f7663f3ecef3174c": {
+      "workers": {
+        "app/secret-door/add-project/page": {
+          "moduleId": "[project]/.next-internal/server/app/secret-door/add-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/projects.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        },
+        "app/secret-door/edit-project/page": {
+          "moduleId": "[project]/.next-internal/server/app/secret-door/edit-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/projects.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/secret-door/add-project/page": "rsc",
+        "app/secret-door/edit-project/page": "rsc"
+      }
+    },
+    "60cfd366acccc452b1229a6601d670d0596d1cfd87": {
+      "workers": {
+        "app/secret-door/add-project/page": {
+          "moduleId": "[project]/.next-internal/server/app/secret-door/add-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/projects.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        },
+        "app/secret-door/edit-project/page": {
+          "moduleId": "[project]/.next-internal/server/app/secret-door/edit-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/projects.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/secret-door/add-project/page": "rsc",
+        "app/secret-door/edit-project/page": "rsc"
       }
     }
   },

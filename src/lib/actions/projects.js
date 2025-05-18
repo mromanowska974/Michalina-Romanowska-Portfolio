@@ -39,24 +39,12 @@ export async function addProject(formData) {
     const { project, images } = await prepareData(formData);
 
     saveProject(project, images);
+    redirect('/secret-door/edit-projects');
 }
 
 export async function updateProject(id, formData) {
     const { project, images } = await prepareData(formData);
 
-    console.log('project', project);
-
     editProject(id, project, images);
-}
-
-export async function projectAction(action, formData){
-    if(action.type === 'add') {
-        await addProject(formData);
-        redirect('/secret-door/edit-projects');
-    } else if(action.type === 'edit') {
-        await updateProject(action.id, formData);
-        redirect('/secret-door/edit-projects');
-    } else {
-        throw new Error('Invalid action');
-    }
+    redirect('/secret-door/edit-projects');
 }

@@ -81,7 +81,21 @@ var __TURBOPACK__imported__module__$5b$externals$5d2f$node$3a$fs__$5b$external$5
 ;
 ;
 const db = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$better$2d$sqlite3__$5b$external$5d$__$28$better$2d$sqlite3$2c$__cjs$29$__["default"])('portfolio.db');
-function addImages(images, projectName) {
+function addImages(images, projectName, projectId) {
+    images.forEach((image)=>{
+        const imageData = {
+            name: image.name,
+            project_id: projectId
+        };
+        db.prepare(`
+            INSERT INTO images
+                (name, project_id)
+            VALUES (
+                @name,
+                @project_id
+            )
+        `).run(imageData);
+    });
     if (!__TURBOPACK__imported__module__$5b$externals$5d2f$node$3a$fs__$5b$external$5d$__$28$node$3a$fs$2c$__cjs$29$__["default"].existsSync(`public/images/${projectName}`)) {
         __TURBOPACK__imported__module__$5b$externals$5d2f$node$3a$fs__$5b$external$5d$__$28$node$3a$fs$2c$__cjs$29$__["default"].mkdirSync(`public/images/${projectName}`);
     }
@@ -97,7 +111,8 @@ function addImages(images, projectName) {
         });
     });
 }
-function deleteImages(projectName) {
+function deleteImages(projectName, projectId) {
+    db.prepare('delete from images where project_id=?').run(projectId);
     __TURBOPACK__imported__module__$5b$externals$5d2f$node$3a$fs__$5b$external$5d$__$28$node$3a$fs$2c$__cjs$29$__["default"].rmdirSync(`public/images/${projectName}`, {
         recursive: true
     });
@@ -118,21 +133,7 @@ function saveProject(project, images) {
     `);
     const result = query.run(project);
     const projectId = result.lastInsertRowid;
-    images.forEach((image)=>{
-        const imageData = {
-            name: image.name,
-            project_id: projectId
-        };
-        db.prepare(`
-            INSERT INTO images
-                (name, project_id)
-            VALUES (
-                @name,
-                @project_id
-            )
-        `).run(imageData);
-    });
-    addImages(images, project.name);
+    addImages(images, project.name, projectId);
 }
 function getProjects() {
     return db.prepare('select * from projects').all();
@@ -146,8 +147,8 @@ function getProject(id) {
 function editProject(id, project, images) {
     const existingProject = getProject(id);
     deleteImages(existingProject.name);
-    addImages(images, project.name);
-    return db.prepare(`
+    addImages(images, project.name, id);
+    db.prepare(`
         update projects
         set name = @name,
             technologies = @technologies,
@@ -165,8 +166,7 @@ function editProject(id, project, images) {
 function deleteProject(id) {
     const project = getProject(id);
     db.prepare('delete from projects where id=?').run(id);
-    db.prepare('delete from images where project_id=?').run(id);
-    deleteImages(project.name);
+    deleteImages(project.name, id);
 }
 }}),
 "[externals]/crypto [external] (crypto, cjs)": (function(__turbopack_context__) {
@@ -642,8 +642,13 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Actions
 ;
 ;
 ;
-function Questions() {
+async function Questions({ searchParams }) {
     let questions = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2f$questions$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getQuestions"])();
+    const { id } = searchParams;
+    let editedQuestion;
+    if (searchParams) {
+        editedQuestion = questions.find((question)=>question.id === id);
+    }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$secret$2d$door$2f$questions$2f$page$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].container,
         children: [
@@ -651,7 +656,7 @@ function Questions() {
                 children: "Pytania weryfikacyjne"
             }, void 0, false, {
                 fileName: "[project]/src/app/secret-door/questions/page.js",
-                lineNumber: 15,
+                lineNumber: 21,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Scrollable$2f$scrollable$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -665,7 +670,7 @@ function Questions() {
                                     children: question.question
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/secret-door/questions/page.js",
-                                    lineNumber: 20,
+                                    lineNumber: 26,
                                     columnNumber: 29
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Actions$2f$actions$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -673,29 +678,29 @@ function Questions() {
                                     resourceType: 'question'
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/secret-door/questions/page.js",
-                                    lineNumber: 21,
+                                    lineNumber: 27,
                                     columnNumber: 29
                                 }, this)
                             ]
                         }, question.id, true, {
                             fileName: "[project]/src/app/secret-door/questions/page.js",
-                            lineNumber: 19,
+                            lineNumber: 25,
                             columnNumber: 25
                         }, this)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         children: "Brak pytań weryfikacyjnych"
                     }, void 0, false, {
                         fileName: "[project]/src/app/secret-door/questions/page.js",
-                        lineNumber: 23,
+                        lineNumber: 29,
                         columnNumber: 26
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/secret-door/questions/page.js",
-                    lineNumber: 17,
+                    lineNumber: 23,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/secret-door/questions/page.js",
-                lineNumber: 16,
+                lineNumber: 22,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -704,18 +709,22 @@ function Questions() {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Input$2f$input$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                         name: "question",
-                        label: 'Pytanie'
+                        label: 'Pytanie',
+                        defaultValue: editedQuestion ? editedQuestion.question : '',
+                        required: true
                     }, void 0, false, {
                         fileName: "[project]/src/app/secret-door/questions/page.js",
-                        lineNumber: 27,
+                        lineNumber: 33,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Input$2f$input$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                         name: "answer",
-                        label: 'Odpowiedź'
+                        label: 'Odpowiedź',
+                        defaultValue: editedQuestion ? editedQuestion.answer : '',
+                        required: true
                     }, void 0, false, {
                         fileName: "[project]/src/app/secret-door/questions/page.js",
-                        lineNumber: 28,
+                        lineNumber: 39,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Button$2f$button$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -723,19 +732,19 @@ function Questions() {
                         text: 'Dodaj'
                     }, void 0, false, {
                         fileName: "[project]/src/app/secret-door/questions/page.js",
-                        lineNumber: 29,
+                        lineNumber: 45,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/secret-door/questions/page.js",
-                lineNumber: 26,
+                lineNumber: 32,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/secret-door/questions/page.js",
-        lineNumber: 14,
+        lineNumber: 20,
         columnNumber: 9
     }, this);
 }

@@ -148,6 +148,14 @@ function saveQuestion(question) {
         )
     `).run(question);
 }
+function updateQuestion(id, question) {
+    db.prepare(`
+        UPDATE questions
+        SET question = @question,
+            answer = @answer
+        WHERE id = ?
+    `).run(question, id);
+}
 function getQuestions() {
     return db.prepare(`SELECT * FROM questions`).all();
 }
@@ -159,14 +167,6 @@ function getRandomQuestion() {
 }
 function deleteQuestion(id) {
     db.prepare(`DELETE FROM questions WHERE id = ?`).run(id);
-}
-function updateQuestion(question) {
-    db.prepare(`
-        UPDATE questions
-        SET question = @question,
-            answer = @answer
-        WHERE id = @id
-    `).run(question);
 }
 }}),
 "[externals]/crypto [external] (crypto, cjs)": (function(__turbopack_context__) {
@@ -235,7 +235,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2f$question
 const { auth, handlers, signIn, signOut } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$locals$3e$__["default"])({
     session: {
         strategy: 'jwt',
-        maxAge: 60 * 30
+        maxAge: 60 * 5
     },
     providers: [
         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$auth$2f$core$2f$providers$2f$credentials$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"])({
@@ -327,9 +327,8 @@ async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ validateAnswer(question
 
 var { g: global, __dirname } = __turbopack_context__;
 {
-/* __next_internal_action_entry_do_not_use__ {"403a5f822e76bd7a75a4fbd453f7663f3ecef3174c":"addProject","6082271261ed90c1040b4315fadfea62da83e3a94d":"projectAction","60cfd366acccc452b1229a6601d670d0596d1cfd87":"updateProject"} */ __turbopack_context__.s({
+/* __next_internal_action_entry_do_not_use__ {"403a5f822e76bd7a75a4fbd453f7663f3ecef3174c":"addProject","60cfd366acccc452b1229a6601d670d0596d1cfd87":"updateProject"} */ __turbopack_context__.s({
     "addProject": (()=>addProject),
-    "projectAction": (()=>projectAction),
     "updateProject": (()=>updateProject)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/build/webpack/loaders/next-flight-loader/server-reference.js [app-rsc] (ecmascript)");
@@ -366,32 +365,20 @@ async function prepareData(formData) {
 async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ addProject(formData) {
     const { project, images } = await prepareData(formData);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2f$projects$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["saveProject"])(project, images);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["redirect"])('/secret-door/edit-projects');
 }
 async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ updateProject(id, formData) {
     const { project, images } = await prepareData(formData);
-    console.log('project', project);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2f$projects$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["editProject"])(id, project, images);
-}
-async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ projectAction(action, formData) {
-    if (action.type === 'add') {
-        await addProject(formData);
-        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["redirect"])('/secret-door/edit-projects');
-    } else if (action.type === 'edit') {
-        await updateProject(action.id, formData);
-        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["redirect"])('/secret-door/edit-projects');
-    } else {
-        throw new Error('Invalid action');
-    }
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["redirect"])('/secret-door/edit-projects');
 }
 ;
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$validate$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["ensureServerEntryExports"])([
     addProject,
-    updateProject,
-    projectAction
+    updateProject
 ]);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(addProject, "403a5f822e76bd7a75a4fbd453f7663f3ecef3174c", null);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(updateProject, "60cfd366acccc452b1229a6601d670d0596d1cfd87", null);
-(0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(projectAction, "6082271261ed90c1040b4315fadfea62da83e3a94d", null);
 }}),
 "[project]/.next-internal/server/app/secret-door/add-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/projects.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript) <locals>": ((__turbopack_context__) => {
 "use strict";
@@ -399,7 +386,6 @@ async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ projectAction(action, f
 var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({});
-;
 ;
 ;
 ;
@@ -424,7 +410,6 @@ var { g: global, __dirname } = __turbopack_context__;
 __turbopack_context__.s({
     "403a5f822e76bd7a75a4fbd453f7663f3ecef3174c": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$actions$2f$projects$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["addProject"]),
     "404429a6882a5c88d0611c2ec8da749fc0f1581ac7": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$actions$2f$shared$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["isInvalidText"]),
-    "6082271261ed90c1040b4315fadfea62da83e3a94d": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$actions$2f$projects$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["projectAction"]),
     "60b7b2e2478925d020a03f1a7243dcc2fb53d5fe3a": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$actions$2f$shared$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["deleteResource"]),
     "60cfd366acccc452b1229a6601d670d0596d1cfd87": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$actions$2f$projects$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["updateProject"]),
     "60ed85bb82904a91c612b23734b6f70a20192d20ac": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$actions$2f$shared$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["validateAnswer"])
@@ -441,7 +426,6 @@ var { g: global, __dirname } = __turbopack_context__;
 __turbopack_context__.s({
     "403a5f822e76bd7a75a4fbd453f7663f3ecef3174c": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$secret$2d$door$2f$add$2d$project$2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$actions$2f$projects$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$actions$2f$shared$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$server__actions__loader$2c$__ecmascript$29$__$3c$exports$3e$__["403a5f822e76bd7a75a4fbd453f7663f3ecef3174c"]),
     "404429a6882a5c88d0611c2ec8da749fc0f1581ac7": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$secret$2d$door$2f$add$2d$project$2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$actions$2f$projects$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$actions$2f$shared$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$server__actions__loader$2c$__ecmascript$29$__$3c$exports$3e$__["404429a6882a5c88d0611c2ec8da749fc0f1581ac7"]),
-    "6082271261ed90c1040b4315fadfea62da83e3a94d": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$secret$2d$door$2f$add$2d$project$2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$actions$2f$projects$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$actions$2f$shared$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$server__actions__loader$2c$__ecmascript$29$__$3c$exports$3e$__["6082271261ed90c1040b4315fadfea62da83e3a94d"]),
     "60b7b2e2478925d020a03f1a7243dcc2fb53d5fe3a": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$secret$2d$door$2f$add$2d$project$2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$actions$2f$projects$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$actions$2f$shared$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$server__actions__loader$2c$__ecmascript$29$__$3c$exports$3e$__["60b7b2e2478925d020a03f1a7243dcc2fb53d5fe3a"]),
     "60cfd366acccc452b1229a6601d670d0596d1cfd87": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$secret$2d$door$2f$add$2d$project$2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$actions$2f$projects$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$actions$2f$shared$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$server__actions__loader$2c$__ecmascript$29$__$3c$exports$3e$__["60cfd366acccc452b1229a6601d670d0596d1cfd87"]),
     "60ed85bb82904a91c612b23734b6f70a20192d20ac": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$secret$2d$door$2f$add$2d$project$2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$actions$2f$projects$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$actions$2f$shared$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$server__actions__loader$2c$__ecmascript$29$__$3c$exports$3e$__["60ed85bb82904a91c612b23734b6f70a20192d20ac"])
@@ -685,15 +669,9 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Select$
 ;
 ;
 function AddOrEditProjectForm({ editedProject = null }) {
-    const action = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$actions$2f$projects$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["projectAction"].bind(null, editedProject ? {
-        type: 'edit',
-        id: editedProject.id
-    } : {
-        type: 'add'
-    });
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
         className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$AddOrEditProjectForm$2f$addOrEditProjectForm$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].form,
-        action: action,
+        action: editedProject ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$actions$2f$projects$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["updateProject"].bind(null, editedProject.id) : __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$actions$2f$projects$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["addProject"],
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Scrollable$2f$scrollable$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                 axis: 'y',
@@ -705,7 +683,7 @@ function AddOrEditProjectForm({ editedProject = null }) {
                         defaultValue: editedProject ? editedProject.name : undefined
                     }, void 0, false, {
                         fileName: "[project]/src/components/AddOrEditProjectForm/addOrEditProjectForm.js",
-                        lineNumber: 18,
+                        lineNumber: 16,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Input$2f$input$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -714,7 +692,7 @@ function AddOrEditProjectForm({ editedProject = null }) {
                         defaultValue: editedProject ? editedProject.technologies : undefined
                     }, void 0, false, {
                         fileName: "[project]/src/components/AddOrEditProjectForm/addOrEditProjectForm.js",
-                        lineNumber: 23,
+                        lineNumber: 21,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Input$2f$input$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -723,7 +701,7 @@ function AddOrEditProjectForm({ editedProject = null }) {
                         defaultValue: editedProject ? editedProject.app_link : undefined
                     }, void 0, false, {
                         fileName: "[project]/src/components/AddOrEditProjectForm/addOrEditProjectForm.js",
-                        lineNumber: 28,
+                        lineNumber: 26,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Input$2f$input$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -732,7 +710,7 @@ function AddOrEditProjectForm({ editedProject = null }) {
                         defaultValue: editedProject ? editedProject.repo_link : undefined
                     }, void 0, false, {
                         fileName: "[project]/src/components/AddOrEditProjectForm/addOrEditProjectForm.js",
-                        lineNumber: 33,
+                        lineNumber: 31,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Input$2f$input$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -742,7 +720,7 @@ function AddOrEditProjectForm({ editedProject = null }) {
                         defaultValue: editedProject ? editedProject.descriptionPL : undefined
                     }, void 0, false, {
                         fileName: "[project]/src/components/AddOrEditProjectForm/addOrEditProjectForm.js",
-                        lineNumber: 38,
+                        lineNumber: 36,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Input$2f$input$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -752,7 +730,7 @@ function AddOrEditProjectForm({ editedProject = null }) {
                         defaultValue: editedProject ? editedProject.descriptionEN : undefined
                     }, void 0, false, {
                         fileName: "[project]/src/components/AddOrEditProjectForm/addOrEditProjectForm.js",
-                        lineNumber: 44,
+                        lineNumber: 42,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Input$2f$input$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -763,7 +741,7 @@ function AddOrEditProjectForm({ editedProject = null }) {
                         multiple: true
                     }, void 0, false, {
                         fileName: "[project]/src/components/AddOrEditProjectForm/addOrEditProjectForm.js",
-                        lineNumber: 50,
+                        lineNumber: 48,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -773,7 +751,7 @@ function AddOrEditProjectForm({ editedProject = null }) {
                                 children: "Status Projektu"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/AddOrEditProjectForm/addOrEditProjectForm.js",
-                                lineNumber: 58,
+                                lineNumber: 56,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Select$2f$select$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -791,32 +769,32 @@ function AddOrEditProjectForm({ editedProject = null }) {
                                 ]
                             }, void 0, false, {
                                 fileName: "[project]/src/components/AddOrEditProjectForm/addOrEditProjectForm.js",
-                                lineNumber: 59,
+                                lineNumber: 57,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/AddOrEditProjectForm/addOrEditProjectForm.js",
-                        lineNumber: 57,
+                        lineNumber: 55,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/AddOrEditProjectForm/addOrEditProjectForm.js",
-                lineNumber: 17,
+                lineNumber: 15,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Button$2f$button$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                 text: editedProject ? 'Edytuj Projekt' : 'Dodaj Projekt'
             }, void 0, false, {
                 fileName: "[project]/src/components/AddOrEditProjectForm/addOrEditProjectForm.js",
-                lineNumber: 70,
+                lineNumber: 68,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/AddOrEditProjectForm/addOrEditProjectForm.js",
-        lineNumber: 13,
+        lineNumber: 11,
         columnNumber: 9
     }, this);
 }

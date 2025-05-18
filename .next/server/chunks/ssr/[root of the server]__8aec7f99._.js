@@ -100,7 +100,7 @@ function getProject(id) {
 function editProject(id, project, images) {
     const existingProject = getProject(id);
     deleteImages(existingProject.name);
-    addImages(images, project.name);
+    addImages(images, project.name, id);
     db.prepare(`
         update projects
         set name = @name,
@@ -148,6 +148,14 @@ function saveQuestion(question) {
         )
     `).run(question);
 }
+function updateQuestion(id, question) {
+    db.prepare(`
+        UPDATE questions
+        SET question = @question,
+            answer = @answer
+        WHERE id = ?
+    `).run(question, id);
+}
 function getQuestions() {
     return db.prepare(`SELECT * FROM questions`).all();
 }
@@ -159,14 +167,6 @@ function getRandomQuestion() {
 }
 function deleteQuestion(id) {
     db.prepare(`DELETE FROM questions WHERE id = ?`).run(id);
-}
-function updateQuestion(question) {
-    db.prepare(`
-        UPDATE questions
-        SET question = @question,
-            answer = @answer
-        WHERE id = @id
-    `).run(question);
 }
 }}),
 "[externals]/crypto [external] (crypto, cjs)": (function(__turbopack_context__) {
@@ -235,7 +235,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2f$question
 const { auth, handlers, signIn, signOut } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$locals$3e$__["default"])({
     session: {
         strategy: 'jwt',
-        maxAge: 60 * 30
+        maxAge: 60 * 5
     },
     providers: [
         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$auth$2f$core$2f$providers$2f$credentials$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"])({

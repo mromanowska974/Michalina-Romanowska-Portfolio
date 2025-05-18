@@ -1,15 +1,24 @@
 import React from 'react';
 import styles from './page.module.css';
-import Input from '../../../components/Input/input';
-import Button from '../../../components/Button/button';
 import Scrollable from '../../../components/Scrollable/scrollable';
-import { addQuestion } from '../../../lib/actions/questions';
 import { getQuestions } from '../../../lib/db/questions';
 import Actions from '../../../components/Actions/actions';
+import QuestionsForm from '../../../components/QuestionsForm/questionsForm';
 
-function Questions() {
+async function Questions({searchParams}) {
     let questions = getQuestions();
-    
+    const { id } = searchParams;
+    let editedQuestion = {};
+
+    if(id) {
+        editedQuestion = questions.find((question) => question.id === +id);
+    }
+
+    async function handleEditCancel() {
+        'use server';
+        if (editedQuestion) editedQuestion = {};
+    }
+
     return (
         <div className={styles.container}>
             <h1>Pytania weryfikacyjne</h1>
@@ -23,11 +32,12 @@ function Questions() {
                     )) : <p>Brak pytań weryfikacyjnych</p>}
                 </ul>
             </Scrollable>
-            <form action={addQuestion} className={styles.newQuestion}>
-                <Input name='question' label={'Pytanie'}/>
-                <Input name='answer' label={'Odpowiedź'}/>
-                <Button type='submit' text={'Dodaj'}/>
-            </form>
+            <QuestionsForm editedQuestion={editedQuestion ? editedQuestion : null} editIsCanceled={
+                async () => {
+                    'use server';
+                    await handleEditCancel();
+                }
+            }/>
         </div>
     );
 }

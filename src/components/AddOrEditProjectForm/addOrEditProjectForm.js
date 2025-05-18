@@ -2,17 +2,15 @@ import React from 'react';
 import Button from '../Button/button';
 import Input from '../Input/input';
 import styles from './addOrEditProjectForm.module.css';
-import { projectAction } from '../../lib/actions/projects';
+import { addProject, updateProject } from '../../lib/actions/projects';
 import Scrollable from '../Scrollable/scrollable';
 import Select from '../Select/select';
 
 function AddOrEditProjectForm({editedProject = null}) {
-    const action = projectAction.bind(null, editedProject ? {type: 'edit', id: editedProject.id} : {type: 'add'});
-
     return (
         <form 
             className={styles.form} 
-            action={action}
+            action={editedProject ? updateProject.bind(null, editedProject.id) : addProject}
         >
             <Scrollable axis={'y'} className={styles.scrollable}>
                 <Input 
