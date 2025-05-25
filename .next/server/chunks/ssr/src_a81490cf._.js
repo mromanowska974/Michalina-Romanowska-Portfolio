@@ -2,27 +2,21 @@ module.exports = {
 
 "[project]/src/app/about-me/page.module.css [app-ssr] (css module)": ((__turbopack_context__) => {
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.v({
   "container": "page-module__46WyTq__container",
   "content": "page-module__46WyTq__content",
 });
-}}),
+}),
 "[project]/src/components/ImageWrapper/ImageWrapper.module.css [app-ssr] (css module)": ((__turbopack_context__) => {
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.v({
   "imageWrap": "ImageWrapper-module__4Ijjwa__imageWrap",
   "isRound": "ImageWrapper-module__4Ijjwa__isRound",
 });
-}}),
+}),
 "[project]/src/components/ImageWrapper/ImageWrapper.jsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
 });
@@ -59,20 +53,16 @@ function ImageWrapper({ width, height, isRound, src }) {
     }, this);
 }
 const __TURBOPACK__default__export__ = ImageWrapper;
-}}),
+}),
 "[project]/src/components/Paragraph/Paragraph.module.css [app-ssr] (css module)": ((__turbopack_context__) => {
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.v({
   "line": "Paragraph-module__6SuPnG__line",
 });
-}}),
+}),
 "[project]/src/components/Paragraph/Paragraph.jsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
 });
@@ -111,12 +101,10 @@ function Paragraph({ title, content, isFirst }) {
     }, void 0, true);
 }
 const __TURBOPACK__default__export__ = Paragraph;
-}}),
+}),
 "[project]/src/components/List/List.jsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
 });
@@ -156,17 +144,13 @@ function List({ toTranslate, keys }) {
     }, void 0, false);
 }
 const __TURBOPACK__default__export__ = List;
-}}),
+}),
 "[project]/src/app/my_photo.jpg (static in ecmascript)": ((__turbopack_context__) => {
 
-var { g: global, __dirname } = __turbopack_context__;
-{
-__turbopack_context__.v("/_next/static/media/my_photo.02e61ca7.jpg");}}),
+__turbopack_context__.v("/_next/static/media/my_photo.02e61ca7.jpg");}),
 "[project]/src/app/my_photo.jpg.mjs { IMAGE => \"[project]/src/app/my_photo.jpg (static in ecmascript)\" } [app-ssr] (structured image object, ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
 });
@@ -180,20 +164,16 @@ const __TURBOPACK__default__export__ = {
     blurWidth: 5,
     blurHeight: 8
 };
-}}),
+}),
 "[project]/src/components/Title/title.module.css [app-ssr] (css module)": ((__turbopack_context__) => {
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.v({
   "title": "title-module__9EsE3G__title",
 });
-}}),
+}),
 "[project]/src/components/Title/title.js [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
 });
@@ -214,11 +194,9 @@ function Title({ children }) {
     }, this);
 }
 const __TURBOPACK__default__export__ = Title;
-}}),
+}),
 "[project]/src/components/Scrollable/scrollable.module.css [app-ssr] (css module)": ((__turbopack_context__) => {
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.v({
   "container": "scrollable-module__V-3v8W__container",
   "portraitX": "scrollable-module__V-3v8W__portraitX",
@@ -226,12 +204,10 @@ __turbopack_context__.v({
   "x": "scrollable-module__V-3v8W__x",
   "y": "scrollable-module__V-3v8W__y",
 });
-}}),
+}),
 "[project]/src/components/Scrollable/scrollable.js [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
 });
@@ -253,12 +229,10 @@ function Scrollable({ children, className, axis, portraitAxis, ...props }) {
     }, this);
 }
 const __TURBOPACK__default__export__ = Scrollable;
-}}),
+}),
 "[project]/src/app/about-me/page.js [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
 });
@@ -380,7 +354,7 @@ function AboutMe() {
     }, this);
 }
 const __TURBOPACK__default__export__ = AboutMe;
-}}),
+}),
 
 };
 

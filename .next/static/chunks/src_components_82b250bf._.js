@@ -1,28 +1,24 @@
-(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push(["static/chunks/src_components_82b250bf._.js", {
+(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push([typeof document === "object" ? document.currentScript : undefined, {
 
 "[project]/src/components/Navbar/Navbar.module.css [app-client] (css module)": ((__turbopack_context__) => {
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.v({
   "active": "Navbar-module___rHu7W__active",
   "btnBox": "Navbar-module___rHu7W__btnBox",
   "logo": "Navbar-module___rHu7W__logo",
   "navbar": "Navbar-module___rHu7W__navbar",
 });
-}}),
+}),
 "[project]/src/components/Navbar/sacramento_2182b52f.module.css [app-client] (css module)": ((__turbopack_context__) => {
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.v({
   "className": "sacramento_2182b52f-module__01yLFG__className",
 });
-}}),
+}),
 "[project]/src/components/Navbar/sacramento_2182b52f.js [app-client] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
+var { k: __turbopack_refresh__, m: module } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
@@ -45,18 +41,16 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 }}),
 "[project]/src/components/Select/select.module.css [app-client] (css module)": ((__turbopack_context__) => {
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.v({
   "aqua": "select-module__voipMq__aqua",
   "select": "select-module__voipMq__select",
   "violet": "select-module__voipMq__violet",
 });
-}}),
+}),
 "[project]/src/components/Select/select.js [app-client] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
+var { k: __turbopack_refresh__, m: module } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
@@ -98,7 +92,7 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 "[project]/src/components/Navbar/Navbar.jsx [app-client] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
+var { k: __turbopack_refresh__, m: module } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)

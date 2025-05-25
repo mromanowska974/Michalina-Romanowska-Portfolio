@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/app/about-me/page.module.css"],"sourcesContent":[".container {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    gap: 5%;\r\n    height: 100%;\r\n}\r\n\r\n.content {\r\n    color: var(--blue_gray-100);\r\n    width: 50%;\r\n    height: 80%;\r\n}\r\n\r\n.content h2, .content h3 {\r\n    text-shadow: 3px 3px 5px var(--aqua-900);\r\n}\r\n\r\n@media (orientation: portrait) {\r\n    .container {\r\n        flex-direction: column;\r\n    }\r\n\r\n    .content {\r\n        width: 80%;\r\n        height: 60%;\r\n    }\r\n}"],"names":[],"mappings":"AAAA;;;;;;;;AAQA;;;;;;AAMA;;;;AAIA;EACI;;;;EAIA"}}]
+}

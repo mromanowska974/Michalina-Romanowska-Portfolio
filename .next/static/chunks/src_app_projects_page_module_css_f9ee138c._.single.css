@@ -1,0 +1,52 @@
+/* [project]/src/app/projects/page.module.css [app-client] (css) */
+.page-module__q81_BW__projects {
+  color: var(--blue_gray-100);
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 5vh;
+  width: 80%;
+  display: flex;
+  overflow: hidden;
+}
+
+.page-module__q81_BW__list {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page-module__q81_BW__scrollable {
+  gap: 50px;
+  padding-inline: 10px;
+  display: flex;
+}
+
+.page-module__q81_BW__scrollable li {
+  list-style: none;
+}
+
+@media (orientation: portrait) {
+  .page-module__q81_BW__projects {
+    align-items: center;
+    gap: 2vh;
+    width: 90%;
+    height: 95%;
+  }
+
+  .page-module__q81_BW__list {
+    justify-content: center;
+    width: 90%;
+    height: 90%;
+    display: flex;
+  }
+
+  .page-module__q81_BW__scrollable {
+    flex-flow: wrap;
+    justify-content: center;
+    width: 600px;
+    height: 100%;
+  }
+}
+
+/*# sourceMappingURL=src_app_projects_page_module_css_f9ee138c._.single.css.map*/

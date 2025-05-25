@@ -14,7 +14,7 @@ async function Project({ project }) {
     const images = getProjectImages(project.id);
 
     const slug = slugify(project.name, {lower: true});
-    const cookieLocale = (await cookies().get('PORTFOLIO_LOCALE'))?.value || 'en';
+    const cookieLocale = (await cookies()).get('PORTFOLIO_LOCALE')?.value || 'en';
 
     return (
         <section className={styles.project}>

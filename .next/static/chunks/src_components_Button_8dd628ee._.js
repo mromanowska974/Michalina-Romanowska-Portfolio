@@ -1,17 +1,15 @@
-(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push(["static/chunks/src_components_Button_8dd628ee._.js", {
+(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push([typeof document === "object" ? document.currentScript : undefined, {
 
 "[project]/src/components/Button/button.module.css [app-client] (css module)": ((__turbopack_context__) => {
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.v({
   "btn": "button-module__OJPZRa__btn",
 });
-}}),
+}),
 "[project]/src/components/Button/button.js [app-client] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
+var { k: __turbopack_refresh__, m: module } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)

@@ -4,20 +4,20 @@
 }
 
 .page-module__y15ooa__scrollable {
-  max-height: 50vh;
   width: 100%;
+  max-height: 50vh;
 }
 
 .page-module__y15ooa__scrollable ul {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .page-module__y15ooa__project {
-  list-style: none;
-  display: flex;
   justify-content: space-between;
   align-items: center;
+  list-style: none;
+  display: flex;
 }
 
 
@@ -48,9 +48,9 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  border: #0000;
   background-color: #fff3;
+  border: #0000;
+  border-radius: 10px;
 }
 
 @media (orientation: portrait) {

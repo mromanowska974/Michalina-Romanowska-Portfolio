@@ -1,18 +1,16 @@
-(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push(["static/chunks/src_985b53e4._.js", {
+(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push([typeof document === "object" ? document.currentScript : undefined, {
 
 "[project]/src/components/ImageWrapper/ImageWrapper.module.css [app-client] (css module)": ((__turbopack_context__) => {
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.v({
   "imageWrap": "ImageWrapper-module__4Ijjwa__imageWrap",
   "isRound": "ImageWrapper-module__4Ijjwa__isRound",
 });
-}}),
+}),
 "[project]/src/components/ImageWrapper/ImageWrapper.jsx [app-client] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
+var { k: __turbopack_refresh__, m: module } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
@@ -59,22 +57,18 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 }}),
 "[project]/src/app/page.module.css [app-client] (css module)": ((__turbopack_context__) => {
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.v({
   "container": "page-module___8aEwW__container",
   "introduction": "page-module___8aEwW__introduction",
 });
-}}),
+}),
 "[project]/src/app/my_photo.jpg (static in ecmascript)": ((__turbopack_context__) => {
 
-var { g: global, __dirname } = __turbopack_context__;
-{
-__turbopack_context__.v("/_next/static/media/my_photo.02e61ca7.jpg");}}),
+__turbopack_context__.v("/_next/static/media/my_photo.02e61ca7.jpg");}),
 "[project]/src/app/my_photo.jpg.mjs { IMAGE => \"[project]/src/app/my_photo.jpg (static in ecmascript)\" } [app-client] (structured image object, ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
+var { k: __turbopack_refresh__, m: module } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
@@ -95,16 +89,14 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 }}),
 "[project]/src/app/sacramento_1bb5461b.module.css [app-client] (css module)": ((__turbopack_context__) => {
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.v({
   "className": "sacramento_1bb5461b-module__dcflla__className",
 });
-}}),
+}),
 "[project]/src/app/sacramento_1bb5461b.js [app-client] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
+var { k: __turbopack_refresh__, m: module } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
@@ -128,7 +120,7 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 "[project]/src/app/page.js [app-client] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
+var { k: __turbopack_refresh__, m: module } = __turbopack_context__;
 {
 __turbopack_context__.s({
     "default": (()=>HomePage)

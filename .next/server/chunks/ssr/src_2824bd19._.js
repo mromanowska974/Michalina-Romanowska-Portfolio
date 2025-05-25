@@ -2,18 +2,14 @@ module.exports = {
 
 "[project]/src/components/ImageWrapper/ImageWrapper.module.css [app-ssr] (css module)": ((__turbopack_context__) => {
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.v({
   "imageWrap": "ImageWrapper-module__4Ijjwa__imageWrap",
   "isRound": "ImageWrapper-module__4Ijjwa__isRound",
 });
-}}),
+}),
 "[project]/src/components/ImageWrapper/ImageWrapper.jsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
 });
@@ -50,26 +46,20 @@ function ImageWrapper({ width, height, isRound, src }) {
     }, this);
 }
 const __TURBOPACK__default__export__ = ImageWrapper;
-}}),
+}),
 "[project]/src/app/page.module.css [app-ssr] (css module)": ((__turbopack_context__) => {
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.v({
   "container": "page-module___8aEwW__container",
   "introduction": "page-module___8aEwW__introduction",
 });
-}}),
+}),
 "[project]/src/app/my_photo.jpg (static in ecmascript)": ((__turbopack_context__) => {
 
-var { g: global, __dirname } = __turbopack_context__;
-{
-__turbopack_context__.v("/_next/static/media/my_photo.02e61ca7.jpg");}}),
+__turbopack_context__.v("/_next/static/media/my_photo.02e61ca7.jpg");}),
 "[project]/src/app/my_photo.jpg.mjs { IMAGE => \"[project]/src/app/my_photo.jpg (static in ecmascript)\" } [app-ssr] (structured image object, ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
 });
@@ -83,20 +73,16 @@ const __TURBOPACK__default__export__ = {
     blurWidth: 5,
     blurHeight: 8
 };
-}}),
+}),
 "[project]/src/app/sacramento_1bb5461b.module.css [app-ssr] (css module)": ((__turbopack_context__) => {
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.v({
   "className": "sacramento_1bb5461b-module__dcflla__className",
 });
-}}),
+}),
 "[project]/src/app/sacramento_1bb5461b.js [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
 });
@@ -112,12 +98,10 @@ if (__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$sacramento_1bb
     fontData.variable = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$sacramento_1bb5461b$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].variable;
 }
 const __TURBOPACK__default__export__ = fontData;
-}}),
+}),
 "[project]/src/app/page.js [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.s({
     "default": (()=>HomePage)
 });
@@ -180,7 +164,7 @@ function HomePage() {
         columnNumber: 9
     }, this);
 }
-}}),
+}),
 
 };
 

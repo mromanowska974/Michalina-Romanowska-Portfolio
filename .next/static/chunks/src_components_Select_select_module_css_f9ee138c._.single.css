@@ -1,0 +1,21 @@
+/* [project]/src/components/Select/select.module.css [app-client] (css) */
+.select-module__voipMq__select {
+  width: fit-content;
+  height: fit-content;
+  color: var(--blue_gray-100);
+  cursor: pointer;
+  background-color: #0000;
+  border: none;
+  margin-block: 0;
+  text-decoration: none;
+}
+
+.select-module__voipMq__aqua option {
+  background-color: var(--aqua-700);
+}
+
+.select-module__voipMq__violet option {
+  background-color: var(--violet-700);
+}
+
+/*# sourceMappingURL=src_components_Select_select_module_css_f9ee138c._.single.css.map*/

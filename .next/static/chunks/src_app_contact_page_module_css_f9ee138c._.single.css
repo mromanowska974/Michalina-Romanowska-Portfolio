@@ -1,0 +1,86 @@
+/* [project]/src/app/contact/page.module.css [app-client] (css) */
+.page-module__OSLHOG__container {
+  height: 100%;
+  color: var(--blue_gray-100);
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  display: flex;
+  overflow-y: hidden;
+}
+
+.page-module__OSLHOG__content {
+  flex-direction: column;
+  justify-content: center;
+  gap: calc(1vh + 1vw);
+  width: 40%;
+  height: 80%;
+  display: flex;
+}
+
+.page-module__OSLHOG__content p, .page-module__OSLHOG__wrapper p {
+  text-wrap: wrap;
+  font-size: calc(.5em + .4vw + .4vh);
+}
+
+.page-module__OSLHOG__form {
+  flex-direction: column;
+  align-items: center;
+  gap: calc(1vw + 1vh);
+  padding: 5px;
+  display: flex;
+  overflow-y: auto;
+}
+
+.page-module__OSLHOG__wrapper {
+  flex-direction: column;
+  display: flex;
+}
+
+.page-module__OSLHOG__contactInfo p {
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+
+.page-module__OSLHOG__line {
+  display: none;
+}
+
+@media (orientation: portrait) {
+  .page-module__OSLHOG__container {
+    flex-direction: column;
+    align-self: center;
+    gap: 2%;
+    height: 95%;
+  }
+
+  .page-module__OSLHOG__content {
+    align-self: center;
+    width: 60%;
+    height: 50%;
+    overflow-x: scroll;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #fff3;
+    border: #0000;
+    border-radius: 10px;
+  }
+
+  .page-module__OSLHOG__line {
+    background: linear-gradient(45deg, var(--violet-400), var(--aqua-400));
+    border: #0000;
+    width: 50%;
+    height: 3px;
+    margin: 0;
+    display: inline;
+  }
+}
+
+/*# sourceMappingURL=src_app_contact_page_module_css_f9ee138c._.single.css.map*/

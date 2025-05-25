@@ -1,0 +1,37 @@
+/* [project]/src/components/Footer/Footer.module.css [app-client] (css) */
+.Footer-module__Grjkva__footer {
+  width: 100%;
+  color: var(--blue_gray-100);
+  justify-content: center;
+  display: flex;
+}
+
+.Footer-module__Grjkva__websites a {
+  color: var(--blue_gray-100);
+}
+
+.Footer-module__Grjkva__websites a:hover {
+  text-shadow: 3px 3px 5px var(--violet-900);
+}
+
+.Footer-module__Grjkva__websites {
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  gap: 5%;
+  width: 15%;
+  height: fit-content;
+  display: flex;
+}
+
+@media (width <= 500px) {
+  .Footer-module__Grjkva__footer {
+    justify-content: space-evenly;
+  }
+
+  .Footer-module__Grjkva__websites {
+    gap: 10%;
+  }
+}
+
+/*# sourceMappingURL=src_components_Footer_Footer_module_css_f9ee138c._.single.css.map*/

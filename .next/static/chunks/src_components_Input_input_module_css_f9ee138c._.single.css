@@ -1,0 +1,26 @@
+/* [project]/src/components/Input/input.module.css [app-client] (css) */
+.input-module__aX0dDG__inputBox {
+  text-align: left;
+  width: 80%;
+  color: var(--blue_gray-100);
+  flex-direction: column;
+  gap: 5px;
+  display: flex;
+}
+
+.input-module__aX0dDG__inputBox input, .input-module__aX0dDG__inputBox textarea {
+  color: var(--blue_gray-100);
+  background: #ffffff1a;
+  border: none;
+  border-bottom: 1px solid #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.input-module__aX0dDG__inputBox textarea {
+  resize: none;
+  height: 10vh;
+  font-family: sans-serif;
+}
+
+/*# sourceMappingURL=src_components_Input_input_module_css_f9ee138c._.single.css.map*/

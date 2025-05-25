@@ -1,22 +1,22 @@
 /* [project]/src/app/contact/page.module.css [app-client] (css) */
 .page-module__OSLHOG__container {
+  height: 100%;
+  color: var(--blue_gray-100);
   flex-grow: 1;
-  display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
   gap: 10%;
-  color: var(--blue_gray-100);
+  display: flex;
   overflow-y: hidden;
 }
 
 .page-module__OSLHOG__content {
-  width: 40%;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   gap: calc(1vh + 1vw);
+  width: 40%;
   height: 80%;
+  display: flex;
 }
 
 .page-module__OSLHOG__content p, .page-module__OSLHOG__wrapper p {
@@ -25,23 +25,23 @@
 }
 
 .page-module__OSLHOG__form {
-  display: flex;
   flex-direction: column;
   align-items: center;
   gap: calc(1vw + 1vh);
-  overflow-y: auto;
   padding: 5px;
+  display: flex;
+  overflow-y: auto;
 }
 
 .page-module__OSLHOG__wrapper {
-  display: flex;
   flex-direction: column;
+  display: flex;
 }
 
 .page-module__OSLHOG__contactInfo p {
-  display: flex;
   align-items: center;
   gap: 10px;
+  display: flex;
 }
 
 .page-module__OSLHOG__line {
@@ -57,9 +57,9 @@
   }
 
   .page-module__OSLHOG__content {
+    align-self: center;
     width: 60%;
     height: 50%;
-    align-self: center;
     overflow-x: scroll;
   }
 
@@ -68,18 +68,18 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    border: #0000;
     background-color: #fff3;
+    border: #0000;
+    border-radius: 10px;
   }
 
   .page-module__OSLHOG__line {
+    background: linear-gradient(45deg, var(--violet-400), var(--aqua-400));
+    border: #0000;
+    width: 50%;
+    height: 3px;
     margin: 0;
     display: inline;
-    height: 3px;
-    border: #0000;
-    background: linear-gradient(45deg, var(--violet-400), var(--aqua-400));
-    width: 50%;
   }
 }
 
@@ -105,53 +105,53 @@
 
 /* [project]/src/components/Input/input.module.css [app-client] (css) */
 .input-module__aX0dDG__inputBox {
-  display: flex;
-  flex-direction: column;
   text-align: left;
   width: 80%;
-  gap: 5px;
   color: var(--blue_gray-100);
+  flex-direction: column;
+  gap: 5px;
+  display: flex;
 }
 
 .input-module__aX0dDG__inputBox input, .input-module__aX0dDG__inputBox textarea {
+  color: var(--blue_gray-100);
   background: #ffffff1a;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
   border: none;
   border-bottom: 1px solid #fff;
-  color: var(--blue_gray-100);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .input-module__aX0dDG__inputBox textarea {
   resize: none;
-  font-family: sans-serif;
   height: 10vh;
+  font-family: sans-serif;
 }
 
 
 /* [project]/src/components/Button/button.module.css [app-client] (css) */
 .button-module__OJPZRa__btn {
-  border: none;
-  border-radius: 10px;
   background-color: var(--orange-cta);
   color: var(--blue_gray-800);
   cursor: pointer;
-  font-size: 1em;
-  padding: 5px;
-  text-decoration: none;
   text-align: center;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 1em;
+  text-decoration: none;
 }
 
 
 /* [project]/src/components/Title/title.module.css [app-client] (css) */
 .title-module__9EsE3G__title {
-  width: 100%;
-  margin: 0;
   text-align: center;
   background: linear-gradient(45deg, var(--violet-200), var(--aqua-200));
-  background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: 100%;
   filter: drop-shadow(3px 3px 5px var(--aqua-900));
+  background-clip: text;
+  margin: 0;
 }
 
 

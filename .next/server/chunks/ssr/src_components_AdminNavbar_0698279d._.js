@@ -2,17 +2,13 @@ module.exports = {
 
 "[project]/src/components/AdminNavbar/AdminNavbar.module.css [app-ssr] (css module)": ((__turbopack_context__) => {
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.v({
   "navbar": "AdminNavbar-module__-ItA-G__navbar",
 });
-}}),
+}),
 "[project]/src/components/AdminNavbar/AdminNavbar.js [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
 });
@@ -61,7 +57,7 @@ function AdminNavbar() {
     }, this);
 }
 const __TURBOPACK__default__export__ = AdminNavbar;
-}}),
+}),
 
 };
 

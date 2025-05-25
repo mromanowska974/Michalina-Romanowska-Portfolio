@@ -2,17 +2,13 @@ module.exports = {
 
 "[project]/src/components/Button/button.module.css [app-ssr] (css module)": ((__turbopack_context__) => {
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.v({
   "btn": "button-module__OJPZRa__btn",
 });
-}}),
+}),
 "[project]/src/components/Button/button.js [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
 });
@@ -47,7 +43,7 @@ function Button({ text, link, ...props }) {
     }, void 0, false);
 }
 const __TURBOPACK__default__export__ = Button;
-}}),
+}),
 
 };
 

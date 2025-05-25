@@ -1,0 +1,15 @@
+/* [project]/src/components/AdminNavbar/AdminNavbar.module.css [app-client] (css) */
+.AdminNavbar-module__-ItA-G__navbar {
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 20px;
+  display: flex;
+}
+
+.AdminNavbar-module__-ItA-G__navbar a {
+  color: var(--blue_gray-100);
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=src_components_AdminNavbar_AdminNavbar_module_css_f9ee138c._.single.css.map*/

@@ -2,8 +2,6 @@ module.exports = {
 
 "[project]/src/app/contact/page.module.css [app-ssr] (css module)": ((__turbopack_context__) => {
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.v({
   "contactInfo": "page-module__OSLHOG__contactInfo",
   "container": "page-module__OSLHOG__container",
@@ -12,21 +10,17 @@ __turbopack_context__.v({
   "line": "page-module__OSLHOG__line",
   "wrapper": "page-module__OSLHOG__wrapper",
 });
-}}),
+}),
 "[project]/src/components/ImageWrapper/ImageWrapper.module.css [app-ssr] (css module)": ((__turbopack_context__) => {
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.v({
   "imageWrap": "ImageWrapper-module__4Ijjwa__imageWrap",
   "isRound": "ImageWrapper-module__4Ijjwa__isRound",
 });
-}}),
+}),
 "[project]/src/components/ImageWrapper/ImageWrapper.jsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
 });
@@ -63,20 +57,16 @@ function ImageWrapper({ width, height, isRound, src }) {
     }, this);
 }
 const __TURBOPACK__default__export__ = ImageWrapper;
-}}),
+}),
 "[project]/src/components/Input/input.module.css [app-ssr] (css module)": ((__turbopack_context__) => {
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.v({
   "inputBox": "input-module__aX0dDG__inputBox",
 });
-}}),
+}),
 "[project]/src/components/Input/input.js [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
 });
@@ -123,20 +113,16 @@ function Input({ label, name, textarea, ...props }) {
     }, this);
 }
 const __TURBOPACK__default__export__ = Input;
-}}),
+}),
 "[project]/src/components/Button/button.module.css [app-ssr] (css module)": ((__turbopack_context__) => {
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.v({
   "btn": "button-module__OJPZRa__btn",
 });
-}}),
+}),
 "[project]/src/components/Button/button.js [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
 });
@@ -171,17 +157,13 @@ function Button({ text, link, ...props }) {
     }, void 0, false);
 }
 const __TURBOPACK__default__export__ = Button;
-}}),
+}),
 "[project]/src/app/my_photo.jpg (static in ecmascript)": ((__turbopack_context__) => {
 
-var { g: global, __dirname } = __turbopack_context__;
-{
-__turbopack_context__.v("/_next/static/media/my_photo.02e61ca7.jpg");}}),
+__turbopack_context__.v("/_next/static/media/my_photo.02e61ca7.jpg");}),
 "[project]/src/app/my_photo.jpg.mjs { IMAGE => \"[project]/src/app/my_photo.jpg (static in ecmascript)\" } [app-ssr] (structured image object, ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
 });
@@ -195,20 +177,16 @@ const __TURBOPACK__default__export__ = {
     blurWidth: 5,
     blurHeight: 8
 };
-}}),
+}),
 "[project]/src/components/Title/title.module.css [app-ssr] (css module)": ((__turbopack_context__) => {
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.v({
   "title": "title-module__9EsE3G__title",
 });
-}}),
+}),
 "[project]/src/components/Title/title.js [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
 });
@@ -229,12 +207,10 @@ function Title({ children }) {
     }, this);
 }
 const __TURBOPACK__default__export__ = Title;
-}}),
+}),
 "[project]/src/app/contact/page.js [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
 });
@@ -429,7 +405,7 @@ const Contact = ()=>{
     }, this);
 };
 const __TURBOPACK__default__export__ = Contact;
-}}),
+}),
 
 };
 

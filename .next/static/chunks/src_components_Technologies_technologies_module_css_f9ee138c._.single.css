@@ -1,0 +1,24 @@
+/* [project]/src/components/Technologies/technologies.module.css [app-client] (css) */
+.technologies-module__wS5OfW__technologies {
+  width: 100%;
+  display: flex;
+}
+
+.technologies-module__wS5OfW__technologies ul {
+  justify-content: start;
+  gap: 5%;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.technologies-module__wS5OfW__technologies ul li {
+  text-transform: uppercase;
+  border: 1px solid var(--blue_gray-100);
+  border-radius: 5px;
+  padding: 3px;
+  font-size: 10px;
+}
+
+/*# sourceMappingURL=src_components_Technologies_technologies_module_css_f9ee138c._.single.css.map*/

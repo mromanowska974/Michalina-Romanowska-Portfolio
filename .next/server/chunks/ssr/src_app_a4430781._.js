@@ -2,14 +2,10 @@ module.exports = {
 
 "[project]/src/app/favicon.ico (static in ecmascript)": ((__turbopack_context__) => {
 
-var { g: global, __dirname } = __turbopack_context__;
-{
-__turbopack_context__.v("/_next/static/media/favicon.0fceec96.ico");}}),
+__turbopack_context__.v("/_next/static/media/favicon.0fceec96.ico");}),
 "[project]/src/app/favicon.ico.mjs { IMAGE => \"[project]/src/app/favicon.ico (static in ecmascript)\" } [app-rsc] (structured image object, ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, __dirname } = __turbopack_context__;
-{
 __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
 });
@@ -20,7 +16,7 @@ const __TURBOPACK__default__export__ = {
     width: 64,
     height: 64
 };
-}}),
+}),
 
 };
 

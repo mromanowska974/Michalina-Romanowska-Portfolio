@@ -7,7 +7,7 @@ import QuestionsForm from '../../../components/QuestionsForm/questionsForm';
 
 async function Questions({searchParams}) {
     let questions = getQuestions();
-    const { id } = searchParams;
+    const { id } =  await searchParams;
     let editedQuestion = {};
 
     if(id) {

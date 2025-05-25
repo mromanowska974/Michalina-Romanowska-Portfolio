@@ -1,27 +1,27 @@
 /* [project]/src/app/secret-door/questions/page.module.css [app-client] (css) */
 .page-module__kk3FyW__container {
   color: #fff;
-  display: flex;
   flex-direction: column;
   align-items: center;
   height: fit-content;
+  display: flex;
 }
 
 .page-module__kk3FyW__scrollable {
-  max-height: 50vh;
   width: 100%;
+  max-height: 50vh;
 }
 
 .page-module__kk3FyW__scrollable ul {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .page-module__kk3FyW__question {
-  list-style: none;
-  display: flex;
   justify-content: space-between;
   align-items: center;
+  list-style: none;
+  display: flex;
 }
 
 
@@ -52,9 +52,9 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  border: #0000;
   background-color: #fff3;
+  border: #0000;
+  border-radius: 10px;
 }
 
 @media (orientation: portrait) {
@@ -82,49 +82,49 @@
 
 /* [project]/src/components/Input/input.module.css [app-client] (css) */
 .input-module__aX0dDG__inputBox {
-  display: flex;
-  flex-direction: column;
   text-align: left;
   width: 80%;
-  gap: 5px;
   color: var(--blue_gray-100);
+  flex-direction: column;
+  gap: 5px;
+  display: flex;
 }
 
 .input-module__aX0dDG__inputBox input, .input-module__aX0dDG__inputBox textarea {
+  color: var(--blue_gray-100);
   background: #ffffff1a;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
   border: none;
   border-bottom: 1px solid #fff;
-  color: var(--blue_gray-100);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .input-module__aX0dDG__inputBox textarea {
   resize: none;
-  font-family: sans-serif;
   height: 10vh;
+  font-family: sans-serif;
 }
 
 
 /* [project]/src/components/Button/button.module.css [app-client] (css) */
 .button-module__OJPZRa__btn {
-  border: none;
-  border-radius: 10px;
   background-color: var(--orange-cta);
   color: var(--blue_gray-800);
   cursor: pointer;
-  font-size: 1em;
-  padding: 5px;
-  text-decoration: none;
   text-align: center;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 1em;
+  text-decoration: none;
 }
 
 
 /* [project]/src/components/QuestionsForm/questionsForm.module.css [app-client] (css) */
 .questionsForm-module__a_8r7q__newQuestion {
-  display: flex;
-  gap: 10px;
   align-items: last baseline;
+  gap: 10px;
+  display: flex;
 }
 
 
