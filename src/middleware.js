@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-// import { signOut } from "./auth";
 import { cookies } from "next/headers";
 
 const protectedRoutes = [
@@ -23,8 +22,6 @@ export default async function middleware(request) {
     }
 
     if(token && !pathname.includes('/secret-door')) {
-        console.log('Token exists and pathname does not include /secret-door');
-        // await signOut();
         (await cookies()).delete('authjs.session-token');
     }
 

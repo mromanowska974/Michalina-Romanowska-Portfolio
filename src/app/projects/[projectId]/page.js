@@ -1,8 +1,6 @@
-import React from 'react';
-import { getProject } from '../../../lib/db/projects';
+import { getProject, getProjectImages } from '../../../lib/db/projects';
 import Title from '../../../components/Title/title';
 import styles from './page.module.css';
-import ImageWrapper from '../../../components/ImageWrapper/ImageWrapper';
 import Technologies from '../../../components/Technologies/technologies';
 import Scrollable from '../../../components/Scrollable/scrollable';
 import Button from '../../../components/Button/button';
@@ -10,6 +8,7 @@ import Link from 'next/link';
 
 import { cookies } from 'next/headers';
 import { getTranslations } from 'next-intl/server';
+import ImageSlideshow from '../../../components/ImageSlideshow/image-slideshow';
 
 async function ProjectPage({ searchParams }) {
     const projectId = await searchParams.id;
@@ -20,6 +19,7 @@ async function ProjectPage({ searchParams }) {
     });
 
     const project = getProject(projectId);
+    const projectImages = getProjectImages(projectId);
     const technologies = project.technologies.split(',');
 
     return (
@@ -27,7 +27,10 @@ async function ProjectPage({ searchParams }) {
             <div className={styles.demo}>
                 <Link href='/projects' className={styles.backLink}> ... {translate("backToProjects")}</Link>
                 <div className={styles.imageWrap}>
-                    <ImageWrapper width={'100%'} height={'100%'}/>
+                    <ImageSlideshow 
+                        images={projectImages}
+                        projectName={project.name}
+                    />
                 </div>
             </div>
             <div className={styles.info}>
