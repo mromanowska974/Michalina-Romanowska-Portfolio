@@ -12,7 +12,10 @@
         "form": {
             "fullName": "Imię i Nazwisko lub Nazwa Firmy",
             "yourMessage": "Twoja Wiadomość",
-            "submit": "Wyślij"
+            "submit": "Wyślij",
+            "success": "Dziękuję za wiadomość! Odpowiem tak szybko, jak to możliwe.",
+            "error": "Wystąpił błąd podczas wysyłania wiadomości. Proszę spróbować ponownie później.",
+            "loading": "Wysyłanie wiadomości..."
         }
     },
     "aboutMe": {

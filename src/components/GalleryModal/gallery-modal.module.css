@@ -37,11 +37,9 @@
 .info {
     width: 50%;
     text-align: center;
-    /* border: 2px solid red; */
 }
 
 .empty, .closeButton {
-    /* border: 2px solid lime !important; */
     width: 30px;
 }
 

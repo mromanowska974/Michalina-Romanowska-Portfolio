@@ -15,16 +15,19 @@
       "static/chunks/_e69f0d32._.js",
       "static/chunks/_fdad9c64._.js"
     ],
-    "/projects/[projectId]/page": [
+    "/contact/page": [
       "static/chunks/node_modules_next_dist_f0c7ae3c._.js",
       "static/chunks/src_app_favicon_ico_mjs_8b0692a2._.js",
       "static/chunks/_7af8d862._.css",
       "static/chunks/node_modules_07469003._.js",
       "static/chunks/src_components_82b250bf._.js",
       "static/chunks/src_app_layout_85f401e9.js",
-      "static/chunks/src_ac722e9c._.css",
-      "static/chunks/_07705772._.js",
-      "static/chunks/src_app_projects_[projectId]_page_84df013a.js",
+      "static/chunks/src_f802cea4._.css",
+      "static/chunks/node_modules_@fortawesome_free-regular-svg-icons_index_mjs_4e322c92._.js",
+      "static/chunks/node_modules_@fortawesome_free-solid-svg-icons_index_mjs_6d4e8d45._.js",
+      "static/chunks/node_modules_7487ff87._.js",
+      "static/chunks/src_183b08a6._.js",
+      "static/chunks/src_app_contact_page_84df013a.js",
       "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_2352e2ab._.js",
       "static/chunks/node_modules_next_dist_compiled_2ce9398a._.js",
       "static/chunks/node_modules_next_dist_client_48ee97d5._.js",

@@ -20,6 +20,7 @@
     "next-auth": "^5.0.0-beta.25",
     "next-i18next": "^15.4.2",
     "next-intl": "^4.0.2",
+    "nodemailer": "^6.10.1",
     "portfolio": "file:",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

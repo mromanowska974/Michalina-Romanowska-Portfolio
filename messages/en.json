@@ -12,7 +12,10 @@
         "form": {
             "fullName": "Full Name or Company Name",
             "yourMessage": "Your Message",
-            "submit": "Submit"
+            "submit": "Submit",
+            "success": "Thank you for your message! I will get back to you as soon as possible.",
+            "error": "There was an error sending your message. Please try again later.",
+            "loading": "Sending your message..."
         }
     },
     "aboutMe": {
