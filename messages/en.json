@@ -71,6 +71,7 @@
         "status": {
             "completed": "Completed",
             "stillInProgress": "Still in progress"
-        }
+        },
+        "clickToView": "Click the image to view a gallery"
     }
 }

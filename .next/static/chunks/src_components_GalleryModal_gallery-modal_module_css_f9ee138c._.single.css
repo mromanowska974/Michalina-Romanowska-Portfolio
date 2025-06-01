@@ -1,0 +1,60 @@
+/* [project]/src/components/GalleryModal/gallery-modal.module.css [app-client] (css) */
+.gallery-modal-module__J0GOFG__overlay {
+  z-index: 1;
+  background-color: #00000080;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.gallery-modal-module__J0GOFG__container {
+  width: 70vw;
+  height: 70vh;
+  color: var(--blue_gray-100);
+  background-color: #000c;
+  padding-inline: 10px;
+}
+
+.gallery-modal-module__J0GOFG__row {
+  justify-content: space-between;
+  align-items: center;
+  height: 10%;
+  display: flex;
+}
+
+.gallery-modal-module__J0GOFG__content {
+  justify-content: space-between;
+  align-items: center;
+  height: 90%;
+  display: flex;
+}
+
+.gallery-modal-module__J0GOFG__info {
+  text-align: center;
+  width: 50%;
+}
+
+.gallery-modal-module__J0GOFG__empty, .gallery-modal-module__J0GOFG__closeButton {
+  width: 30px;
+}
+
+.gallery-modal-module__J0GOFG__container button {
+  color: var(--blue_gray-100);
+  cursor: pointer;
+  background-color: #0000;
+  border: none;
+  font-size: 2rem;
+}
+
+.gallery-modal-module__J0GOFG__imageWrap {
+  aspect-ratio: 1;
+  max-height: 90%;
+}
+
+/*# sourceMappingURL=src_components_GalleryModal_gallery-modal_module_css_f9ee138c._.single.css.map*/

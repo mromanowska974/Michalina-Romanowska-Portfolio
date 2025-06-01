@@ -23,8 +23,10 @@
 }
 
 .page-module__QLFHmG__imageWrap {
+  align-items: center;
   width: 100%;
   height: 80%;
+  display: flex;
 }
 
 .page-module__QLFHmG__info {

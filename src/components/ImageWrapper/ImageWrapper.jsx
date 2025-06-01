@@ -11,8 +11,8 @@ function ImageWrapper({width, height, isRound, src}) {
             }}
         >
             <img className={styles.myImg} style={{
-                width: width,
-                height: height
+                width: '100%',
+                height: '100%',
             }} src={src} alt='Something'/>
         </div>
     );

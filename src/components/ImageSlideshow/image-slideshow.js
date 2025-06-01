@@ -3,9 +3,14 @@
 import React, { useEffect, useState } from 'react';
 import ImageWrapper from '../ImageWrapper/ImageWrapper';
 import styles from './image-slideshow.module.css';
+import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/navigation';
+import slugify from 'slugify';
 
-function ImageSlideshow({ images, projectName }) {
+function ImageSlideshow({ images, project }) {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const t = useTranslations("projects");
+    const router = useRouter();
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -17,14 +22,19 @@ function ImageSlideshow({ images, projectName }) {
         return () => clearInterval(interval);
     }, []);
 
+    function handleClick() {
+        router.push(`/projects/${slugify(project.name, {lower: true})}?id=${project.id}&gallery=true`);
+    }
+
     return (
-        <div className={styles.slideshow}>
+        <button onClick={handleClick} className={styles.slideshow}>
             <ImageWrapper 
-                src={`/images/${projectName}/${images[currentImageIndex].name}`} 
-                width={'100%'} 
-                height={'100%'}
+                src={`/images/${project.name}/${images[currentImageIndex].name}`} 
+                width={'90%'} 
+                height={'90%'}
             />
-        </div>
+            <p>{t("clickToView")}</p>
+        </button>
     );
 }
 

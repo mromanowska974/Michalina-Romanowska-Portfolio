@@ -9,9 +9,11 @@ import Link from 'next/link';
 import { cookies } from 'next/headers';
 import { getTranslations } from 'next-intl/server';
 import ImageSlideshow from '../../../components/ImageSlideshow/image-slideshow';
+import GalleryModal from '../../../components/GalleryModal/gallery-modal';
 
 async function ProjectPage({ searchParams }) {
     const projectId = await searchParams.id;
+    const isGalleryOpen = await searchParams.gallery;
     const cookieLocale = (await cookies()).get("PORTFOLIO_LOCALE")?.value || "en";
 
     const translate = await getTranslations('projects', {
@@ -22,14 +24,18 @@ async function ProjectPage({ searchParams }) {
     const projectImages = getProjectImages(projectId);
     const technologies = project.technologies.split(',');
 
-    return (
+    return (       
         <div className={styles.container}>
+            {isGalleryOpen && <GalleryModal 
+                images={projectImages} 
+                project={project} 
+            />}
             <div className={styles.demo}>
                 <Link href='/projects' className={styles.backLink}> ... {translate("backToProjects")}</Link>
                 <div className={styles.imageWrap}>
                     <ImageSlideshow 
                         images={projectImages}
-                        projectName={project.name}
+                        project={project}
                     />
                 </div>
             </div>

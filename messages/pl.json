@@ -71,6 +71,7 @@
         "status": {
             "completed": "Ukończony",
             "stillInProgress": "Jeszcze pracuję"
-        }
+        },
+        "clickToView": "Kliknij zdjęcie, aby zobaczyć galerię"
     }
 }
