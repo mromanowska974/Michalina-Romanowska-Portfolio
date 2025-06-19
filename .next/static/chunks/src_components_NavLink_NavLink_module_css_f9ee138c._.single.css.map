@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/NavLink/NavLink.module.css"],"sourcesContent":[".link{\r\n  width: fit-content;\r\n  height: 100%;\r\n  border: none;\r\n  background-color: transparent;\r\n  color: var(--blue_gray-100);\r\n  text-decoration: none;\r\n  margin-block: 0;\r\n  cursor: pointer;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n}\r\n\r\n.activeBar {\r\n    background-color: var(--orange-cta);\r\n}\r\n\r\n.empty, .activeBar {\r\n    height: 3px;\r\n    width: 100%;\r\n}\r\n\r\n.link p{\r\n  margin: 0;\r\n}"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;;AAcA;;;;AAIA;;;;;AAKA"}}]
+}

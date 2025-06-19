@@ -8,6 +8,7 @@ import { usePathname, useRouter } from 'next/navigation';
 
 import localFont from 'next/font/local';
 import Select from '../Select/select';
+import NavLink from '../NavLink/NavLink';
 
 const sacramento = localFont({src: '../../app/fonts/Sacramento-Regular.ttf'})
 
@@ -47,33 +48,33 @@ function Navbar(props) {
             <div className={styles.btnBox}>
                 {
                     path.startsWith('/secret-door') && <>
-                        <Link href='/secret-door'>
-                            <p className={path ==='/secret-door' ? styles.active : undefined}>
-                                Admin
-                            </p>
-                        </Link>
+                        <NavLink 
+                            href='/secret-door' 
+                            name='Admin'
+                            isActive={path.startsWith('/secret-door') ? true : false} 
+                        />
                     </>
                 }
-                <Link href='/'>
-                    <p className={path ==='/' ? styles.active : undefined}>
-                        {translate('mainPage')}
-                    </p>
-                </Link>
-                <Link href='/about-me'>
-                    <p className={path ==='/about-me' ? styles.active : undefined}>
-                        {translate("aboutMe")}
-                    </p>
-                </Link>
-                <Link href='/projects'>
-                    <p className={path.startsWith('/projects') ? styles.active : undefined}>
-                        {translate("projects")}
-                    </p>
-                </Link>
-                <Link href='/contact'>
-                    <p className={path ==='/contact' ? styles.active : undefined}>
-                        {translate("contact")}
-                    </p>
-                </Link>
+                <NavLink 
+                    href='/' 
+                    name={translate('mainPage')}
+                    isActive={path === '/' ? true : false} 
+                />
+                <NavLink 
+                    href='/about-me' 
+                    name={translate('aboutMe')}
+                    isActive={path === '/about-me' ? true : false} 
+                />
+                <NavLink 
+                    href='/projects' 
+                    name={translate('projects')}
+                    isActive={path.startsWith('/projects') ? true : false} 
+                />
+                <NavLink 
+                    href='/contact' 
+                    name={translate('contact')}
+                    isActive={path === '/contact' ? true : false} 
+                />
                 <Select 
                     name={'language'} 
                     defaultValue={locale} 

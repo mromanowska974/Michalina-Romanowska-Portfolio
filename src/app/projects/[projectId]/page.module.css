@@ -4,6 +4,7 @@
     align-items: center;
     gap: 5%;
     overflow: hidden;
+    height: 100%;
 }
 
 .demo, .info {
@@ -18,7 +19,7 @@
 .demo {
     max-width: 400px;
     width: 30vw;
-    gap: 10px;
+    gap: 30px;
 }
 
 .imageWrap {
@@ -44,21 +45,6 @@
 
 .info ul {
     justify-content: center !important;
-}
-
-.backLink {
-    background-color: transparent;
-    color: var(--blue_gray-100);
-    text-decoration: none;
-    margin-block: 0;
-    cursor: pointer;
-    align-self: flex-start;
-}
-
-.backLink:hover {
-    text-decoration: underline var(--orange-cta);
-    text-decoration-thickness: 3px;
-    text-underline-offset: 5px;
 }
 
 .links {
@@ -95,10 +81,6 @@
 
     .info {
         height: fit-content;
-    }
-
-    .backLink {
-        top: 0;
     }
 
     .paragraph {

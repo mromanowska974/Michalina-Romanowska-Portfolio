@@ -3,11 +3,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    aspect-ratio: 1 / 1;
     background-color: transparent;
     border: none;
     color: var(--blue_gray-100);
     cursor: pointer;
+}
+
+.animatedImage {
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    height: 90%;
 }
 
 .slideshow p{

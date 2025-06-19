@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/GoBackBtn/GoBackBtn.module.css"],"sourcesContent":[".backLink {\r\n    background-color: transparent;\r\n    color: var(--blue_gray-100);\r\n    text-decoration: none;\r\n    margin-block: 0;\r\n    cursor: pointer;\r\n    align-self: flex-start;\r\n}\r\n\r\n.backLink p {\r\n    margin: 0;\r\n}\r\n\r\n.underline {\r\n    height: 3px;\r\n    background-color: var(--orange-cta);\r\n}\r\n\r\n@media (orientation: portrait) {\r\n    .backLink {\r\n        top: 0;\r\n    }\r\n}"],"names":[],"mappings":"AAAA;;;;;;;;;AASA;;;;AAIA;;;;;AAKA;EACI"}}]
+}

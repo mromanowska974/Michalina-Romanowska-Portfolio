@@ -5,6 +5,8 @@ import styles from './gallery-modal.module.css';
 import { useRouter } from 'next/navigation';
 import slugify from 'slugify';
 import ImageWrapper from '../ImageWrapper/ImageWrapper';
+import { createPortal } from 'react-dom';
+import { AnimatePresence, motion } from 'framer-motion';
 
 function GalleryModal({ images, project }) {
     const dialogRef = useRef();
@@ -31,31 +33,66 @@ function GalleryModal({ images, project }) {
         );
     }
 
-    return (
-        <dialog className={styles.overlay} ref={dialogRef}>
-            <div className={styles.container}>
+    return createPortal(
+        <motion.dialog 
+            className={styles.overlay} 
+            ref={dialogRef}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+        >
+            <motion.div 
+                className={styles.container}
+                initial={{ y: 30 }}
+                animate={{ y: 0 }}
+                exit={{ y: 30 }}
+                transition={{ duration: 0.5 }}
+            >
                 <div className={styles.row}>
                     <div className={styles.empty}></div>
                     <span className={styles.info}>
                         {currentImageIndex + 1} / {images.length}
                     </span>
-                    <button className={styles.closeButton} onClick={handleClose}>
+                    <motion.button 
+                        className={styles.closeButton} 
+                        onClick={handleClose}
+                        whileHover={{ scale: [1, 0.9, 1.1, 1 ]}}
+                        transition={{ duration: 0.5 }}
+                    >
                         X
-                    </button>
+                    </motion.button>
                 </div>
                 <div className={styles.content}>
-                    <button onClick={handlePreviousImage}> {'<'} </button>
-                    <div className={styles.imageWrap}>
-                        <ImageWrapper 
-                            width={'100%'}
-                            height={'100%'}
-                            src={`/images/${project.name}/${images[currentImageIndex].name}`} 
-                        />
-                    </div>
-                    <button onClick={handleNextImage}> {'>'} </button>
+                    <motion.button 
+                        onClick={handlePreviousImage}
+                        whileHover={{ scale: [1, 0.9, 1.1, 1 ]}}
+                        transition={{ duration: 0.5 }}
+                    > {'<'} </motion.button>
+                    <AnimatePresence mode='wait'>
+                        <motion.div 
+                            className={styles.imageWrap}
+                            initial={{ opacity: 0, x: 30 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: -30 }}
+                            key={images[currentImageIndex].name}
+                        >
+                            <ImageWrapper 
+                                width={'100%'}
+                                height={'100%'}
+                                src={`/images/${project.name}/${images[currentImageIndex].name}`} 
+                            />
+                        </motion.div>
+                    </AnimatePresence>
+                    <motion.button 
+                        onClick={handleNextImage}
+                        whileHover={{ scale: [1, 0.9, 1.1, 1 ]}}
+                        transition={{ duration: 0.5 }}
+                    > {'>'} </motion.button>
                 </div>
-            </div>
-        </dialog>
+            </motion.div>
+        </motion.dialog>,
+        document.getElementById('modal')
     );
 }
 

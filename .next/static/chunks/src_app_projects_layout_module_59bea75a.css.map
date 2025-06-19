@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///D:/Kodowanko/React/portfolio/src/app/projects/layout.module.css"],"sourcesContent":[".layout {\r\n    height: 95%;\r\n    display: flex;\r\n}"],"names":[],"mappings":"AAAA","debugId":null}}]
+}

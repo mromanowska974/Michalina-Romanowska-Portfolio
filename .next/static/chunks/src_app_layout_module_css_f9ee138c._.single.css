@@ -14,9 +14,9 @@
 .layout-module__L5FxyW__content {
   flex-grow: 1;
   justify-content: center;
-  width: 100%;
+  width: 100vw;
   display: flex;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=src_app_layout_module_css_f9ee138c._.single.css.map*/

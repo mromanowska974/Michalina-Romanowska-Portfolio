@@ -12,9 +12,9 @@
   
   .content {
     flex-grow: 1;
-    width: 100%;
-    overflow-y: hidden;
+    width: 100vw;
     display: flex;
     justify-content: center;
+    overflow: hidden;
   }
   

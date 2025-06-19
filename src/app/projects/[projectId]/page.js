@@ -5,11 +5,13 @@ import Technologies from '../../../components/Technologies/technologies';
 import Scrollable from '../../../components/Scrollable/scrollable';
 import Button from '../../../components/Button/button';
 import Link from 'next/link';
+import { AnimatePresence, motion } from 'framer-motion';
 
 import { cookies } from 'next/headers';
 import { getTranslations } from 'next-intl/server';
 import ImageSlideshow from '../../../components/ImageSlideshow/image-slideshow';
 import GalleryModal from '../../../components/GalleryModal/gallery-modal';
+import GoBackBtn from '../../../components/GoBackBtn/GoBackBtn';
 
 async function ProjectPage({ searchParams }) {
     const projectId = await searchParams.id;
@@ -26,12 +28,16 @@ async function ProjectPage({ searchParams }) {
 
     return (       
         <div className={styles.container}>
-            {isGalleryOpen && <GalleryModal 
-                images={projectImages} 
-                project={project} 
-            />}
+            <AnimatePresence mode='wait'>
+                {isGalleryOpen && 
+                    <GalleryModal 
+                        images={projectImages} 
+                        project={project} 
+                    />
+                }
+            </AnimatePresence>
             <div className={styles.demo}>
-                <Link href='/projects' className={styles.backLink}> ... {translate("backToProjects")}</Link>
+                <GoBackBtn text={`... ${translate("backToProjects")}`} href={'/projects'}/>
                 <div className={styles.imageWrap}>
                     <ImageSlideshow 
                         images={projectImages}

@@ -44,27 +44,6 @@
   display: flex;
 }
 
-.Navbar-module___rHu7W__btnBox a {
-  width: fit-content;
-  height: fit-content;
-  color: var(--blue_gray-100);
-  cursor: pointer;
-  background-color: #0000;
-  border: none;
-  margin-block: 0;
-  text-decoration: none;
-}
-
-.Navbar-module___rHu7W__btnBox a:hover, .Navbar-module___rHu7W__active {
-  text-decoration: underline var(--orange-cta);
-  text-underline-offset: 5px;
-  text-decoration-thickness: 3px;
-}
-
-.Navbar-module___rHu7W__btnBox a p {
-  margin: 0;
-}
-
 .Navbar-module___rHu7W__navbar {
   justify-content: space-between;
   width: 100%;

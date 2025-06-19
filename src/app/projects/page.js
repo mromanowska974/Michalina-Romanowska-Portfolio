@@ -5,6 +5,7 @@ import Title from '../../components/Title/title';
 import { getProjects } from '../../lib/db/projects';
 import Scrollable from '../../components/Scrollable/scrollable';
 import { useTranslations } from 'next-intl';
+import AnimatedListItem from '../../components/AnimatedListItem/AnimatedListItem';
 
 function Projects() {
   const projects = getProjects();
@@ -13,13 +14,17 @@ function Projects() {
   return (
     <div className={styles.projects}>
       <Title>{translate('title')}</Title>
-      <ul className={styles.list}>
-        <Scrollable className={styles.scrollable} axis={'x'} portraitAxis={'portraitY'}>
-          {projects.map(project => (
-            <li key={project.id}>
-              <Project project={project}/>
-            </li>
-          ))}
+      <ul>
+        <Scrollable 
+          className={styles.scrollable} 
+          axis={'x'} 
+          portraitAxis={'portraitY'}
+        >
+            {projects.map(project => (
+              <AnimatedListItem key={project.id}>
+                <Project project={project}/>
+              </AnimatedListItem>
+            ))}
         </Scrollable>
       </ul>
     </div>

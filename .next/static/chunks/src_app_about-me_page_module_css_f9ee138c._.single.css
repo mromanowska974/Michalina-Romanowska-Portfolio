@@ -10,7 +10,11 @@
 .page-module__46WyTq__content {
   color: var(--blue_gray-100);
   width: 50%;
-  height: 80%;
+  height: 90%;
+}
+
+.page-module__46WyTq__scrollable {
+  height: 90%;
 }
 
 .page-module__46WyTq__content h2, .page-module__46WyTq__content h3 {

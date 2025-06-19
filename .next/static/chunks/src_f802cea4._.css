@@ -142,6 +142,10 @@
   text-decoration: none;
 }
 
+.button-module__OJPZRa__animatingContainer {
+  display: flex;
+}
+
 
 /* [project]/src/components/Title/title.module.css [app-client] (css) */
 .title-module__9EsE3G__title {

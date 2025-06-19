@@ -1,0 +1,26 @@
+/* [project]/src/components/GoBackBtn/GoBackBtn.module.css [app-client] (css) */
+.GoBackBtn-module__RnQx3a__backLink {
+  color: var(--blue_gray-100);
+  cursor: pointer;
+  background-color: #0000;
+  align-self: flex-start;
+  margin-block: 0;
+  text-decoration: none;
+}
+
+.GoBackBtn-module__RnQx3a__backLink p {
+  margin: 0;
+}
+
+.GoBackBtn-module__RnQx3a__underline {
+  background-color: var(--orange-cta);
+  height: 3px;
+}
+
+@media (orientation: portrait) {
+  .GoBackBtn-module__RnQx3a__backLink {
+    top: 0;
+  }
+}
+
+/*# sourceMappingURL=src_components_GoBackBtn_GoBackBtn_module_css_f9ee138c._.single.css.map*/

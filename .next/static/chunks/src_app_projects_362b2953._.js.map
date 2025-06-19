@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/app/projects/layout.module.css [app-client] (css module)"],"sourcesContent":["__turbopack_context__.v({\n  \"layout\": \"layout-module___pIV1G__layout\",\n});\n"],"names":[],"mappings":"AAAA;AACA;AACA"}},
+    {"offset": {"line": 13, "column": 0}, "map": {"version":3,"sources":["file:///D:/Kodowanko/React/portfolio/src/app/projects/layout.js"],"sourcesContent":["'use client';\r\n\r\nimport React from 'react';\r\nimport AnimatedOutlet from '../../components/AnimatedOutlet/AnimatedOutlet';\r\nimport styles from './layout.module.css';\r\n\r\nfunction ProjectsLayout({ children }) {\r\n    return (\r\n        <AnimatedOutlet className={styles.layout}>\r\n            { children }\r\n        </AnimatedOutlet>\r\n    );\r\n}\r\n\r\nexport default ProjectsLayout;"],"names":[],"mappings":";;;;AAEA;AACA;AACA;AAJA;;;;;AAMA,SAAS,eAAe,EAAE,QAAQ,EAAE;IAChC,qBACI,6LAAC,yJAAA,CAAA,UAAc;QAAC,WAAW,+IAAA,CAAA,UAAM,CAAC,MAAM;kBAClC;;;;;;AAGd;KANS;uCAQM","debugId":null}}]
+}

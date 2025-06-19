@@ -9,7 +9,11 @@
 .content {
     color: var(--blue_gray-100);
     width: 50%;
-    height: 80%;
+    height: 90%;
+}
+
+.scrollable {
+    height: 90%;
 }
 
 .content h2, .content h3 {

@@ -38,26 +38,28 @@ function AboutMe() {
         height={'calc(15vh + 15vw)'}
         src={myPhoto.src}
       />
-      <Scrollable className={styles.content} axis={'y'}>
+      <div className={styles.content}>
         <Title>{translate('title')}</Title>
-        <Paragraph 
-          title={translate('whoAmI.title')}
-          content={translate('whoAmI.description')}
-          isFirst
-        />
-        <Paragraph 
-          title={translate('whyIChose.title')}
-          content={translate('whyIChose.description')}
-        />
-        <Paragraph 
-          title={translate('whatAmIDoingNow.title')}
-          content={translate('whatAmIDoingNow.description')}
-        />
-        <Paragraph 
-          title={translate('skills.title')}
-          content={skills}
-        />        
-      </Scrollable>
+        <Scrollable className={styles.scrollable} axis={'y'}>
+          <Paragraph 
+            title={translate('whoAmI.title')}
+            content={translate('whoAmI.description')}
+            isFirst
+          />
+          <Paragraph 
+            title={translate('whyIChose.title')}
+            content={translate('whyIChose.description')}
+          />
+          <Paragraph 
+            title={translate('whatAmIDoingNow.title')}
+            content={translate('whatAmIDoingNow.description')}
+          />
+          <Paragraph 
+            title={translate('skills.title')}
+            content={skills}
+          />        
+        </Scrollable>
+      </div>
     </div>
   )
 }

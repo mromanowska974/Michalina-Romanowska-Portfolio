@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 5, "column": 0}, "map": {"version":3,"sources":["file:///D:/Kodowanko/React/portfolio/src/app/projects/layout.js"],"sourcesContent":["'use client';\r\n\r\nimport React from 'react';\r\nimport AnimatedOutlet from '../../components/AnimatedOutlet/AnimatedOutlet';\r\n\r\nfunction ProjectsLayout({ children }) {\r\n    return (\r\n        <AnimatedOutlet>\r\n            { children }\r\n        </AnimatedOutlet>\r\n    );\r\n}\r\n\r\nexport default ProjectsLayout;"],"names":[],"mappings":";;;;AAEA;AACA;AAHA;;;;AAKA,SAAS,eAAe,EAAE,QAAQ,EAAE;IAChC,qBACI,8OAAC,sJAAA,CAAA,UAAc;kBACT;;;;;;AAGd;uCAEe","debugId":null}}]
+}

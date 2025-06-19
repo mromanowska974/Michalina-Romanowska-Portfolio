@@ -6,23 +6,13 @@ import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
-// import { cookies, headers } from "next/headers";
-// import { signOut } from "../auth";
+import AnimatedOutlet from "../components/AnimatedOutlet/AnimatedOutlet";
+
 config.autoAddCss = false;
 
 async function RootLayout({ children }) {
     const messages = await getMessages();
     const locale = await getLocale();
-
-    // const token = (await cookies()).get('authjs.session-token')?.value;
-    // const pathname = (await headers()).get('x-pathname');
-    // console.log('Token:', token);
-    // console.log('Pathname:', pathname);
-
-    // if (token && !pathname.includes('/secret-door')) {
-    //     console.log('Token exists and pathname does not include /secret-door');
-    //     await signOut();
-    // }
 
     return (
             <html lang={locale}>
@@ -30,12 +20,12 @@ async function RootLayout({ children }) {
                     <NextIntlClientProvider messages={messages}>
                         <div id={styles.root}>
                             <Navbar />
-                            <div className={styles.content}>
-                                {/* <AnimatedOutlet/> */}
-                                {children}
-                            </div>
+                                <AnimatedOutlet className={styles.content}>
+                                    {children}
+                                </AnimatedOutlet>
                             <Footer />
                         </div>
+                        <div id="modal"></div>
                     </NextIntlClientProvider>
                 </body>
             </html>

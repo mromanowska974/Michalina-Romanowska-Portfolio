@@ -13,7 +13,9 @@ export default function HomePage() {
     const t = useTranslations("home");
 
     return (
-        <div className={styles.container}>
+        <div 
+            className={styles.container}
+        >
             <ImageWrapper 
                 isRound 
                 width={'calc(20vh + 20vw)'} 
