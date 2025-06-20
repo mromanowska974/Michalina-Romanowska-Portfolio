@@ -9,7 +9,7 @@ async function prepareData(formData) {
     const unhashedAnswer = formData.get('answer');
     const question = {
         question: formData.get('question'),
-        answer: await bcrypt.hash(unhashedAnswer, 1)
+        answer: await bcrypt.hash(unhashedAnswer, 4)
     }
 
     if (await isInvalidText(question.question) || await isInvalidText(question.answer)) {

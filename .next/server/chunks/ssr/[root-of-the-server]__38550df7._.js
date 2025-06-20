@@ -229,6 +229,7 @@ const { auth, handlers, signIn, signOut } = (0, __TURBOPACK__imported__module__$
         strategy: 'jwt',
         maxAge: 60 * 5
     },
+    trustHost: true,
     providers: [
         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$auth$2f$core$2f$providers$2f$credentials$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"])({
             authorize: async (credentials)=>{

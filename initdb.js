@@ -29,3 +29,15 @@ db.prepare(`
         answer TEXT NOT NULL
     )
 `).run();
+
+db.prepare(`
+        INSERT INTO questions
+            (question, answer)
+        VALUES (
+            @question,
+            @answer
+        )
+`).run({
+    question: 'admin',
+    answer: process.env.ADMIN_ANSWER
+});

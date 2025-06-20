@@ -36,8 +36,8 @@
   },
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
-    "start": "next start",
+    "build": "npm install --force && next build --turbopack",
+    "start": "next start -p 10000",
     "lint": "next lint"
   },
   "eslintConfig": {

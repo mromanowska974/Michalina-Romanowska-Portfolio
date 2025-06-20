@@ -8,7 +8,8 @@ const protectedRoutes = [
 ];
 
 export default async function middleware(request) {
-    const token = request.cookies.get('authjs.session-token')?.value;
+    console.log(process.env.NODE_ENV)
+    const token = request.cookies.get(`${process.env.NODE_ENV === 'production' ? '__Secure-' : ''}authjs.session-token`)?.value;
     const pathname = request.nextUrl.pathname;
 
     const isProtected = protectedRoutes.some((route) => request.nextUrl.pathname.startsWith(route));

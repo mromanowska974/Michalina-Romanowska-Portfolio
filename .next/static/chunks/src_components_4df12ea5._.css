@@ -11,6 +11,10 @@
   text-decoration: none;
 }
 
+.button-module__OJPZRa__animatingContainer {
+  display: flex;
+}
+
 
 /* [project]/src/components/Input/input.module.css [app-client] (css) */
 .input-module__aX0dDG__inputBox {

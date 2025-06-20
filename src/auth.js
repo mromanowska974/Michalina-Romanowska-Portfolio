@@ -8,6 +8,7 @@ export const {auth, handlers, signIn, signOut} = NextAuth({
         strategy: 'jwt',
         maxAge: 60 * 5, // 5 minutes
     },
+    trustHost: true,
     providers: [
         CredentialsProvider({
             authorize: async (credentials) => {

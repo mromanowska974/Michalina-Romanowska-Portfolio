@@ -73,7 +73,8 @@ const protectedRoutes = [
     '/secret-door/add-project'
 ];
 async function middleware(request) {
-    const token = request.cookies.get('authjs.session-token')?.value;
+    console.log(("TURBOPACK compile-time value", "development"));
+    const token = request.cookies.get(`${("TURBOPACK compile-time falsy", 0) ? ("TURBOPACK unreachable", undefined) : ''}authjs.session-token`)?.value;
     const pathname = request.nextUrl.pathname;
     const isProtected = protectedRoutes.some((route)=>request.nextUrl.pathname.startsWith(route));
     if (!token && isProtected) {
