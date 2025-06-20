@@ -29,16 +29,19 @@
 
 @media (orientation: portrait) {
     .projects {
-        height: 95%;
+        height: 100%;
         align-items: center;
-        gap: 2vh;
-        width: 90%;
+        width: 100%;
+    }
+    
+    .projects h1 {
+        padding-top: 10px;
     }
 
     .projects ul {
         display: flex;
         justify-content: center;
-        height: 90%;
+        height: 100%;
         width: 90%;
     }
     

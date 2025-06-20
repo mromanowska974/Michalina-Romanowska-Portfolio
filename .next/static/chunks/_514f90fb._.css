@@ -44,6 +44,10 @@
   display: flex;
 }
 
+.Navbar-module___rHu7W__btnBox a {
+  text-align: center;
+}
+
 .Navbar-module___rHu7W__navbar {
   justify-content: space-between;
   width: 100%;
