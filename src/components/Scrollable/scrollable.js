@@ -4,7 +4,7 @@ import React from 'react';
 import styles from './scrollable.module.css';
 import { motion } from 'framer-motion';
 
-function Scrollable({ children, className, axis, portraitAxis, ...props}) {
+function Scrollable({ children, className, axis, portraitAxis, scrollbarSize='normal', ...props}) {
     const container = {
         start: {
             x: 0
@@ -17,7 +17,13 @@ function Scrollable({ children, className, axis, portraitAxis, ...props}) {
 
     return (
         <motion.div 
-            className={`${styles.container} ${className} ${axis ? styles[axis] : undefined} ${portraitAxis ? styles[portraitAxis] : undefined}`} 
+            className={`
+                ${styles.container} 
+                ${className} 
+                ${axis ? styles[axis] : undefined} 
+                ${portraitAxis ? styles[portraitAxis] : undefined}
+                ${scrollbarSize==='small' ? styles.small : undefined}
+            `} 
             variants={container}
             initial="start"
             animate="finish"

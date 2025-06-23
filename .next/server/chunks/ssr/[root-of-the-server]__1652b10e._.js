@@ -258,7 +258,7 @@ function getProject(id) {
 }
 function editProject(id, project, images) {
     const existingProject = getProject(id);
-    deleteImages(existingProject.name);
+    deleteImages(existingProject.name, id);
     addImages(images, project.name, id);
     db.prepare(`
         update projects

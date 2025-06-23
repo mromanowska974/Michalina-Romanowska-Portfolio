@@ -119,6 +119,10 @@
   text-decoration: none;
 }
 
+.button-module__OJPZRa__animatingContainer {
+  display: flex;
+}
+
 
 /* [project]/src/components/QuestionsForm/questionsForm.module.css [app-client] (css) */
 .questionsForm-module__a_8r7q__newQuestion {

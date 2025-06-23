@@ -38,6 +38,10 @@
   margin: 0;
 }
 
+.project-module__tptZMq__scrollable {
+  width: 100%;
+}
+
 .project-module__tptZMq__status {
   background-color: var(--violet-200);
   width: 97%;

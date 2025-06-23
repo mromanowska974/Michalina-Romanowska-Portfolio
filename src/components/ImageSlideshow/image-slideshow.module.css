@@ -10,7 +10,6 @@
 }
 
 .animatedImage {
-    aspect-ratio: 1 / 1;
     display: flex;
     justify-content: center;
     width: 90%;

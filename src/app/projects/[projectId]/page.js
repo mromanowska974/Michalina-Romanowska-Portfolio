@@ -37,7 +37,7 @@ async function ProjectPage({ searchParams }) {
                 }
             </AnimatePresence>
             <div className={styles.demo}>
-                <GoBackBtn text={`... ${translate("backToProjects")}`} href={'/projects'}/>
+                <GoBackBtn text={translate("backToProjects")} href={'/projects'}/>
                 <div className={styles.imageWrap}>
                     <ImageSlideshow 
                         images={projectImages}
@@ -49,7 +49,7 @@ async function ProjectPage({ searchParams }) {
                 <Title>{project.name}</Title>
                 <Technologies technologies={technologies}/>
                 <Scrollable className={styles.paragraph} axis={'y'}>
-                    <p>{cookieLocale === 'pl' ? project.descriptionPL : project.descriptionEN}</p>
+                    <pre>{cookieLocale === 'pl' ? project.descriptionPL : project.descriptionEN}</pre>
                 </Scrollable>
                 <div className={styles.links}>
                     <Button link href={project.app_link} text={translate('viewProject')}/>

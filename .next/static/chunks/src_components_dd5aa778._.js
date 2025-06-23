@@ -6,6 +6,7 @@ __turbopack_context__.v({
   "container": "scrollable-module__V-3v8W__container",
   "portraitX": "scrollable-module__V-3v8W__portraitX",
   "portraitY": "scrollable-module__V-3v8W__portraitY",
+  "small": "scrollable-module__V-3v8W__small",
   "x": "scrollable-module__V-3v8W__x",
   "y": "scrollable-module__V-3v8W__y",
 });
@@ -27,7 +28,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$mo
 ;
 ;
 ;
-function Scrollable({ children, className, axis, portraitAxis, ...props }) {
+function Scrollable({ children, className, axis, portraitAxis, scrollbarSize = 'normal', ...props }) {
     const container = {
         start: {
             x: 0
@@ -40,7 +41,13 @@ function Scrollable({ children, className, axis, portraitAxis, ...props }) {
         }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-        className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Scrollable$2f$scrollable$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].container} ${className} ${axis ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Scrollable$2f$scrollable$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"][axis] : undefined} ${portraitAxis ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Scrollable$2f$scrollable$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"][portraitAxis] : undefined}`,
+        className: `
+                ${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Scrollable$2f$scrollable$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].container} 
+                ${className} 
+                ${axis ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Scrollable$2f$scrollable$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"][axis] : undefined} 
+                ${portraitAxis ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Scrollable$2f$scrollable$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"][portraitAxis] : undefined}
+                ${scrollbarSize === 'small' ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Scrollable$2f$scrollable$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].small : undefined}
+            `,
         variants: container,
         initial: "start",
         animate: "finish",

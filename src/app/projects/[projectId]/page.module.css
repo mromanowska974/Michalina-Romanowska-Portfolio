@@ -39,8 +39,11 @@
     width: 100%;
 }
 
-.paragraph p {
+.paragraph pre {
     margin: 0;
+    font-size: 1rem;
+    font-family: sans-serif;
+    text-wrap: wrap;
 }
 
 .info ul {

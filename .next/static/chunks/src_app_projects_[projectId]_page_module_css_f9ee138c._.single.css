@@ -40,8 +40,11 @@
   height: 60%;
 }
 
-.page-module__QLFHmG__paragraph p {
+.page-module__QLFHmG__paragraph pre {
+  text-wrap: wrap;
   margin: 0;
+  font-family: sans-serif;
+  font-size: 1rem;
 }
 
 .page-module__QLFHmG__info ul {

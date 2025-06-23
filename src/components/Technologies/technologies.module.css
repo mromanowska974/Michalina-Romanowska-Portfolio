@@ -18,4 +18,5 @@
     border: 1px solid var(--blue_gray-100);
     border-radius: 5px;
     padding: 3px;
+    text-wrap: nowrap;
 }

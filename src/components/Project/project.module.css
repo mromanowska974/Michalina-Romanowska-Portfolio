@@ -37,6 +37,10 @@
     width: calc(95%);
 }
 
+.scrollable {
+    width: 100%;
+}
+
 .status {
     width: 97%;
     border-radius: 5px;

@@ -8,13 +8,12 @@ const protectedRoutes = [
 ];
 
 export default async function middleware(request) {
-    console.log(process.env.NODE_ENV)
     const token = request.cookies.get(`${process.env.NODE_ENV === 'production' ? '__Secure-' : ''}authjs.session-token`)?.value;
     const pathname = request.nextUrl.pathname;
 
     const isProtected = protectedRoutes.some((route) => request.nextUrl.pathname.startsWith(route));
 
-    if(!token && isProtected) {
+    if(!token && isProtected && process.env.NODE_ENV === 'production') { // admin panel disabled for onrender.com hosting bc I don't need it there
         return NextResponse.redirect(new URL('/', request.url));
     }
 

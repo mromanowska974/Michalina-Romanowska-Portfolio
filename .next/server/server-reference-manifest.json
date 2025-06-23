@@ -6,6 +6,10 @@
           "moduleId": "[project]/.next-internal/server/app/secret-door/add-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/projects.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false
         },
+        "app/secret-door/edit-project/page": {
+          "moduleId": "[project]/.next-internal/server/app/secret-door/edit-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/projects.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        },
         "app/secret-door/page": {
           "moduleId": "[project]/.next-internal/server/app/secret-door/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false
@@ -13,6 +17,7 @@
       },
       "layer": {
         "app/secret-door/add-project/page": "rsc",
+        "app/secret-door/edit-project/page": "rsc",
         "app/secret-door/page": "rsc"
       }
     },
@@ -22,20 +27,12 @@
           "moduleId": "[project]/.next-internal/server/app/secret-door/add-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/projects.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false
         },
-        "app/secret-door/page": {
-          "moduleId": "[project]/.next-internal/server/app/secret-door/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+        "app/secret-door/edit-project/page": {
+          "moduleId": "[project]/.next-internal/server/app/secret-door/edit-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/projects.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false
-        }
-      },
-      "layer": {
-        "app/secret-door/add-project/page": "rsc",
-        "app/secret-door/page": "rsc"
-      }
-    },
-    "60ed85bb82904a91c612b23734b6f70a20192d20ac": {
-      "workers": {
-        "app/secret-door/add-project/page": {
-          "moduleId": "[project]/.next-internal/server/app/secret-door/add-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/projects.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+        },
+        "app/secret-door/edit-projects/page": {
+          "moduleId": "[project]/.next-internal/server/app/secret-door/edit-projects/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false
         },
         "app/secret-door/page": {
@@ -45,6 +42,29 @@
       },
       "layer": {
         "app/secret-door/add-project/page": "rsc",
+        "app/secret-door/edit-project/page": "rsc",
+        "app/secret-door/edit-projects/page": "action-browser",
+        "app/secret-door/page": "rsc"
+      }
+    },
+    "60ed85bb82904a91c612b23734b6f70a20192d20ac": {
+      "workers": {
+        "app/secret-door/add-project/page": {
+          "moduleId": "[project]/.next-internal/server/app/secret-door/add-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/projects.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        },
+        "app/secret-door/edit-project/page": {
+          "moduleId": "[project]/.next-internal/server/app/secret-door/edit-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/projects.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        },
+        "app/secret-door/page": {
+          "moduleId": "[project]/.next-internal/server/app/secret-door/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/secret-door/add-project/page": "rsc",
+        "app/secret-door/edit-project/page": "rsc",
         "app/secret-door/page": "rsc"
       }
     },
@@ -53,10 +73,15 @@
         "app/secret-door/add-project/page": {
           "moduleId": "[project]/.next-internal/server/app/secret-door/add-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/projects.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false
+        },
+        "app/secret-door/edit-project/page": {
+          "moduleId": "[project]/.next-internal/server/app/secret-door/edit-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/projects.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
         }
       },
       "layer": {
-        "app/secret-door/add-project/page": "rsc"
+        "app/secret-door/add-project/page": "rsc",
+        "app/secret-door/edit-project/page": "rsc"
       }
     },
     "60cfd366acccc452b1229a6601d670d0596d1cfd87": {
@@ -64,10 +89,15 @@
         "app/secret-door/add-project/page": {
           "moduleId": "[project]/.next-internal/server/app/secret-door/add-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/projects.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false
+        },
+        "app/secret-door/edit-project/page": {
+          "moduleId": "[project]/.next-internal/server/app/secret-door/edit-project/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions/projects.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/actions/shared.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
         }
       },
       "layer": {
-        "app/secret-door/add-project/page": "rsc"
+        "app/secret-door/add-project/page": "rsc",
+        "app/secret-door/edit-project/page": "rsc"
       }
     }
   },

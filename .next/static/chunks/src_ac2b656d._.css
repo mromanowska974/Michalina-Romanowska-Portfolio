@@ -53,6 +53,10 @@
   border-radius: 10px;
 }
 
+.scrollable-module__V-3v8W__small::-webkit-scrollbar {
+  height: 5px;
+}
+
 @media (orientation: portrait) {
   .scrollable-module__V-3v8W__y:hover {
     overflow-y: auto;

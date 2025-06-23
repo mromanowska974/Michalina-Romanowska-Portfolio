@@ -29,6 +29,10 @@
     background-color: rgba(255, 255, 255, 0.2);
   }
 
+.small::-webkit-scrollbar{
+    height: 5px;
+}
+
 @media (orientation: portrait) {
     .y:hover {
         overflow-y: auto;

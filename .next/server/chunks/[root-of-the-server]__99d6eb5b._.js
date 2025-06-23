@@ -73,12 +73,11 @@ const protectedRoutes = [
     '/secret-door/add-project'
 ];
 async function middleware(request) {
-    console.log(("TURBOPACK compile-time value", "development"));
     const token = request.cookies.get(`${("TURBOPACK compile-time falsy", 0) ? ("TURBOPACK unreachable", undefined) : ''}authjs.session-token`)?.value;
     const pathname = request.nextUrl.pathname;
     const isProtected = protectedRoutes.some((route)=>request.nextUrl.pathname.startsWith(route));
-    if (!token && isProtected) {
-        return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$middleware$5d$__$28$ecmascript$29$__["NextResponse"].redirect(new URL('/', request.url));
+    if ("TURBOPACK compile-time falsy", 0) {
+        "TURBOPACK unreachable";
     }
     if (token && pathname === '/secret-door') {
         return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$middleware$5d$__$28$ecmascript$29$__["NextResponse"].redirect(new URL('/secret-door/add-project', request.url));
