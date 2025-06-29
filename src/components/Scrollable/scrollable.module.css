@@ -34,19 +34,19 @@
 }
 
 @media (orientation: portrait) {
-    .y:hover {
+    .y {
         overflow-y: auto;
     }
 
-    .x:hover {
+    .x {
         overflow-x: auto;
     }
 
-    .portraitY:hover {
+    .portraitY {
         overflow-y: auto;
     }
 
-    .portraitX:hover {
+    .portraitX {
         overflow-x: auto;
     }
 }

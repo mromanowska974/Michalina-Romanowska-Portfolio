@@ -1,0 +1,4 @@
+.clickableContainer {
+    color: var(--blue_gray-100);
+    text-decoration: none;
+}

@@ -29,11 +29,32 @@
 }
 
 @media (max-width: 435px) and (min-height: 660px) {
+  .btnBox {
+    gap: 8px;
+  }
+}
+
+@media (orientation: portrait) {
+  .navbar {
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 85%;
+    background: linear-gradient(45deg, var(--violet-800), var(--aqua-800));
+  }
+
   .logo a {
-    display: none;
+    font-size: 3em;
+    margin: 0;
   }
 
   .btnBox {
-    gap: 8px;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .btnBox a p, .btnBox select{
+    font-size: 1.5em;
+    margin: 0;
   }
 }

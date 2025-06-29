@@ -1,0 +1,22 @@
+/* [project]/src/components/Root/Root.module.css [app-client] (css) */
+#Root-module__Nk_dMG__root {
+  background: linear-gradient(45deg, var(--violet-700), var(--aqua-700));
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.Root-module__Nk_dMG__content {
+  flex-grow: 1;
+  justify-content: center;
+  width: 100vw;
+  display: flex;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=src_components_Root_Root_module_css_f9ee138c._.single.css.map*/

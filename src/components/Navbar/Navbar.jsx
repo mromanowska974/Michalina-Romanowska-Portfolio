@@ -43,7 +43,7 @@ function Navbar(props) {
     return (
         <nav className={styles.navbar}>
             <div className={styles.logo}>
-            <Link href='/' className={sacramento.className}>MR</Link>
+                <Link href='/' className={sacramento.className}>MR</Link>
             </div>
             <div className={styles.btnBox}>
                 {

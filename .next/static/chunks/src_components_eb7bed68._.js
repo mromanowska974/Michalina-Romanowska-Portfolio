@@ -119,6 +119,8 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 
 __turbopack_context__.v({
   "btnBox": "Navbar-module___rHu7W__btnBox",
+  "container": "Navbar-module___rHu7W__container",
+  "hamburger": "Navbar-module___rHu7W__hamburger",
   "logo": "Navbar-module___rHu7W__logo",
   "navbar": "Navbar-module___rHu7W__navbar",
 });
@@ -345,7 +347,7 @@ function Navbar(props) {
                 }, void 0, false, {
                     fileName: "[project]/src/components/Navbar/Navbar.jsx",
                     lineNumber: 46,
-                    columnNumber: 13
+                    columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/Navbar/Navbar.jsx",

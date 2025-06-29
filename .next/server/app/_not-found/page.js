@@ -5,7 +5,7 @@ runtime.loadChunk("server/chunks/ssr/[root-of-the-server]__1681fb2c._.js");
 runtime.loadChunk("server/chunks/ssr/src_app_a4430781._.js");
 runtime.loadChunk("server/chunks/ssr/messages_5ab6f695._.js");
 runtime.loadChunk("server/chunks/ssr/node_modules_168cb7e0._.js");
-runtime.loadChunk("server/chunks/ssr/_6d0ba367._.js");
+runtime.loadChunk("server/chunks/ssr/_40de6e4f._.js");
 runtime.loadChunk("server/chunks/ssr/src_app_template_2edeee49.js");
 runtime.loadChunk("server/chunks/ssr/node_modules_next_dist_client_components_a1eec29e._.js");
 runtime.loadChunk("server/chunks/ssr/node_modules_next_dist_client_components_forbidden-error_ea7ea172.js");

@@ -111,19 +111,19 @@
 }
 
 @media (orientation: portrait) {
-  .scrollable-module__V-3v8W__y:hover {
+  .scrollable-module__V-3v8W__y {
     overflow-y: auto;
   }
 
-  .scrollable-module__V-3v8W__x:hover {
+  .scrollable-module__V-3v8W__x {
     overflow-x: auto;
   }
 
-  .scrollable-module__V-3v8W__portraitY:hover {
+  .scrollable-module__V-3v8W__portraitY {
     overflow-y: auto;
   }
 
-  .scrollable-module__V-3v8W__portraitX:hover {
+  .scrollable-module__V-3v8W__portraitX {
     overflow-x: auto;
   }
 }

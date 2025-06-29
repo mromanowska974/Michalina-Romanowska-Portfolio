@@ -30,12 +30,33 @@
 }
 
 @media (width <= 435px) and (height >= 660px) {
+  .Navbar-module___rHu7W__btnBox {
+    gap: 8px;
+  }
+}
+
+@media (orientation: portrait) {
+  .Navbar-module___rHu7W__navbar {
+    background: linear-gradient(45deg, var(--violet-800), var(--aqua-800));
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 85%;
+  }
+
   .Navbar-module___rHu7W__logo a {
-    display: none;
+    margin: 0;
+    font-size: 3em;
   }
 
   .Navbar-module___rHu7W__btnBox {
-    gap: 8px;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .Navbar-module___rHu7W__btnBox a p, .Navbar-module___rHu7W__btnBox select {
+    margin: 0;
+    font-size: 1.5em;
   }
 }
 

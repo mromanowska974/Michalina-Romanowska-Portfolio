@@ -6,6 +6,7 @@ import { getProjects } from '../../lib/db/projects';
 import Scrollable from '../../components/Scrollable/scrollable';
 import { useTranslations } from 'next-intl';
 import AnimatedListItem from '../../components/AnimatedListItem/AnimatedListItem';
+import slugify from 'slugify';
 
 function Projects() {
   const projects = getProjects();
@@ -21,7 +22,10 @@ function Projects() {
           portraitAxis={'portraitY'}
         >
             {projects.map(project => (
-              <AnimatedListItem key={project.id}>
+              <AnimatedListItem data={{
+                slug: slugify(project.name, {lower: true}),
+                project: project
+              }} key={project.id}>
                 <Project project={project}/>
               </AnimatedListItem>
             ))}

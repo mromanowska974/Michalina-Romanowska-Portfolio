@@ -1,0 +1,23 @@
+/* [project]/src/components/HamburgerMenu/HamburgerMenu.module.css [app-client] (css) */
+.HamburgerMenu-module__F5PFJq__container {
+  z-index: 2;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  position: absolute;
+}
+
+.HamburgerMenu-module__F5PFJq__hamburger {
+  width: 15%;
+  height: 15%;
+  color: var(--blue_gray-100);
+  background-color: #0000;
+  border: none;
+  align-self: flex-end;
+  padding: 5px;
+  font-size: 2.5em;
+}
+
+/*# sourceMappingURL=src_components_HamburgerMenu_HamburgerMenu_module_css_f9ee138c._.single.css.map*/

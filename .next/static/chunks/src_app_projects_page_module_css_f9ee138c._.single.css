@@ -41,16 +41,17 @@
 
   .page-module__q81_BW__projects ul {
     justify-content: center;
-    width: 90%;
+    width: 100%;
     height: 100%;
     display: flex;
   }
 
   .page-module__q81_BW__scrollable {
+    touch-action: cross-slide-y;
     flex-flow: wrap;
     justify-content: center;
     width: 100%;
-    height: 70vh;
+    height: 75vh;
   }
 }
 

@@ -1,12 +1,9 @@
-import Footer from "../components/Footer/Footer";
-import Navbar from "../components/Navbar/Navbar";
-import styles from './layout.module.css';
 import './globals.css';
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import AnimatedOutlet from "../components/AnimatedOutlet/AnimatedOutlet";
+import Root from "../components/Root/Root";
 
 config.autoAddCss = false;
 
@@ -18,13 +15,7 @@ async function RootLayout({ children }) {
             <html lang={locale}>
                 <body>
                     <NextIntlClientProvider messages={messages}>
-                        <div id={styles.root}>
-                            <Navbar />
-                                <AnimatedOutlet className={styles.content}>
-                                    {children}
-                                </AnimatedOutlet>
-                            <Footer />
-                        </div>
+                        <Root>{children}</Root>
                         <div id="modal"></div>
                     </NextIntlClientProvider>
                 </body>

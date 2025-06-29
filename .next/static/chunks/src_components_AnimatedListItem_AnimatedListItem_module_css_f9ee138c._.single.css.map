@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/AnimatedListItem/AnimatedListItem.module.css"],"sourcesContent":[".clickableContainer {\r\n    color: var(--blue_gray-100);\r\n    text-decoration: none;\r\n}"],"names":[],"mappings":"AAAA"}}]
+}
