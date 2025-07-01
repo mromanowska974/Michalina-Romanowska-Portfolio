@@ -37,7 +37,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "npm install --force && next build --turbopack",
-    "start": "next start -p 10000",
+    "start": "cd portfolio-cron-refresh && npm i node-cron express && node index.js && cd .. && next start -p 10000",
     "lint": "next lint"
   },
   "eslintConfig": {
